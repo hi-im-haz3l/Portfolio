@@ -1,0 +1,46 @@
+{
+    "lang": "FI",
+    "Timeline.Now": "Nyt",
+
+    "Navbar.Works": "Projektit",
+    "Navbar.Source": "Lähdekoodi",
+
+    "Sidebar.About": "Tietoja Minusta",
+    "Sidebar.Works": "Omat Projektit",
+    "Sidebar.Source": "Näytä Lähdekoodi",
+
+    "Home.Greeting": "Tervetuloa, tämä on portfolioni!",
+    "Home.Description": "Utelias harrastaja - Luoja, Suunnittelija, Kehittäjä",
+    "Home.Bio.Title": "Elämäkerta",
+    "Home.Bio.Content": "Olen itseoppinut suunnittelija/kehittäjä, jolla on intohimo mielenkiintoisten sovellusten rakentamiseen. Kaikkea tuotteiden lanseerauksesta suunnitteluun ja suunnitteluun, rakastan aina ratkaista ongelmia koodin avulla. Kun en ole tietokoneellani, Netflixin ahmiminen on minun viivyttelyni. Tällä hetkellä, jos sait juuri tämän linkin ansioluettelostani, se tarkoittaa, että olen työtön :V",
+    "Home.Works.Button": "Omat Teokset",
+    "Home.Timeline.Title": "Elämäni",
+    "Home.Timeline.Year.02": "2002",
+    "Home.Timeline.Content.02": "Syntynyt Hanoissa, Vietnamissa.",
+    "Home.Timeline.Year.14": "2014",
+    "Home.Timeline.Content.14": "Loin ensimmäisen Lua-skriptini valvomaan ja käsittelemään yksinkertaisia ​​pelin sisäisiä muistilohkoja.",
+    "Home.Timeline.Year.17": "2017",
+    "Home.Timeline.Content.17": "Aloin kokeilla sulautettuja mikrokontrollereita ja verkkosovelluksia.",
+    "Home.Timeline.Year.21": "2021",
+    "Home.Timeline.Content.21": "Kansainvälisen liiketoiminnan kandidaattiohjelma ja kauppatieteiden maisteri Aalto-yliopistossa.",
+    "Home.Hobbies.Title": "Asioita, joita rakastan eniten",
+    "Home.Hobbies.Content": "Musiikki, Oppiminen, Näpertely, Tekeminen, ja Koneoppiminen.",
+    "Home.Social.Title": "Muut alustat",
+
+    "Works.Title": "Omat projektit",
+    "Works.Badge.Website": "Verkkosivusto",
+    "Works.Badge.Platform": "Sovellusalusta",
+    "Works.Badge.Platform.Description": "Verkkosovellus, monialustainen",
+    "Works.Badge.Stack": "Pino",
+
+    "Works.Product.Ambersbakery.Life": "Tammi - Kesä 2021",
+    "Works.Product.Ambersbakery.Title": "Amber's Bakery",
+    "Works.Product.Ambersbakery.Description": "Verkkoleipomo, jossa on vahvat tilaukset, tuotteet ja henkilöstöhallintajärjestelmä",
+    "Works.Product.Stickynote.Life": "Maalis 2021",
+    "Works.Product.Stickynote.Title": "Sticky Note",
+    "Works.Product.Stickynote.Description": "Kevyt, monialustainen ja synkroninen tekstinjakoverkkosovellus",
+
+    "Works.Experimental": "Kokeellinen",
+    
+    "Footer": "Tehnyt ❤️"
+}

@@ -1,0 +1,46 @@
+{
+    "lang": "EN",
+    "Timeline.Now": "Now",
+
+    "Navbar.Works": "Works",
+    "Navbar.Source": "Source",
+
+    "Sidebar.About": "About Me",
+    "Sidebar.Works": "My Works",
+    "Sidebar.Source": "View Source",
+
+    "Home.Greeting": "Hello, welcome to my portfolio!",
+    "Home.Description": "Curious hobbyist - Maker, Designer, Developer",
+    "Home.Bio.Title": "Bio",
+    "Home.Bio.Content": "I'm a self-taught designer/developer with a passion for building interesting applications. Everything from launching products to planning and designing, I always love to solve problems with code. When not on my computer, binge-watching Netflix is my go-to procastination. Currently, if you just got this link from my resumé, that means I'm unemployed :V",
+    "Home.Works.Button": "My Works",
+    "Home.Timeline.Title": "My life",
+    "Home.Timeline.Year.02": "2002",
+    "Home.Timeline.Content.02": "Born in Hanoi, Vietnam.",
+    "Home.Timeline.Year.14": "2014",
+    "Home.Timeline.Content.14": "Created my first Lua script to monitor and manipulate simple in-game memory blocks.",
+    "Home.Timeline.Year.17": "2017",
+    "Home.Timeline.Content.17": "Started experimenting with embedded microcontrollers and web applications.",
+    "Home.Timeline.Year.21": "2021",
+    "Home.Timeline.Content.21": "Bachelor's Programme in International Business and MSc (Econ) at Aalto University.",
+    "Home.Hobbies.Title": "Things I love most",
+    "Home.Hobbies.Content": "Music, Learning, Tinkering, Making, and Machine Learning.",
+    "Home.Social.Title": "Other platforms",
+
+    "Works.Title": "My works",
+    "Works.Badge.Website": "Website",
+    "Works.Badge.Platform": "Platform",
+    "Works.Badge.Platform.Description": "Web application, cross-platform",
+    "Works.Badge.Stack": "Stack",
+
+    "Works.Product.Ambersbakery.Life": "Jan - June 2021",
+    "Works.Product.Ambersbakery.Title": "Amber's Bakery",
+    "Works.Product.Ambersbakery.Description": "A online bakery with robust orders, products, and HR management system",
+    "Works.Product.Stickynote.Life": "March 2021",
+    "Works.Product.Stickynote.Title": "Sticky Note",
+    "Works.Product.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application",
+
+    "Works.Experimental": "Experimental",
+
+    "Footer": "Made with ❤️ by"
+}
