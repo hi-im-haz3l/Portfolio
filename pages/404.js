@@ -7,16 +7,25 @@ import {
   Divider,
   Button
 } from '@chakra-ui/react'
+import { useIntl } from 'react-intl'
 
 const NotFound = () => {
+  const { formatMessage: t } = useIntl()
+
   return (
     <Container>
-      <Heading as="h1">Not found</Heading>
-      <Text>The page you&apos;re looking for was not found.</Text>
+      <Heading as="h1">
+        {t({id: '404.Title', defaultMessage: 'Undefined'})}
+      </Heading>
+      <Text>
+        {t({id: '404.Description', defaultMessage: 'Undefined'})}
+      </Text>
       <Divider my={6} />
       <Box my={6} align="center">
         <NextLink href="/">
-          <Button colorScheme="teal">Return to home</Button>
+          <Button colorScheme="teal">
+            {t({id: '404.Button.Return', defaultMessage: 'Undefined'})}
+          </Button>
         </NextLink>
       </Box>
     </Container>

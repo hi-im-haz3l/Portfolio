@@ -40,6 +40,10 @@
     "Works.Product.Stickynote.Title": "Sticky Note",
     "Works.Product.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application",
 
+    "404.Title": "Bummer",
+    "404.Description": "The page you're looking for was not found.",
+    "404.Button.Return": "Return to home",
+
     "Works.Experimental": "Experimental",
 
     "Footer": "Made with ❤️ by"

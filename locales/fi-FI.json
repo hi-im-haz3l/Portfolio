@@ -40,6 +40,10 @@
     "Works.Product.Stickynote.Title": "Sticky Note",
     "Works.Product.Stickynote.Description": "Kevyt, monialustainen ja synkroninen tekstinjakoverkkosovellus",
 
+    "404.Title": "Voi harmi",
+    "404.Description": "Etsimääsi sivua ei löytynyt.",
+    "404.Button.Return": "Palaa etusivulle",
+
     "Works.Experimental": "Kokeellinen",
     
     "Footer": "Tehnyt ❤️"
