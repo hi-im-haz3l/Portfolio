@@ -26,7 +26,6 @@ const ProfileImage = chakra(Image, {
 const Home = () => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('facebook', 'teal.200')
-  const LighterAccentColor = useColorModeValue('facebook', 'teal')
   const SocialHoverColor = useColorModeValue('#f0f2f5', '#525255')
 
   return (
@@ -89,7 +88,7 @@ const Home = () => {
             <NextLink href="/works" scroll={false}>
               <Button 
               rightIcon={<ChevronRightIcon />} 
-              colorScheme={LighterAccentColor}
+              colorScheme={useColorModeValue('facebook', 'teal')}
               >
                 {t({id: 'Home.Works.Button', defaultMessage: 'Undefined'})}
               </Button>
@@ -123,7 +122,7 @@ const Home = () => {
             <BioYear>
               {t({id: 'Home.Timeline.Year.21', defaultMessage: 'Undefined'})}
               -
-              {t({id: 'Home.Timeline.Now', defaultMessage: 'Undefined'})}
+              {t({id: 'Timeline.Now', defaultMessage: 'Undefined'})}
             </BioYear>
             {t({id: 'Home.Timeline.Content.21', defaultMessage: 'Undefined'})}
           </BioSection>

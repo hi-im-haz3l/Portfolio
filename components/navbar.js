@@ -25,10 +25,9 @@ const NavBarItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
   const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
-  const hoverColor = useColorModeValue('#ffffff88', '#71717488')
 
   return (
-    <NextLink href={href} passHref scroll={false}>
+    <NextLink href={href} passHref>
       <Link
         p={2}
         pl={3}
@@ -36,9 +35,10 @@ const NavBarItem = ({ href, path, target, children, ...props }) => {
         borderRadius={7}
         fontWeight='semibold'
         color={active ? activeColor : inactiveColor}
-        css={active ? { textDecoration: 'underline' } : undefined}
+        css={active ? { textDecoration: 'underline', 
+        textDecorationThickness: '2px' } : undefined}
         target={target}
-        _hover={{ bg: hoverColor }}
+        _hover={{ bg: useColorModeValue('#ffffff95', '#71717488') }}
         {...props}
       >
         {children}
@@ -51,16 +51,16 @@ const SideBarItem = ({ href, path, children }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
   const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
-  const hoverColor = useColorModeValue('#edf2f7', '#414144')
 
   return (
     <NextLink href={href} passHref>
-        <MenuItem _hover={{ bg: hoverColor }}>
+        <MenuItem _hover={{ bg: useColorModeValue('#edf2f7', '#414144') }}>
           <Link
             variant="no-underline"
             fontWeight='semibold'
             color={active ? activeColor : inactiveColor}
-            css={active ? { textDecoration: 'underline' } : undefined}
+            css={active ? { textDecoration: 'underline', 
+            textDecorationThickness: '2px' } : undefined}
           >
             {children}
           </Link>
@@ -72,7 +72,6 @@ const SideBarItem = ({ href, path, children }) => {
 const Navbar = props => {
   const { formatMessage: t } = useIntl()
   const { path } = props
-  const SidebarColor = useColorModeValue('#f5f5f5', '#313134')
 
   return (
     <Box
@@ -143,7 +142,7 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
               />
-              <MenuList bg={SidebarColor}>
+              <MenuList bg={useColorModeValue('#f5f5f5', '#313134')}>
                 <SideBarItem href="/" path={path}>
                   {t({id: 'Sidebar.About', defaultMessage: 'Undefined'})}
                 </SideBarItem>

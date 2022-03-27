@@ -1,3 +1,4 @@
+import NextLink from 'next/link'
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
@@ -9,26 +10,28 @@ const Work = () => {
   const { formatMessage: t } = useIntl()
 
   return (
-    <Layout title={t({id: 'Works.Web.Ambersbakery.Title', defaultMessage: 'Undefined'})}>
+    <Layout title={t({id: 'Works.Web.khanhsportfolio.Title', defaultMessage: 'Undefined'})}>
       <Container>
         <Title>
-          {t({id: 'Works.Web.Ambersbakery.Title', defaultMessage: 'Undefined'})}
+          {t({id: 'Works.Web.khanhsportfolio.Title', defaultMessage: 'Undefined'})}
           <Badge ml={3}>
-            {t({id: 'Works.Web.Ambersbakery.Life', defaultMessage: 'Undefined'})}
+            {t({id: 'Works.Web.khanhsportfolio.Life', defaultMessage: 'Undefined'})}
           </Badge>
         </Title>
         <P>
-          {t({id: 'Works.Web.Ambersbakery.Description', defaultMessage: 'Undefined'})}
+          {t({id: 'Works.Web.khanhsportfolio.Description', defaultMessage: 'Undefined'})}
         </P>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>
               {t({id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined'})}
             </Meta>
-            <Link target="_blank" href="https://portfolio.haz3l.duckdns.org/prototype/Ambersbakery">
-              Prototype/Ambersbakery
-              <ExternalLinkIcon mx="2px" />
-            </Link>
+            <NextLink href="/" passHref>
+              <Link>
+                {t({id: 'Button.Return', defaultMessage: 'Undefined'})}
+                <ExternalLinkIcon mx="2px" />
+              </Link>
+            </NextLink>
           </ListItem>
           <ListItem>
             <Meta>
@@ -42,13 +45,14 @@ const Work = () => {
             <Meta>
               {t({id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined'})}
             </Meta>
-            <span>PHP 7.4, Bootstrap 5.1, Jquery 3.6, Vanilla JS, MariaDB 10.7</span>
+            <span>
+              Next.js, React, Chakra UI, Emotion, Three.js, Framer Motion
+            </span>
           </ListItem>
         </List>
 
-        <WorkImage src="/images/works/ambersbakery_landing.png" alt="LandingImage" />
-        <WorkImage src="/images/works/ambersbakery_customize.png" alt="CustomizeImage" />
-        <WorkImage src="/images/works/ambersbakery_cart.png" alt="CartImage" />
+        <WorkImage src="/images/works/khanhsportfolio_landing.png" alt="LandingImage" />
+        <WorkImage src="/images/works/khanhsportfolio_works.png" alt="WorksImage" />
       </Container>
     </Layout>
   )

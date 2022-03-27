@@ -1,6 +1,7 @@
 {
     "lang": "FI",
     "Timeline.Now": "Nyt",
+    "Button.Return": "Palaa etusivulle",
 
     "Navbar.Works": "Projektit",
     "Navbar.Source": "Lähdekoodi",
@@ -28,21 +29,25 @@
     "Home.Social.Title": "Muut alustat",
 
     "Works.Title": "Omat projektit",
-    "Works.Badge.Website": "Verkkosivusto",
-    "Works.Badge.Platform": "Sovellusalusta",
-    "Works.Badge.Platform.Description": "Verkkosovellus, monialustainen",
-    "Works.Badge.Stack": "Pino",
 
-    "Works.Product.Ambersbakery.Life": "Tammi - Kesä 2021",
-    "Works.Product.Ambersbakery.Title": "Amber's Bakery",
-    "Works.Product.Ambersbakery.Description": "Verkkoleipomo, jossa on vahvat tilaukset, tuotteet ja henkilöstöhallintajärjestelmä",
-    "Works.Product.Stickynote.Life": "Maalis 2021",
-    "Works.Product.Stickynote.Title": "Sticky Note",
-    "Works.Product.Stickynote.Description": "Kevyt, monialustainen ja synkroninen tekstinjakoverkkosovellus",
+    "Works.Web.Title": "Verkkosovellukset",
+    "Works.Web.Badge.Demo": "Esittely",
+    "Works.Web.Badge.Platform": "Sovellusalusta",
+    "Works.Web.Badge.Stack": "Pino",
+    "Works.Web.Platform.Description": "Verkkosovellus, monialustainen",
+
+    "Works.Web.Ambersbakery.Life": "Tammi - Kesäkuun 2021",
+    "Works.Web.Ambersbakery.Title": "Amber's Bakery",
+    "Works.Web.Ambersbakery.Description": "Verkkoleipomo, jossa on vahvat tilaukset, tuotteet ja henkilöstöhallintajärjestelmä.",
+    "Works.Web.Stickynote.Life": "Maaliskuun 2021",
+    "Works.Web.Stickynote.Title": "Sticky Note",
+    "Works.Web.Stickynote.Description": "Kevyt, monialustainen ja synkroninen tekstinjakoverkkosovellus.",
+    "Works.Web.khanhsportfolio.Life": "Maaliskuun 2022",
+    "Works.Web.khanhsportfolio.Title": "Khánh's portfolio",
+    "Works.Web.khanhsportfolio.Description": "Responsiivinen, lokalisoitu ja dynaamisesti renderöivä portfoliosovellus.",
 
     "404.Title": "Voi harmi",
     "404.Description": "Etsimääsi sivua ei löytynyt.",
-    "404.Button.Return": "Palaa etusivulle",
 
     "Works.Experimental": "Kokeellinen",
     

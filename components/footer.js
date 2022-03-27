@@ -3,7 +3,6 @@ import { useIntl } from 'react-intl'
 
 const Footer = () => {
   const { formatMessage: t } = useIntl()
-  const AccentColor = useColorModeValue('facebook', 'teal.200')
   
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
@@ -11,7 +10,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/hi-im-haz3l"
-        color={AccentColor}
+        color={useColorModeValue('#3d7aed', '#ff63c3')}
       >
         @hi-im-haz3l
       </Link>

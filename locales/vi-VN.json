@@ -1,6 +1,7 @@
 {
     "lang": "VI",
     "Timeline.Now": "Hiện tại",
+    "Button.Return": "Về trang chủ",
 
     "Navbar.Works": "Dự Án",
     "Navbar.Source": "Mã Nguồn",
@@ -27,22 +28,26 @@
     "Home.Hobbies.Content": "Nhạc, Học Hỏi, Mày Mò, Chế Tạo, và Trí Tuệ Nhân Tạo.",
     "Home.Social.Title": "Các nền tảng khác",
 
-    "Works.Title": "Dự án đã làm",
-    "Works.Badge.Website": "Trang Web",
-    "Works.Badge.Platform": "Nền Tảng",
-    "Works.Badge.Platform.Description": "Ứng dụng Web, đa nền tảng",
-    "Works.Badge.Stack": "Công Nghệ",
+    "Works.Title": "Dự án",
 
-    "Works.Product.Ambersbakery.Life": "Tháng 1 - 6, 2021",
-    "Works.Product.Ambersbakery.Title": "Amber's Bakery",
-    "Works.Product.Ambersbakery.Description": "Tiệm bánh online kết hợp với hệ thống kiểm soát linh hoạt đơn hàng, mặt hàng, và nhân viên",
-    "Works.Product.Stickynote.Life": "Tháng 3, 2021",
-    "Works.Product.Stickynote.Title": "Sticky Note",
-    "Works.Product.Stickynote.Description": "Ứng dụng lưu trữ thông tin nhỏ gọn, đa nền tảng, và đồ bộ hóa",
+    "Works.Web.Title": "Ứng dụng Web",
+    "Works.Web.Badge.Demo": "Trải Nghiệm",
+    "Works.Web.Badge.Platform": "Nền Tảng",
+    "Works.Web.Badge.Stack": "Công Nghệ",
+    "Works.Web.Platform.Description": "Ứng dụng Web, đa nền tảng",
+
+    "Works.Web.Ambersbakery.Life": "Tháng 1 - 6, 2021",
+    "Works.Web.Ambersbakery.Title": "Amber's Bakery",
+    "Works.Web.Ambersbakery.Description": "Tiệm bánh online kết hợp với hệ thống số giúp kiểm soát linh hoạt đơn hàng, mặt hàng, và nhân viên.",
+    "Works.Web.Stickynote.Life": "Tháng 3, 2021",
+    "Works.Web.Stickynote.Title": "Sticky Note",
+    "Works.Web.Stickynote.Description": "Ứng dụng web chuyên lưu trữ thông tin nhỏ gọn, đa nền tảng, và luôn đồ bộ hóa.",
+    "Works.Web.khanhsportfolio.Life": "Tháng 3, 2022",
+    "Works.Web.khanhsportfolio.Title": "Khánh's portfolio",
+    "Works.Web.khanhsportfolio.Description": "Sơ yếu lý lịch web đa tương thích, bản địa hóa, và thông dịch linh hoạt.",
 
     "404.Title": "Rất tiếc",
     "404.Description": "Trang web bạn đang tìm không tồn tại.",
-    "404.Button.Return": "Về trang chủ",
 
     "Works.Experimental": "Đang thí nghiệm",
 

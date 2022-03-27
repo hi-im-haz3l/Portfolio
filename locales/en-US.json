@@ -1,6 +1,7 @@
 {
     "lang": "EN",
     "Timeline.Now": "Now",
+    "Button.Return": "Return home",
 
     "Navbar.Works": "Works",
     "Navbar.Source": "Source",
@@ -28,21 +29,25 @@
     "Home.Social.Title": "Other platforms",
 
     "Works.Title": "My works",
-    "Works.Badge.Website": "Website",
-    "Works.Badge.Platform": "Platform",
-    "Works.Badge.Platform.Description": "Web application, cross-platform",
-    "Works.Badge.Stack": "Stack",
 
-    "Works.Product.Ambersbakery.Life": "Jan - June 2021",
-    "Works.Product.Ambersbakery.Title": "Amber's Bakery",
-    "Works.Product.Ambersbakery.Description": "A online bakery with robust orders, products, and HR management system",
-    "Works.Product.Stickynote.Life": "March 2021",
-    "Works.Product.Stickynote.Title": "Sticky Note",
-    "Works.Product.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application",
+    "Works.Web.Title": "Web applications",
+    "Works.Web.Badge.Demo": "Demo",
+    "Works.Web.Badge.Platform": "Platform",
+    "Works.Web.Badge.Stack": "Stack",
+    "Works.Web.Platform.Description": "Web application, cross-platform",
+
+    "Works.Web.Ambersbakery.Life": "Jan - June 2021",
+    "Works.Web.Ambersbakery.Title": "Amber's Bakery",
+    "Works.Web.Ambersbakery.Description": "A online bakery with robust orders, products, and HR management system.",
+    "Works.Web.Stickynote.Life": "March 2021",
+    "Works.Web.Stickynote.Title": "Sticky Note",
+    "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",
+    "Works.Web.khanhsportfolio.Life": "March 2022",
+    "Works.Web.khanhsportfolio.Title": "Khánh's portfolio",
+    "Works.Web.khanhsportfolio.Description": "Responsive, localized, and  dynamically render portfolio application.",
 
     "404.Title": "Bummer",
     "404.Description": "The page you're looking for was not found.",
-    "404.Button.Return": "Return to home",
 
     "Works.Experimental": "Experimental",
 

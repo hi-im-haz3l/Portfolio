@@ -9,24 +9,24 @@ const Work = () => {
   const { formatMessage: t } = useIntl()
 
   return (
-    <Layout title={t({id: 'Works.Web.Ambersbakery.Title', defaultMessage: 'Undefined'})}>
+    <Layout title={t({id: 'Works.Web.Stickynote.Title', defaultMessage: 'Undefined'})}>
       <Container>
         <Title>
-          {t({id: 'Works.Web.Ambersbakery.Title', defaultMessage: 'Undefined'})}
+          {t({id: 'Works.Web.Stickynote.Title', defaultMessage: 'Undefined'})}
           <Badge ml={3}>
-            {t({id: 'Works.Web.Ambersbakery.Life', defaultMessage: 'Undefined'})}
+            {t({id: 'Works.Web.Stickynote.Life', defaultMessage: 'Undefined'})}
           </Badge>
         </Title>
         <P>
-          {t({id: 'Works.Web.Ambersbakery.Description', defaultMessage: 'Undefined'})}
+          {t({id: 'Works.Web.Stickynote.Description', defaultMessage: 'Undefined'})}
         </P>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>
               {t({id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined'})}
             </Meta>
-            <Link target="_blank" href="https://portfolio.haz3l.duckdns.org/prototype/Ambersbakery">
-              Prototype/Ambersbakery
+            <Link target="_blank" href="https://portfolio.haz3l.duckdns.org/prototype/Stickynote">
+              Prototype/Stickynote
               <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
@@ -46,9 +46,9 @@ const Work = () => {
           </ListItem>
         </List>
 
-        <WorkImage src="/images/works/ambersbakery_landing.png" alt="LandingImage" />
-        <WorkImage src="/images/works/ambersbakery_customize.png" alt="CustomizeImage" />
-        <WorkImage src="/images/works/ambersbakery_cart.png" alt="CartImage" />
+        <WorkImage src="/images/works/stickynote_landing.png" alt="LandingImage" />
+        <WorkImage src="/images/works/stickynote_edit.png" alt="EditImage" />
+        <WorkImage src="/images/works/stickynote_merge.png" alt="MergeImage" />
       </Container>
     </Layout>
   )

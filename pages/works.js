@@ -6,6 +6,7 @@ import { useIntl } from 'react-intl'
 
 import thumbAmbersbakery from '../public/images/works/ambersbakery_thumbnail.png'
 import thumbStickynote from '../public/images/works/stickynote_thumbnail.png'
+import thumbKhanhsportfolio from '../public/placeholder.png'
 
 const Works = () => {
   const { formatMessage: t } = useIntl()
@@ -14,32 +15,42 @@ const Works = () => {
     <Layout title="Works">
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
-          {t({id: 'Works.Title', defaultMessage: 'Undefined'})}
+          {t({id: 'Works.Web.Title', defaultMessage: 'Undefined'})}
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem
               id="ambersbakery"
-              title={t({id: 'Works.Product.Ambersbakery.Title', defaultMessage: 'Undefined'})}
+              title={t({id: 'Works.Web.Ambersbakery.Title', defaultMessage: 'Undefined'})}
               thumbnail={thumbAmbersbakery}
             >
-              {t({id: 'Works.Product.Ambersbakery.Description', defaultMessage: 'Undefined'})}
+              {t({id: 'Works.Web.Ambersbakery.Description', defaultMessage: 'Undefined'})}
             </WorkGridItem>
           </Section>
 
           <Section>
             <WorkGridItem
               id="stickynote"
-              title={t({id: 'Works.Product.Stickynote.Title', defaultMessage: 'Undefined'})}
+              title={t({id: 'Works.Web.Stickynote.Title', defaultMessage: 'Undefined'})}
               thumbnail={thumbStickynote}
             >
-              {t({id: 'Works.Product.Stickynote.Description', defaultMessage: 'Undefined'})}
+              {t({id: 'Works.Web.Stickynote.Description', defaultMessage: 'Undefined'})}
+            </WorkGridItem>
+          </Section>
+
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="khanhsportfolio"
+              title={t({id: 'Works.Web.khanhsportfolio.Title', defaultMessage: 'Undefined'})}
+              thumbnail={thumbKhanhsportfolio}
+            >
+              {t({id: 'Works.Web.khanhsportfolio.Description', defaultMessage: 'Undefined'})}
             </WorkGridItem>
           </Section>
         </SimpleGrid>
 
-        <Section delay={0.1}>
+        <Section delay={0.2}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({id: 'Works.Experimental', defaultMessage: 'Undefined'})}
@@ -47,22 +58,22 @@ const Works = () => {
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section delay={0.2}>
+          <Section delay={0.3}>
             <WorkGridItem
               id="3dprintermonitor"
-              title={t({id: 'Works.Product.3Dprintermonitor.Title', defaultMessage: 'Undefined'})}
+              title={t({id: 'Works.Web.3Dprintermonitor.Title', defaultMessage: 'Undefined'})}
               thumbnail=''
             >
-              {t({id: 'Works.Product.3Dprintermonitor.Description', defaultMessage: 'Undefined'})}
+              {t({id: 'Works.Web.3Dprintermonitor.Description', defaultMessage: 'Undefined'})}
             </WorkGridItem>
           </Section>
-          <Section delay={0.2}>
+          <Section delay={0.3}>
             <WorkGridItem
               id="bluetoohdoor"
-              title={t({id: 'Works.Product.Bluetoohdoor.Title', defaultMessage: 'Undefined'})}
+              title={t({id: 'Works.Web.Bluetoohdoor.Title', defaultMessage: 'Undefined'})}
               thumbnail=''
             >
-              {t({id: 'Works.Product.Bluetoohdoor.Description', defaultMessage: 'Undefined'})}
+              {t({id: 'Works.Web.Bluetoohdoor.Description', defaultMessage: 'Undefined'})}
             </WorkGridItem>
           </Section>
         </SimpleGrid>
