@@ -1,2 +1,2 @@
 # Khánh's portfolio
-Feel free to take a look around
+This branch is only for redirecting Github Pages
