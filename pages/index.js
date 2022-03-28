@@ -101,28 +101,32 @@ const Home = () => {
             {t({id: 'Home.Timeline.Title', defaultMessage: 'Undefined'})}
           </Heading>
           <BioSection>
-            <BioYear>
-              {t({id: 'Home.Timeline.Year.02', defaultMessage: 'Undefined'})}
-            </BioYear>
+            <BioYear>2002</BioYear>
             {t({id: 'Home.Timeline.Content.02', defaultMessage: 'Undefined'})}
           </BioSection>
           <BioSection>
-            <BioYear>
-              {t({id: 'Home.Timeline.Year.14', defaultMessage: 'Undefined'})}
-            </BioYear>
+            <BioYear>2014</BioYear>
             {t({id: 'Home.Timeline.Content.14', defaultMessage: 'Undefined'})}
           </BioSection>
           <BioSection>
-            <BioYear>
-              {t({id: 'Home.Timeline.Year.17', defaultMessage: 'Undefined'})}
-            </BioYear>
+            <BioYear>2017</BioYear>
             {t({id: 'Home.Timeline.Content.17', defaultMessage: 'Undefined'})}
           </BioSection>
           <BioSection>
+            <BioYear>2018</BioYear>
+            {t({id: 'Home.Timeline.Content.18', defaultMessage: 'Undefined'})}
+          </BioSection>
+          <BioSection>
+            <BioYear>2019</BioYear>
+            {t({id: 'Home.Timeline.Content.19', defaultMessage: 'Undefined'})}
+          </BioSection>
+          <BioSection>
+            <BioYear>2020</BioYear>
+            {t({id: 'Home.Timeline.Content.20', defaultMessage: 'Undefined'})}
+          </BioSection>
+          <BioSection>
             <BioYear>
-              {t({id: 'Home.Timeline.Year.21', defaultMessage: 'Undefined'})}
-              -
-              {t({id: 'Timeline.Now', defaultMessage: 'Undefined'})}
+              2021-{t({id: 'Timeline.Now', defaultMessage: 'Undefined'})}
             </BioYear>
             {t({id: 'Home.Timeline.Content.21', defaultMessage: 'Undefined'})}
           </BioSection>
