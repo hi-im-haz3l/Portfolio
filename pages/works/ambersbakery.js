@@ -32,6 +32,15 @@ const Work = () => {
           </ListItem>
           <ListItem>
             <Meta>
+              {t({id: 'Works.Web.Badge.Backend', defaultMessage: 'Undefined'})}
+            </Meta>
+            <Link target="_blank" href="https://portfolio.haz3l.duckdns.org/prototype/Ambersbakery/management">
+              {t({id: 'Works.Web.Ambersbakery.Management.Instruction', defaultMessage: 'Undefined'})}
+              <ExternalLinkIcon mx="2px" />
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Meta>
               {t({id: 'Works.Web.Badge.Platform', defaultMessage: 'Undefined'})}
             </Meta>
             <span>

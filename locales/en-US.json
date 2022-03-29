@@ -33,11 +33,13 @@
     "Works.Web.Badge.Demo": "Demo",
     "Works.Web.Badge.Platform": "Platform",
     "Works.Web.Badge.Stack": "Stack",
+    "Works.Web.Badge.Backend": "Backend",
     "Works.Web.Platform.Description": "Web application, cross-platform",
 
     "Works.Web.Ambersbakery.Life": "Jan - June 2021",
     "Works.Web.Ambersbakery.Title": "Amber's Bakery",
     "Works.Web.Ambersbakery.Description": "A online bakery with robust orders, products, and HR management system.",
+    "Works.Web.Ambersbakery.Management.Instruction": "Management system",
     "Works.Web.Stickynote.Life": "March 2021",
     "Works.Web.Stickynote.Title": "Sticky Note",
     "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",

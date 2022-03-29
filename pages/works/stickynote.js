@@ -42,7 +42,7 @@ const Work = () => {
             <Meta>
               {t({id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined'})}
             </Meta>
-            <span>PHP 7.4, Bootstrap 5.1, Jquery 3.6, Vanilla JS, MariaDB 10.7</span>
+            <span>PHP 7.4, Jquery 3.6, Vanilla JS, MariaDB 10.7</span>
           </ListItem>
         </List>
 
