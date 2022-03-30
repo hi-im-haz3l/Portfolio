@@ -56,7 +56,13 @@ const LocalesSelector = () => {
                 <TabStyling locale='fi-FI' selected={locale}></TabStyling>
                 <TabStyling locale='vi-VN' selected={locale}></TabStyling>
             </TabList>
-            <TabIndicator mt='-38px' height='36px' bg={useColorModeValue('#375ba3', '#4fd1c5')} borderRadius='xl' />
+            <TabIndicator
+            mt='-38px'
+            height='36px'
+            bg={useColorModeValue('#375ba3', '#4fd1c5')}
+            borderRadius='xl'
+            boxShadow= 'lg'
+            />
         </Tabs>
     )
 }

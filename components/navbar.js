@@ -35,10 +35,9 @@ const NavBarItem = ({ href, path, target, children, ...props }) => {
         borderRadius={7}
         fontWeight='semibold'
         color={active ? activeColor : inactiveColor}
-        css={active ? { textDecoration: 'underline', 
-        textDecorationThickness: '2px' } : undefined}
+        css={active ? { textDecoration: 'underline', textDecorationThickness: '2px' } : undefined}
         target={target}
-        _hover={{ bg: useColorModeValue('#ffffff95', '#71717488') }}
+        _hover={{ bg: useColorModeValue('#d1d1d195', '#71717488') }}
         {...props}
       >
         {children}
@@ -59,8 +58,7 @@ const SideBarItem = ({ href, path, children }) => {
             variant="no-underline"
             fontWeight='semibold'
             color={active ? activeColor : inactiveColor}
-            css={active ? { textDecoration: 'underline', 
-            textDecorationThickness: '2px' } : undefined}
+            css={active ? { textDecoration: 'underline', textDecorationThickness: '2px' } : undefined}
           >
             {children}
           </Link>
@@ -80,7 +78,7 @@ const Navbar = props => {
       w="100%"
       bg={useColorModeValue('#ffffff70', '#44444a80')}
       css={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
+      zIndex={2}
       {...props}
     >
       <Container
@@ -119,7 +117,11 @@ const Navbar = props => {
             <IoLogoGithub />
             {t({id: 'Navbar.Source', defaultMessage: 'Undefined'})}
           </NavBarItem>
-          <Box ml='auto !important'>
+          <Box
+            ml='auto !important'
+            bg={useColorModeValue('#d1d1d195', '#71717488')}
+            borderRadius='xl'
+          >
             <LocalesSelector />
           </Box>
         </Stack>
