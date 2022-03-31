@@ -1,6 +1,5 @@
 import NextLink from 'next/link'
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
@@ -29,7 +28,6 @@ const Work = () => {
             <NextLink href="/" passHref>
               <Link>
                 {t({id: 'Button.Return', defaultMessage: 'Undefined'})}
-                <ExternalLinkIcon mx="2px" />
               </Link>
             </NextLink>
           </ListItem>
