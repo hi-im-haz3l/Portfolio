@@ -12,12 +12,14 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { IoLogoStackoverflow, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
 import { useIntl } from 'react-intl'
+import Events from '../components/timeline'
+import timeline from '../public/timeline.json'
+
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -26,7 +28,7 @@ const ProfileImage = chakra(Image, {
 const Home = () => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('facebook', 'teal.200')
-  const HoverColor = useColorModeValue('#f0f2f5', '#525255')
+  const HoverColor = useColorModeValue('#f0f2f5', '#464646')
 
   return (
     <Layout>
@@ -86,9 +88,7 @@ const Home = () => {
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works" scroll={false}>
-              <Button 
-              rightIcon={<ChevronRightIcon />} 
-              colorScheme={useColorModeValue('facebook', 'teal')}
+              <Button rightIcon={<ChevronRightIcon />} colorScheme={useColorModeValue('facebook', 'teal')}
               >
                 {t({id: 'Home.Works.Button', defaultMessage: 'Undefined'})}
               </Button>
@@ -100,36 +100,18 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             {t({id: 'Home.Timeline.Title', defaultMessage: 'Undefined'})}
           </Heading>
-          <BioSection>
-            <BioYear>2002</BioYear>
-            {t({id: 'Home.Timeline.Content.02', defaultMessage: 'Undefined'})}
-          </BioSection>
-          <BioSection>
-            <BioYear>2014</BioYear>
-            {t({id: 'Home.Timeline.Content.14', defaultMessage: 'Undefined'})}
-          </BioSection>
-          <BioSection>
-            <BioYear>2017</BioYear>
-            {t({id: 'Home.Timeline.Content.17', defaultMessage: 'Undefined'})}
-          </BioSection>
-          <BioSection>
-            <BioYear>2018</BioYear>
-            {t({id: 'Home.Timeline.Content.18', defaultMessage: 'Undefined'})}
-          </BioSection>
-          <BioSection>
-            <BioYear>2019</BioYear>
-            {t({id: 'Home.Timeline.Content.19', defaultMessage: 'Undefined'})}
-          </BioSection>
-          <BioSection>
-            <BioYear>2020</BioYear>
-            {t({id: 'Home.Timeline.Content.20', defaultMessage: 'Undefined'})}
-          </BioSection>
-          <BioSection>
-            <BioYear>
-              2021-{t({id: 'Timeline.Now', defaultMessage: 'Undefined'})}
-            </BioYear>
-            {t({id: 'Home.Timeline.Content.21', defaultMessage: 'Undefined'})}
-          </BioSection>
+          <List spacing={4}>
+          {
+            (timeline ?? []).map(({ year, events }) => (
+              <ListItem key={year}>
+                <Heading variant='year-title'>
+                  {year}
+                </Heading>
+                <Events events={events} />
+              </ListItem>
+            ))
+          }
+          </List>
         </Section>
 
         <Section delay={0.3}>
