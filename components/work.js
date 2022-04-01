@@ -9,9 +9,7 @@ export const Title = ({ children }) => {
   return (
     <Box>
       <NextLink href="/works" passHref>
-        <Link>
-          {t({id: 'Works.Title', defaultMessage: 'Undefined'})}
-        </Link>
+        <Link>{t({ id: 'Works.Title', defaultMessage: 'Undefined' })}</Link>
       </NextLink>
       <span>
         {' '}

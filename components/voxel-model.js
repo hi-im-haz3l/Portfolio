@@ -122,7 +122,9 @@ const VoxelModel = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <ModelContainer ref={refContainer}>{loading && <ModelSpinner />}</ModelContainer>
+    <ModelContainer ref={refContainer}>
+      {loading && <ModelSpinner />}
+    </ModelContainer>
   )
 }
 

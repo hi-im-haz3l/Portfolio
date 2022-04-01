@@ -16,16 +16,16 @@ if (typeof window !== 'undefined') {
 const messages = {
   'en-US': en,
   'vi-VN': vi,
-  'fi-FI': fi,
+  'fi-FI': fi
 }
 
 function Portfolio({ Component, pageProps, router }) {
-  const { locale, defaultLocale } = router;
+  const { locale, defaultLocale } = router
 
   return (
-    <IntlProvider 
+    <IntlProvider
       messages={messages[locale]}
-      locale={locale} 
+      locale={locale}
       defaultLocale={defaultLocale}
     >
       <Chakra cookies={pageProps.cookies}>
@@ -40,7 +40,7 @@ function Portfolio({ Component, pageProps, router }) {
               }
             }}
           >
-              <Component {...pageProps} key={router.route} />
+            <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </Layout>
       </Chakra>

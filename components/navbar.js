@@ -33,9 +33,13 @@ const NavBarItem = ({ href, path, target, children, ...props }) => {
         pl={3}
         pr={3}
         borderRadius={7}
-        fontWeight='semibold'
+        fontWeight="semibold"
         color={active ? activeColor : inactiveColor}
-        css={active ? { textDecoration: 'underline', textDecorationThickness: '2px' } : undefined}
+        css={
+          active
+            ? { textDecoration: 'underline', textDecorationThickness: '2px' }
+            : undefined
+        }
         target={target}
         _hover={{ bg: useColorModeValue('#d1d1d195', '#71717488') }}
         {...props}
@@ -53,16 +57,20 @@ const SideBarItem = ({ href, path, children }) => {
 
   return (
     <NextLink href={href} passHref>
-        <MenuItem _hover={{ bg: useColorModeValue('#edf2f7', '#414144') }}>
-          <Link
-            variant="no-underline"
-            fontWeight='semibold'
-            color={active ? activeColor : inactiveColor}
-            css={active ? { textDecoration: 'underline', textDecorationThickness: '2px' } : undefined}
-          >
-            {children}
-          </Link>
-        </MenuItem>
+      <MenuItem _hover={{ bg: useColorModeValue('#edf2f7', '#414144') }}>
+        <Link
+          variant="no-underline"
+          fontWeight="semibold"
+          color={active ? activeColor : inactiveColor}
+          css={
+            active
+              ? { textDecoration: 'underline', textDecorationThickness: '2px' }
+              : undefined
+          }
+        >
+          {children}
+        </Link>
+      </MenuItem>
     </NextLink>
   )
 }
@@ -104,7 +112,7 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <NavBarItem href="/works" path={path}>
-            {t({id: 'Navbar.Works', defaultMessage: 'Undefined'})}
+            {t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}
           </NavBarItem>
           <NavBarItem
             target="_blank"
@@ -115,12 +123,12 @@ const Navbar = props => {
             style={{ gap: 4 }}
           >
             <IoLogoGithub />
-            {t({id: 'Navbar.Source', defaultMessage: 'Undefined'})}
+            {t({ id: 'Navbar.Source', defaultMessage: 'Undefined' })}
           </NavBarItem>
           <Box
-            ml='auto !important'
+            ml="auto !important"
             bg={useColorModeValue('#d1d1d195', '#71717488')}
-            borderRadius='xl'
+            borderRadius="xl"
           >
             <LocalesSelector />
           </Box>
@@ -129,15 +137,8 @@ const Navbar = props => {
         <Box ml={7} align="end">
           <ThemeToggleButton />
 
-          <Box 
-            ml={2} 
-            display={{ base: 'inline-block', md: 'none' }} 
-          >
-            <Menu 
-              isLazy 
-              id="navbar-menu"
-              color='blackAlpha.500'
-            >
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu isLazy id="navbar-menu" color="blackAlpha.500">
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
@@ -146,18 +147,21 @@ const Navbar = props => {
               />
               <MenuList bg={useColorModeValue('#f5f5f5', '#313134')}>
                 <SideBarItem href="/" path={path}>
-                  {t({id: 'Sidebar.About', defaultMessage: 'Undefined'})}
+                  {t({ id: 'Sidebar.About', defaultMessage: 'Undefined' })}
                 </SideBarItem>
                 <SideBarItem href="/works" path={path}>
-                  {t({id: 'Sidebar.Works', defaultMessage: 'Undefined'})}
+                  {t({ id: 'Sidebar.Works', defaultMessage: 'Undefined' })}
                 </SideBarItem>
-                <SideBarItem href="https://github.com/hi-im-haz3l/portfolio" path={path}>
-                  {t({id: 'Sidebar.Source', defaultMessage: 'Undefined'})}
+                <SideBarItem
+                  href="https://github.com/hi-im-haz3l/portfolio"
+                  path={path}
+                >
+                  {t({ id: 'Sidebar.Source', defaultMessage: 'Undefined' })}
                 </SideBarItem>
                 <MenuDivider />
-                
+
                 <MenuItem closeOnSelect={false}>
-                  <Box m='0 auto !important'>
+                  <Box m="0 auto !important">
                     <LocalesSelector />
                   </Box>
                 </MenuItem>

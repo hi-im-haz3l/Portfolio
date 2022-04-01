@@ -14,12 +14,15 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoStackoverflow, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
+import {
+  IoLogoStackoverflow,
+  IoLogoLinkedin,
+  IoLogoGithub
+} from 'react-icons/io5'
 import Image from 'next/image'
 import { useIntl } from 'react-intl'
 import Events from '../components/timeline'
 import timeline from '../public/timeline.json'
-
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -40,7 +43,7 @@ const Home = () => {
           textAlign="center"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         >
-          {t({id: 'Home.Greeting', defaultMessage: 'Undefined'})}
+          {t({ id: 'Home.Greeting', defaultMessage: 'Undefined' })}
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -48,9 +51,7 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Lê Duy Khánh
             </Heading>
-            <p>
-              {t({id: 'Home.Description', defaultMessage: 'Undefined'})}
-            </p>
+            <p>{t({ id: 'Home.Description', defaultMessage: 'Undefined' })}</p>
           </Box>
           <Box
             flexShrink={0}
@@ -66,12 +67,12 @@ const Home = () => {
               h="100px"
               display="inline-block"
               borderRadius="full"
-              overflow='hidden'
+              overflow="hidden"
             >
               <ProfileImage
                 src="/images/sad_keanu.jpg"
                 alt="Profile image"
-                borderRadius='full'
+                borderRadius="full"
                 width="100%"
                 height="100%"
               />
@@ -81,19 +82,19 @@ const Home = () => {
 
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            {t({id: 'Home.Bio.Title', defaultMessage: 'Undefined'})}
+            {t({ id: 'Home.Bio.Title', defaultMessage: 'Undefined' })}
           </Heading>
           <Paragraph>
-            {t({id: 'Home.Bio.Content', defaultMessage: 'Undefined'})}
+            {t({ id: 'Home.Bio.Content', defaultMessage: 'Undefined' })}
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/works" scroll={false}>
               <Button
                 rightIcon={<ChevronRightIcon />}
                 colorScheme={useColorModeValue('facebook', 'teal')}
-                boxShadow= 'lg'
+                boxShadow="lg"
               >
-                {t({id: 'Home.Works.Button', defaultMessage: 'Undefined'})}
+                {t({ id: 'Home.Works.Button', defaultMessage: 'Undefined' })}
               </Button>
             </NextLink>
           </Box>
@@ -101,34 +102,30 @@ const Home = () => {
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
-            {t({id: 'Home.Timeline.Title', defaultMessage: 'Undefined'})}
+            {t({ id: 'Home.Timeline.Title', defaultMessage: 'Undefined' })}
           </Heading>
           <List spacing={4}>
-          {
-            (timeline ?? []).map(({ year, events }) => (
+            {(timeline ?? []).map(({ year, events }) => (
               <ListItem key={year}>
-                <Heading variant='year-title'>
-                  {year}
-                </Heading>
+                <Heading variant="year-title">{year}</Heading>
                 <Events events={events} />
               </ListItem>
-            ))
-          }
+            ))}
           </List>
         </Section>
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            {t({id: 'Home.Hobbies.Title', defaultMessage: 'Undefined'})}
+            {t({ id: 'Home.Hobbies.Title', defaultMessage: 'Undefined' })}
           </Heading>
           <Paragraph>
-            {t({id: 'Home.Hobbies.Content', defaultMessage: 'Undefined'})}
+            {t({ id: 'Home.Hobbies.Content', defaultMessage: 'Undefined' })}
           </Paragraph>
         </Section>
 
         <Section delay={0.4}>
           <Heading as="h3" variant="section-title">
-            {t({id: 'Home.Social.Title', defaultMessage: 'Undefined'})}
+            {t({ id: 'Home.Social.Title', defaultMessage: 'Undefined' })}
           </Heading>
           <List>
             <ListItem>

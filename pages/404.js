@@ -15,16 +15,14 @@ const NotFound = () => {
   return (
     <Container>
       <Heading as="h1">
-        {t({id: '404.Title', defaultMessage: 'Undefined'})}
+        {t({ id: '404.Title', defaultMessage: 'Undefined' })}
       </Heading>
-      <Text>
-        {t({id: '404.Description', defaultMessage: 'Undefined'})}
-      </Text>
+      <Text>{t({ id: '404.Description', defaultMessage: 'Undefined' })}</Text>
       <Divider my={6} />
       <Box my={6} align="center">
         <NextLink href="/">
           <Button colorScheme="teal">
-            {t({id: 'Button.Return', defaultMessage: 'Undefined'})}
+            {t({ id: 'Button.Return', defaultMessage: 'Undefined' })}
           </Button>
         </NextLink>
       </Box>

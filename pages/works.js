@@ -15,37 +15,55 @@ const Works = () => {
     <Layout title="Works">
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
-          {t({id: 'Works.Web.Title', defaultMessage: 'Undefined'})}
+          {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem
               id="ambersbakery"
-              title={t({id: 'Works.Web.Ambersbakery.Title', defaultMessage: 'Undefined'})}
+              title={t({
+                id: 'Works.Web.Ambersbakery.Title',
+                defaultMessage: 'Undefined'
+              })}
               thumbnail={thumbAmbersbakery}
             >
-              {t({id: 'Works.Web.Ambersbakery.Description', defaultMessage: 'Undefined'})}
+              {t({
+                id: 'Works.Web.Ambersbakery.Description',
+                defaultMessage: 'Undefined'
+              })}
             </WorkGridItem>
           </Section>
 
           <Section>
             <WorkGridItem
               id="stickynote"
-              title={t({id: 'Works.Web.Stickynote.Title', defaultMessage: 'Undefined'})}
+              title={t({
+                id: 'Works.Web.Stickynote.Title',
+                defaultMessage: 'Undefined'
+              })}
               thumbnail={thumbStickynote}
             >
-              {t({id: 'Works.Web.Stickynote.Description', defaultMessage: 'Undefined'})}
+              {t({
+                id: 'Works.Web.Stickynote.Description',
+                defaultMessage: 'Undefined'
+              })}
             </WorkGridItem>
           </Section>
 
           <Section delay={0.1}>
             <WorkGridItem
               id="khanhsportfolio"
-              title={t({id: 'Works.Web.khanhsportfolio.Title', defaultMessage: 'Undefined'})}
+              title={t({
+                id: 'Works.Web.khanhsportfolio.Title',
+                defaultMessage: 'Undefined'
+              })}
               thumbnail={thumbKhanhsportfolio}
             >
-              {t({id: 'Works.Web.khanhsportfolio.Description', defaultMessage: 'Undefined'})}
+              {t({
+                id: 'Works.Web.khanhsportfolio.Description',
+                defaultMessage: 'Undefined'
+              })}
             </WorkGridItem>
           </Section>
         </SimpleGrid>
@@ -53,7 +71,7 @@ const Works = () => {
         <Section delay={0.2}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
-            {t({id: 'Works.Experimental', defaultMessage: 'Undefined'})}
+            {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
 
@@ -61,19 +79,31 @@ const Works = () => {
           <Section delay={0.3}>
             <WorkGridItem
               id="3dprintermonitor"
-              title={t({id: 'Works.Web.3Dprintermonitor.Title', defaultMessage: 'Undefined'})}
-              thumbnail=''
+              title={t({
+                id: 'Works.Web.3Dprintermonitor.Title',
+                defaultMessage: 'Undefined'
+              })}
+              thumbnail=""
             >
-              {t({id: 'Works.Web.3Dprintermonitor.Description', defaultMessage: 'Undefined'})}
+              {t({
+                id: 'Works.Web.3Dprintermonitor.Description',
+                defaultMessage: 'Undefined'
+              })}
             </WorkGridItem>
           </Section>
           <Section delay={0.3}>
             <WorkGridItem
               id="bluetoohdoor"
-              title={t({id: 'Works.Web.Bluetoohdoor.Title', defaultMessage: 'Undefined'})}
-              thumbnail=''
+              title={t({
+                id: 'Works.Web.Bluetoohdoor.Title',
+                defaultMessage: 'Undefined'
+              })}
+              thumbnail=""
             >
-              {t({id: 'Works.Web.Bluetoohdoor.Description', defaultMessage: 'Undefined'})}
+              {t({
+                id: 'Works.Web.Bluetoohdoor.Description',
+                defaultMessage: 'Undefined'
+              })}
             </WorkGridItem>
           </Section>
         </SimpleGrid>

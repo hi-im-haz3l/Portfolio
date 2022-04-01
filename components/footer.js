@@ -3,10 +3,11 @@ import { useIntl } from 'react-intl'
 
 const Footer = () => {
   const { formatMessage: t } = useIntl()
-  
+
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
-      {t({id: 'Footer', defaultMessage: 'Undefined'})} <Link
+      {t({ id: 'Footer', defaultMessage: 'Undefined' })}{' '}
+      <Link
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/hi-im-haz3l"

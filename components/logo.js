@@ -29,7 +29,7 @@ const Logo = () => {
       <a>
         <LogoBox>
           <Image src={dinoImg} width={20} height={20} alt="logo" />
-          <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')} >
+          <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}>
             Khánh&#x27;s Portfolio
           </Text>
         </LogoBox>

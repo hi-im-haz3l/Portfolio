@@ -9,39 +9,59 @@ const Work = () => {
   const { formatMessage: t } = useIntl()
 
   return (
-    <Layout title={t({id: 'Works.Web.khanhsportfolio.Title', defaultMessage: 'Undefined'})}>
+    <Layout
+      title={t({
+        id: 'Works.Web.khanhsportfolio.Title',
+        defaultMessage: 'Undefined'
+      })}
+    >
       <Container>
         <Title>
-          {t({id: 'Works.Web.khanhsportfolio.Title', defaultMessage: 'Undefined'})}
+          {t({
+            id: 'Works.Web.khanhsportfolio.Title',
+            defaultMessage: 'Undefined'
+          })}
           <Badge ml={3}>
-            {t({id: 'Works.Web.khanhsportfolio.Life', defaultMessage: 'Undefined'})}
+            {t({
+              id: 'Works.Web.khanhsportfolio.Lifespan',
+              defaultMessage: 'Undefined'
+            })}
           </Badge>
         </Title>
         <P>
-          {t({id: 'Works.Web.khanhsportfolio.Description', defaultMessage: 'Undefined'})}
+          {t({
+            id: 'Works.Web.khanhsportfolio.Description',
+            defaultMessage: 'Undefined'
+          })}
         </P>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>
-              {t({id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined'})}
+              {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
             </Meta>
             <NextLink href="/" passHref>
               <Link>
-                {t({id: 'Button.Return', defaultMessage: 'Undefined'})}
+                {t({ id: 'Button.Return', defaultMessage: 'Undefined' })}
               </Link>
             </NextLink>
           </ListItem>
           <ListItem>
             <Meta>
-              {t({id: 'Works.Web.Badge.Platform', defaultMessage: 'Undefined'})}
+              {t({
+                id: 'Works.Web.Badge.Platform',
+                defaultMessage: 'Undefined'
+              })}
             </Meta>
             <span>
-              {t({id: 'Works.Web.Platform.Description', defaultMessage: 'Undefined'})}
+              {t({
+                id: 'Works.Web.Platform.Description',
+                defaultMessage: 'Undefined'
+              })}
             </span>
           </ListItem>
           <ListItem>
             <Meta>
-              {t({id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined'})}
+              {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
             </Meta>
             <span>
               Next.js, React, Chakra UI, Emotion, Three.js, Framer Motion
@@ -49,8 +69,14 @@ const Work = () => {
           </ListItem>
         </List>
 
-        <WorkImage src="/images/works/khanhsportfolio_landing.png" alt="LandingImage" />
-        <WorkImage src="/images/works/khanhsportfolio_works.png" alt="WorksImage" />
+        <WorkImage
+          src="/images/works/khanhsportfolio_landing.png"
+          alt="LandingImage"
+        />
+        <WorkImage
+          src="/images/works/khanhsportfolio_works.png"
+          alt="WorksImage"
+        />
       </Container>
     </Layout>
   )
