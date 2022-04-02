@@ -32,7 +32,7 @@ const NavBarItem = ({ href, path, target, children, ...props }) => {
         p={2}
         pl={3}
         pr={3}
-        borderRadius={7}
+        borderRadius="lg"
         fontWeight="semibold"
         color={active ? activeColor : inactiveColor}
         css={

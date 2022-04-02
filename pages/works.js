@@ -18,7 +18,7 @@ const Works = () => {
           {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
         </Heading>
 
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <SimpleGrid columns={[1, 1, 2]} m={-3}>
           <Section>
             <WorkGridItem
               id="ambersbakery"

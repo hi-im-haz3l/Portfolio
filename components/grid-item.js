@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -22,7 +22,13 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 )
 
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
+  <Box
+    w="100%"
+    textAlign="center"
+    p={3}
+    borderRadius="xl"
+    _hover={{ bg: useColorModeValue('#f0f2f5', '#464646') }}
+  >
     <NextLink href={`/works/${id}`} scroll={false}>
       <LinkBox cursor="pointer">
         <Image
