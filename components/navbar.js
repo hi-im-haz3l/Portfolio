@@ -144,6 +144,7 @@ const Navbar = props => {
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
+                borderRadius="lg"
               />
               <MenuList bg={useColorModeValue('#f5f5f5', '#313134')}>
                 <SideBarItem href="/" path={path}>
