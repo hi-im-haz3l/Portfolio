@@ -1,6 +1,6 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
+import { Section } from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import { useIntl } from 'react-intl'
 
@@ -14,19 +14,11 @@ const Works = () => {
   return (
     <Layout title="Works">
       <Container maxW="container.sm">
-        <Heading
-          as="h3"
-          fontSize={20}
-          mb={6}
-        >
+        <Heading as="h3" fontSize={20} mb={6}>
           {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
         </Heading>
 
-        <SimpleGrid
-          columns={[1, 1, 2]}
-          m={-3}
-          spacing={2}
-        >
+        <SimpleGrid columns={[1, 1, 2]} m={-3} spacing={2}>
           <Section>
             <WorkGridItem
               id="ambersbakery"
@@ -78,11 +70,7 @@ const Works = () => {
 
         <Section delay={0.2}>
           <Divider my={6} />
-          <Heading
-            as="h3"
-            fontSize={20}
-            mb={4}
-          >
+          <Heading as="h3" fontSize={20} mb={4}>
             {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
