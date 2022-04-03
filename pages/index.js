@@ -11,7 +11,7 @@ import {
   chakra
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
+import { Paragraph, JustifyParagraph } from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import {
@@ -84,9 +84,9 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Bio.Title', defaultMessage: 'Undefined' })}
           </Heading>
-          <Paragraph>
+          <JustifyParagraph>
             {t({ id: 'Home.Bio.Content', defaultMessage: 'Undefined' })}
-          </Paragraph>
+          </JustifyParagraph>
           <Box align="center" my={4}>
             <NextLink href="/works" scroll={false}>
               <Button

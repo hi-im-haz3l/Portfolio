@@ -1,7 +1,7 @@
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage } from '../../components/work'
-import P from '../../components/paragraph'
+import { Paragraph } from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import { FaFileAlt } from 'react-icons/fa'
 import { GiPlatform, GiStack } from 'react-icons/gi'
@@ -22,9 +22,9 @@ const Work = () => {
             {t({ id: 'Works.Web.Stickynote.Lifespan', defaultMessage: 'Undefined' })}
           </Badge>
         </Title>
-        <P>
+        <Paragraph>
           {t({ id: 'Works.Web.Stickynote.Description', defaultMessage: 'Undefined' })}
-        </P>
+        </Paragraph>
         <List ml={4} my={4}>
           <ListItem>
             <IconBadge icon={<FaFileAlt />}>
