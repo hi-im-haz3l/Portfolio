@@ -103,6 +103,20 @@ const Home = () => {
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
+            {t({ id: 'Home.Timeline.Title', defaultMessage: 'Undefined' })}
+          </Heading>
+          <List spacing={4}>
+            {(timeline ?? []).map(({ year, events }) => (
+              <ListItem key={year}>
+                <Heading variant="year-title">{year}</Heading>
+                <Events events={events} />
+              </ListItem>
+            ))}
+          </List>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Hobbies.Title', defaultMessage: 'Undefined' })}
           </Heading>
           <Box>
@@ -123,20 +137,6 @@ const Home = () => {
             </Rating>
             <Spacing />
           </Box>
-        </Section>
-
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            {t({ id: 'Home.Timeline.Title', defaultMessage: 'Undefined' })}
-          </Heading>
-          <List spacing={4}>
-            {(timeline ?? []).map(({ year, events }) => (
-              <ListItem key={year}>
-                <Heading variant="year-title">{year}</Heading>
-                <Events events={events} />
-              </ListItem>
-            ))}
-          </List>
         </Section>
 
         <Section delay={0.4}>
