@@ -24,10 +24,13 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
   <Box
     w="100%"
-    textAlign="center"
+    maxW="421px"
     p={3}
+    m="0 auto"
+    textAlign="center"
     borderRadius="xl"
     _hover={{ bg: useColorModeValue('#f0f2f5', '#464646') }}
+    transition="150ms"
   >
     <NextLink href={`/works/${id}`} scroll={false}>
       <LinkBox cursor="pointer">

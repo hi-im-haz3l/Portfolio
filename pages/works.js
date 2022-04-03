@@ -13,12 +13,20 @@ const Works = () => {
 
   return (
     <Layout title="Works">
-      <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
+      <Container maxW="container.sm">
+        <Heading
+          as="h3"
+          fontSize={20}
+          mb={6}
+        >
           {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
         </Heading>
 
-        <SimpleGrid columns={[1, 1, 2]} m={-3}>
+        <SimpleGrid
+          columns={[1, 1, 2]}
+          m={-3}
+          spacing={2}
+        >
           <Section>
             <WorkGridItem
               id="ambersbakery"
@@ -70,13 +78,17 @@ const Works = () => {
 
         <Section delay={0.2}>
           <Divider my={6} />
-          <Heading as="h3" fontSize={20} mb={4}>
+          <Heading
+            as="h3"
+            fontSize={20}
+            mb={4}
+          >
             {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section delay={0.3}>
+          <Section delay={0.2}>
             <WorkGridItem
               id="3dprintermonitor"
               title={t({
@@ -91,7 +103,8 @@ const Works = () => {
               })}
             </WorkGridItem>
           </Section>
-          <Section delay={0.3}>
+
+          <Section delay={0.2}>
             <WorkGridItem
               id="bluetoohdoor"
               title={t({

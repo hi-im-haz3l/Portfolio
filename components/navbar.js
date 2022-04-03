@@ -29,9 +29,7 @@ const NavBarItem = ({ href, path, target, children, ...props }) => {
   return (
     <NextLink href={href} passHref>
       <Link
-        p={2}
-        pl={3}
-        pr={3}
+        p="0.5rem 0.75rem"
         borderRadius="lg"
         fontWeight="semibold"
         color={active ? activeColor : inactiveColor}
