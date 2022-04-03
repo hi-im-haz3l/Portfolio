@@ -18,4 +18,4 @@ export const Section = ({ children, delay = 0 }) => (
   </StyledDiv>
 )
 
-export const Spacing = () => <Box pb={4}></Box>
+export const Spacing = () => <Box pb={2}></Box>

@@ -13,6 +13,7 @@ const Rating = ({ comfortability, children }) => {
 
   return (
     <Flex
+      mb={2}
       color={useColorModeValue('#1a202c', '#e3e3e3')}
       alignItems="center"
       justifyContent="space-between"
