@@ -143,6 +143,8 @@ const Navbar = props => {
                 variant="outline"
                 aria-label="Options"
                 borderRadius="lg"
+                borderWidth="2px"
+                borderColor={useColorModeValue('blackAlpha.50', 'whiteAlpha.200')}
               />
               <MenuList bg={useColorModeValue('#f5f5f5', '#313134')}>
                 <SideBarItem href="/" path={path}>
