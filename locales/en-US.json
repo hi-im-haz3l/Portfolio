@@ -47,7 +47,11 @@
   "Home.Timeline.Content.22": "Started working on building my portfolio",
   "Home.Timeline.Content.22.Description": "As spring break began, I figured it might be a great opportunity to look back and reflect upon what I've learned throughout the years.",
   "Home.Hobbies.Title": "Things I love most",
-  "Home.Hobbies.Content": "Music, Learning, Making, and Machine Learning.",
+  "Home.Hobbies.1": "Music",
+  "Home.Hobbies.2": "Creating",
+  "Home.Hobbies.3": "Learning",
+  "Home.Hobbies.4": "Traveling",
+  "Home.Hobbies.5": "Machine Learning",
   "Home.Social.Title": "Other platforms",
 
   "Works.Title": "My works",

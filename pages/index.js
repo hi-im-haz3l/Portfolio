@@ -11,9 +11,9 @@ import {
   chakra
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { Paragraph, JustifyParagraph } from '../components/paragraph'
+import { JustifyParagraph } from '../components/paragraph'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
+import { Section, Spacing } from '../components/section'
 import {
   IoLogoStackoverflow,
   IoLogoLinkedin,
@@ -22,6 +22,7 @@ import {
 import Image from 'next/image'
 import { useIntl } from 'react-intl'
 import Events from '../components/timeline'
+import Rating from '../components/rating'
 import timeline from '../public/timeline.json'
 
 const ProfileImage = chakra(Image, {
@@ -102,6 +103,30 @@ const Home = () => {
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
+            {t({ id: 'Home.Hobbies.Title', defaultMessage: 'Undefined' })}
+          </Heading>
+          <Box>
+            <Rating comfortability="5">
+              {t({ id: 'Home.Hobbies.1', defaultMessage: 'Undefined' })}
+            </Rating>
+            <Rating comfortability="5">
+              {t({ id: 'Home.Hobbies.2', defaultMessage: 'Undefined' })}
+            </Rating>
+            <Rating comfortability="5">
+              {t({ id: 'Home.Hobbies.3', defaultMessage: 'Undefined' })}
+            </Rating>
+            <Rating comfortability="4">
+              {t({ id: 'Home.Hobbies.4', defaultMessage: 'Undefined' })}
+            </Rating>
+            <Rating comfortability="4">
+              {t({ id: 'Home.Hobbies.5', defaultMessage: 'Undefined' })}
+            </Rating>
+            <Spacing />
+          </Box>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Timeline.Title', defaultMessage: 'Undefined' })}
           </Heading>
           <List spacing={4}>
@@ -112,15 +137,6 @@ const Home = () => {
               </ListItem>
             ))}
           </List>
-        </Section>
-
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            {t({ id: 'Home.Hobbies.Title', defaultMessage: 'Undefined' })}
-          </Heading>
-          <Paragraph>
-            {t({ id: 'Home.Hobbies.Content', defaultMessage: 'Undefined' })}
-          </Paragraph>
         </Section>
 
         <Section delay={0.4}>

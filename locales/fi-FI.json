@@ -47,7 +47,11 @@
   "Home.Timeline.Content.22": "Aloin työstää portfolioni rakentamista",
   "Home.Timeline.Content.22.Description": "Kevätloman alkaessa ajattelin, että se voisi olla loistava tilaisuus katsoa taaksepäin ja pohtia, mitä olen oppinut vuosien varrella.",
   "Home.Hobbies.Title": "Asioita, joita rakastan eniten",
-  "Home.Hobbies.Content": "Musiikki, Oppiminen, Tekeminen, ja Koneoppiminen.",
+  "Home.Hobbies.1": "Musiikki",
+  "Home.Hobbies.2": "Tekeminen",
+  "Home.Hobbies.3": "Oppiminen",
+  "Home.Hobbies.4": "Matkustaminen",
+  "Home.Hobbies.5": "Koneoppiminen",
   "Home.Social.Title": "Muut alustat",
 
   "Works.Title": "Omat projektit",

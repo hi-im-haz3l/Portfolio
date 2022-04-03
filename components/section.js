@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { chakra, shouldForwardProp } from '@chakra-ui/react'
+import { Box, chakra, shouldForwardProp } from '@chakra-ui/react'
 
 const StyledDiv = chakra(motion.div, {
   shouldForwardProp: prop => {
@@ -7,7 +7,7 @@ const StyledDiv = chakra(motion.div, {
   }
 })
 
-const Section = ({ children, delay = 0 }) => (
+export const Section = ({ children, delay = 0 }) => (
   <StyledDiv
     initial={{ y: 10, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
@@ -18,4 +18,4 @@ const Section = ({ children, delay = 0 }) => (
   </StyledDiv>
 )
 
-export default Section
+export const Spacing = () => <Box pb={4}></Box>
