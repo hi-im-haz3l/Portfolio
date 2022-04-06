@@ -86,13 +86,7 @@ const Comforts = () => {
             bg={useColorModeValue(undefined, '#000')}
             tooltip="Next.js"
           />
-          <IconBadge
-            icon={<RiReactjsLine />}
-            color={useColorModeValue('#00c2e5', undefined)}
-            bg={useColorModeValue(undefined, '#00aec5')}
-            borderColor={useColorModeValue('#00c2e5', '#007989')}
-            tooltip="React"
-          />
+
           <IconBadge
             icon={<SiPhp />}
             color={useColorModeValue('#4b568b', undefined)}
@@ -113,6 +107,13 @@ const Comforts = () => {
             bg={useColorModeValue(undefined, '#5bc0c1')}
             borderColor={useColorModeValue('#4cc8c3', '#408889')}
             tooltip="Chakra UI"
+          />
+          <IconBadge
+            icon={<RiReactjsLine />}
+            color={useColorModeValue('#00c2e5', undefined)}
+            bg={useColorModeValue(undefined, '#00aec5')}
+            borderColor={useColorModeValue('#00c2e5', '#007989')}
+            tooltip="React"
           />
         </Technologies>
       </Comfort>
