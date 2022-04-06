@@ -17,7 +17,7 @@ const Events = ({ events }) => {
   const LineColor = useColorModeValue('#c1c1c1', '#686868')
 
   return (
-    <List paddingBottom={4}>
+    <List pb={4}>
       {(events ?? []).map(({ title, description }, index) => {
         const isLastElement = index === events.length - 1
         const isFirstElement = index === 0
@@ -26,7 +26,7 @@ const Events = ({ events }) => {
         const DescriptionID = TitleID + '.Description'
 
         return (
-          <ListItem key={title} zIndex={0} paddingTop={4} position="relative">
+          <ListItem key={title} zIndex={0} pt={4} position="relative">
             {shouldConnectDots ? (
               <Flex
                 left="5px"
@@ -47,7 +47,7 @@ const Events = ({ events }) => {
               <Box
                 minWidth="14px"
                 height="14px"
-                marginTop={1}
+                mt={1}
                 borderRadius="full"
                 bg={AccentColor}
               />
@@ -58,7 +58,7 @@ const Events = ({ events }) => {
                 <Text width="full" textAlign="left">
                   {typeof description === 'undefined'
                     ? ''
-                    : t({ id: DescriptionID, defaultMessage: '' })}
+                    : t({ id: DescriptionID, defaultMessage: 'Undefined' })}
                 </Text>
               </VStack>
             </HStack>

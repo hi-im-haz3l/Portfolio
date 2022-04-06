@@ -8,12 +8,18 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
+  chakra,
+  Collapse
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import {
+  ChevronRightIcon,
+  ChevronUpIcon,
+  ChevronDownIcon
+} from '@chakra-ui/icons'
 import { JustifyParagraph } from '../components/paragraph'
 import Layout from '../components/layouts/article'
-import { Section, Spacing } from '../components/section'
+import Section from '../components/section'
+import Comforts from '../components/comforts'
 import {
   IoLogoStackoverflow,
   IoLogoLinkedin,
@@ -22,8 +28,8 @@ import {
 import Image from 'next/image'
 import { useIntl } from 'react-intl'
 import Events from '../components/timeline'
-import Rating from '../components/rating'
 import timeline from '../public/timeline.json'
+import { useState } from 'react'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -31,8 +37,17 @@ const ProfileImage = chakra(Image, {
 
 const Home = () => {
   const { formatMessage: t } = useIntl()
-  const AccentColor = useColorModeValue('facebook', 'teal.200')
+  const AccentColor = useColorModeValue('#385898', 'teal.200')
   const HoverColor = useColorModeValue('#f0f2f5', '#464646')
+  const BtnTextColor = useColorModeValue('#979797', '#ededee')
+  const CollapseShadow = useColorModeValue(
+    '0px -20px 20px -23px #000',
+    '0px -30px 20px -20px #000'
+  )
+  const [show, setShow] = useState(false)
+  const handleToggle = () => {
+    setShow(!show)
+  }
 
   return (
     <Layout>
@@ -81,14 +96,14 @@ const Home = () => {
           </Box>
         </Box>
 
-        <Section delay={0.1}>
+        <Section mb={7} delay={0.1}>
           <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Bio.Title', defaultMessage: 'Undefined' })}
           </Heading>
           <JustifyParagraph>
             {t({ id: 'Home.Bio.Content', defaultMessage: 'Undefined' })}
           </JustifyParagraph>
-          <Box align="center" my={4}>
+          <Box align="center" mt={4}>
             <NextLink href="/works" scroll={false}>
               <Button
                 rightIcon={<ChevronRightIcon />}
@@ -101,45 +116,54 @@ const Home = () => {
           </Box>
         </Section>
 
-        <Section delay={0.2}>
+        <Section mb={8} delay={0.2}>
+          <Heading as="h3" variant="section-title">
+            {t({ id: 'Home.Comfortable.Title', defaultMessage: 'Undefined' })}
+          </Heading>
+          <Comforts />
+        </Section>
+
+        <Section mb={6} delay={0.3}>
           <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Timeline.Title', defaultMessage: 'Undefined' })}
           </Heading>
-          <List spacing={4}>
-            {(timeline ?? []).map(({ year, events }) => (
-              <ListItem key={year}>
-                <Heading variant="year-title">{year}</Heading>
-                <Events events={events} />
-              </ListItem>
-            ))}
-          </List>
-        </Section>
-
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            {t({ id: 'Home.Hobbies.Title', defaultMessage: 'Undefined' })}
-          </Heading>
-          <Box>
-            <Rating comfortability="5">
-              {t({ id: 'Home.Hobbies.1', defaultMessage: 'Undefined' })}
-            </Rating>
-            <Rating comfortability="5">
-              {t({ id: 'Home.Hobbies.2', defaultMessage: 'Undefined' })}
-            </Rating>
-            <Rating comfortability="5">
-              {t({ id: 'Home.Hobbies.3', defaultMessage: 'Undefined' })}
-            </Rating>
-            <Rating comfortability="4">
-              {t({ id: 'Home.Hobbies.4', defaultMessage: 'Undefined' })}
-            </Rating>
-            <Rating comfortability="4">
-              {t({ id: 'Home.Hobbies.5', defaultMessage: 'Undefined' })}
-            </Rating>
-            <Spacing />
+          <Collapse startingHeight={531} in={show} duration={5000}>
+            <List spacing={4} mb={-4}>
+              {(timeline ?? []).map(({ year, events }) => (
+                <ListItem key={year}>
+                  <Heading variant="year-title">{year}</Heading>
+                  <Events events={events} />
+                </ListItem>
+              ))}
+            </List>
+          </Collapse>
+          <Box
+            left="-5%"
+            width="110%"
+            position="relative"
+            boxShadow={show ? undefined : CollapseShadow}
+            align="center"
+            overflow="auto"
+          >
+            <Button
+              variant="ghost"
+              display="flex"
+              mt={2}
+              p=".25em .75em"
+              h="auto"
+              flexDirection="column"
+              color={useColorModeValue('#979797', '#686868')}
+              _hover={{ bg: HoverColor, color: BtnTextColor }}
+              onClick={handleToggle}
+            >
+              {show ? <ChevronUpIcon /> : undefined}
+              {show ? 'Collapse' : 'Expand'}
+              {show ? undefined : <ChevronDownIcon />}
+            </Button>
           </Box>
         </Section>
 
-        <Section delay={0.4}>
+        <Section mb={4} delay={0.4}>
           <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Social.Title', defaultMessage: 'Undefined' })}
           </Heading>
@@ -149,12 +173,10 @@ const Home = () => {
                 variant="no-underline"
                 href="https://www.linkedin.com/in/haz3l/"
                 target="_blank"
-                color={AccentColor}
-                _focus={{ boxShadow: 'none' }}
               >
                 <Button
                   variant="ghost"
-                  colorScheme={AccentColor}
+                  color={AccentColor}
                   leftIcon={<IoLogoLinkedin />}
                   _hover={{ bg: HoverColor }}
                 >
@@ -167,12 +189,10 @@ const Home = () => {
                 variant="no-underline"
                 href="https://github.com/hi-im-haz3l"
                 target="_blank"
-                color={AccentColor}
-                _focus={{ boxShadow: 'none' }}
               >
                 <Button
                   variant="ghost"
-                  colorScheme={AccentColor}
+                  color={AccentColor}
                   leftIcon={<IoLogoGithub />}
                   _hover={{ bg: HoverColor }}
                 >
@@ -185,12 +205,10 @@ const Home = () => {
                 variant="no-underline"
                 href="https://stackoverflow.com/users/11005113/haz3l"
                 target="_blank"
-                color={AccentColor}
-                _focus={{ boxShadow: 'none' }}
               >
                 <Button
                   variant="ghost"
-                  colorScheme={AccentColor}
+                  color={AccentColor}
                   leftIcon={<IoLogoStackoverflow />}
                   _hover={{ bg: HoverColor }}
                 >
