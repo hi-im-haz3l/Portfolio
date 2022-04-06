@@ -1,4 +1,10 @@
-import { Flex, Box, SimpleGrid, HStack, useColorModeValue } from '@chakra-ui/react'
+import {
+  Flex,
+  Box,
+  SimpleGrid,
+  HStack,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { IconBadge } from './icon-badge'
 BsLightningChargeFill
 import { BsLightningChargeFill } from 'react-icons/bs'
@@ -27,8 +33,8 @@ import { useIntl } from 'react-intl'
 const Comfort = ({ children, ...props }) => (
   <Flex
     p=".75rem 1rem"
-    maxW={[300, "unset"]}
-    m={["0 auto", 0]}
+    maxW={[300, 'unset']}
+    m={['0 auto', 0]}
     borderRadius="xl"
     bg={useColorModeValue('whiteAlpha.500', 'blackAlpha.300')}
     justifyContent="space-between"
@@ -42,16 +48,12 @@ const Comfort = ({ children, ...props }) => (
   </Flex>
 )
 
-const Heading = ({ children }) => (
-  <Box w={[200, 150, 200]}>
-    {children}
-  </Box>
-)
+const Heading = ({ children }) => <Box w={[200, 150, 200]}>{children}</Box>
 
 const Technologies = ({ children }) => (
   <HStack
     w={[200, 150, 200]}
-    justifyContent={["flex-start", "flex-end", "flex-start"]}
+    justifyContent={['flex-start', 'flex-end', 'flex-start']}
     pt={[2, 0, 2]}
   >
     {children}
@@ -60,13 +62,22 @@ const Technologies = ({ children }) => (
 
 const Comforts = () => {
   const { formatMessage: t } = useIntl()
-  const CTooltip = 'C (' + t({ id: 'Home.Comfortable.Content.Embedded.C', defaultMessage: 'Undefined' }) + ')'
+  const CTooltip =
+    'C (' +
+    t({
+      id: 'Home.Comfortable.Content.Embedded.C',
+      defaultMessage: 'Undefined'
+    }) +
+    ')'
 
   return (
     <SimpleGrid columns={[1, 1, 2]} spacing={3}>
       <Comfort>
         <Heading>
-          {t({ id: 'Home.Comfortable.Content.Web', defaultMessage: 'Undefined' })}
+          {t({
+            id: 'Home.Comfortable.Content.Web',
+            defaultMessage: 'Undefined'
+          })}
         </Heading>
         <Technologies>
           <IconBadge
@@ -92,7 +103,7 @@ const Comforts = () => {
           <IconBadge
             icon={<SiBootstrap />}
             color={useColorModeValue('#8f62d2', undefined)}
-            bg={useColorModeValue(undefined,'#7e4eca')}
+            bg={useColorModeValue(undefined, '#7e4eca')}
             borderColor={useColorModeValue('#8f62d2', undefined)}
             tooltip="Bootstrap"
           />
@@ -107,7 +118,10 @@ const Comforts = () => {
       </Comfort>
       <Comfort>
         <Heading>
-          {t({ id: 'Home.Comfortable.Content.Linux', defaultMessage: 'Undefined' })}
+          {t({
+            id: 'Home.Comfortable.Content.Linux',
+            defaultMessage: 'Undefined'
+          })}
         </Heading>
         <Technologies>
           <IconBadge
@@ -130,7 +144,7 @@ const Comforts = () => {
             bg={useColorModeValue(undefined, '#097039')}
             borderColor={useColorModeValue('#097039', undefined)}
             tooltip="Nginx"
-            />
+          />
           <IconBadge
             icon={<SiPopos />}
             color={useColorModeValue('#2c7078', undefined)}
@@ -142,7 +156,10 @@ const Comforts = () => {
       </Comfort>
       <Comfort>
         <Heading>
-          {t({ id: 'Home.Comfortable.Content.Embedded', defaultMessage: 'Undefined' })}
+          {t({
+            id: 'Home.Comfortable.Content.Embedded',
+            defaultMessage: 'Undefined'
+          })}
         </Heading>
         <Technologies>
           <IconBadge
@@ -170,7 +187,10 @@ const Comforts = () => {
       </Comfort>
       <Comfort>
         <Heading>
-          {t({ id: 'Home.Comfortable.Content.3D', defaultMessage: 'Undefined' })}
+          {t({
+            id: 'Home.Comfortable.Content.3D',
+            defaultMessage: 'Undefined'
+          })}
         </Heading>
         <Technologies>
           <IconBadge
@@ -198,7 +218,10 @@ const Comforts = () => {
       </Comfort>
       <Comfort>
         <Heading>
-          {t({ id: 'Home.Comfortable.Content.Vision', defaultMessage: 'Undefined' })}
+          {t({
+            id: 'Home.Comfortable.Content.Vision',
+            defaultMessage: 'Undefined'
+          })}
         </Heading>
         <Technologies>
           <IconBadge
@@ -219,7 +242,10 @@ const Comforts = () => {
       </Comfort>
       <Comfort>
         <Heading>
-          {t({ id: 'Home.Comfortable.Content.Images', defaultMessage: 'Undefined' })}
+          {t({
+            id: 'Home.Comfortable.Content.Images',
+            defaultMessage: 'Undefined'
+          })}
         </Heading>
         <Technologies>
           <IconBadge

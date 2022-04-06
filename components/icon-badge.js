@@ -18,7 +18,13 @@ export const CustomBadge = ({ icon, children }) => (
   </Box>
 )
 
-export const IconBadge = ({ icon, tooltip, bg='#00000000', color='#fff', borderColor }) => {
+export const IconBadge = ({
+  icon,
+  tooltip,
+  bg = '#00000000',
+  color = '#fff',
+  borderColor
+}) => {
   const defaultBorder = useColorModeValue('gray.300', 'whiteAlpha.300')
 
   return (
@@ -30,7 +36,9 @@ export const IconBadge = ({ icon, tooltip, bg='#00000000', color='#fff', borderC
         display="inline-flex"
         bg={bg}
         color={color}
-        borderColor={typeof borderColor === 'undefined' ? defaultBorder : borderColor}
+        borderColor={
+          typeof borderColor === 'undefined' ? defaultBorder : borderColor
+        }
         _hover={{ transform: 'scale(1.1)' }}
       >
         {icon}
