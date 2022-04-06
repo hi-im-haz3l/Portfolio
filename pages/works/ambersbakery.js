@@ -5,7 +5,7 @@ import { Paragraph } from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import { FaFileAlt, FaFileSignature } from 'react-icons/fa'
 import { GiPlatform, GiStack } from 'react-icons/gi'
-import IconBadge from '../../components/icon-badge'
+import { CustomBadge } from '../../components/icon-badge'
 import { useIntl } from 'react-intl'
 
 const Work = () => {
@@ -39,9 +39,9 @@ const Work = () => {
         </Paragraph>
         <List ml={4} my={4}>
           <ListItem>
-            <IconBadge icon={<FaFileAlt />}>
+            <CustomBadge icon={<FaFileAlt />}>
               {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
-            </IconBadge>
+            </CustomBadge>
             <Link
               target="_blank"
               href="https://portfolio.haz3l.duckdns.org/prototype/Ambersbakery"
@@ -51,12 +51,12 @@ const Work = () => {
             </Link>
           </ListItem>
           <ListItem>
-            <IconBadge icon={<FaFileSignature />}>
+            <CustomBadge icon={<FaFileSignature />}>
               {t({
                 id: 'Works.Web.Badge.Backend',
                 defaultMessage: 'Undefined'
               })}
-            </IconBadge>
+            </CustomBadge>
             <Link
               target="_blank"
               href="https://portfolio.haz3l.duckdns.org/prototype/Ambersbakery/management"
@@ -69,12 +69,12 @@ const Work = () => {
             </Link>
           </ListItem>
           <ListItem>
-            <IconBadge icon={<GiPlatform />}>
+            <CustomBadge icon={<GiPlatform />}>
               {t({
                 id: 'Works.Web.Badge.Platform',
                 defaultMessage: 'Undefined'
               })}
-            </IconBadge>
+            </CustomBadge>
             <span>
               {t({
                 id: 'Works.Web.Platform.Description',
@@ -83,9 +83,9 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
-            <IconBadge icon={<GiStack />}>
+            <CustomBadge icon={<GiStack />}>
               {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
-            </IconBadge>
+            </CustomBadge>
             <span>PHP 7.4, Bootstrap 5.1, jQuery 3.6, MariaDB 10.7</span>
           </ListItem>
         </List>

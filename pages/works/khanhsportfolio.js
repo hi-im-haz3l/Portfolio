@@ -5,7 +5,7 @@ import { Paragraph } from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import { FaFileAlt } from 'react-icons/fa'
 import { GiPlatform, GiStack } from 'react-icons/gi'
-import IconBadge from '../../components/icon-badge'
+import { CustomBadge } from '../../components/icon-badge'
 import { useIntl } from 'react-intl'
 
 const Work = () => {
@@ -39,9 +39,9 @@ const Work = () => {
         </Paragraph>
         <List ml={4} my={4}>
           <ListItem>
-            <IconBadge icon={<FaFileAlt />}>
+            <CustomBadge icon={<FaFileAlt />}>
               {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
-            </IconBadge>
+            </CustomBadge>
             <NextLink href="/" passHref>
               <Link>
                 {t({ id: 'Button.Return', defaultMessage: 'Undefined' })}
@@ -49,12 +49,12 @@ const Work = () => {
             </NextLink>
           </ListItem>
           <ListItem>
-            <IconBadge icon={<GiPlatform />}>
+            <CustomBadge icon={<GiPlatform />}>
               {t({
                 id: 'Works.Web.Badge.Platform',
                 defaultMessage: 'Undefined'
               })}
-            </IconBadge>
+            </CustomBadge>
             <span>
               {t({
                 id: 'Works.Web.Platform.Description',
@@ -63,9 +63,9 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
-            <IconBadge icon={<GiStack />}>
+            <CustomBadge icon={<GiStack />}>
               {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
-            </IconBadge>
+            </CustomBadge>
             <span>Next.js, Chakra UI, Emotion, Three.js, Framer Motion</span>
           </ListItem>
         </List>
