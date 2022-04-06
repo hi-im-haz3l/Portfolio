@@ -21,7 +21,7 @@ import { IoLogoGithub } from 'react-icons/io5'
 import LocalesSelector from './locales-selector'
 import { useIntl } from 'react-intl'
 
-const NavBarItem = ({ href, path, target, children, ...props }) => {
+const NavBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
   const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
@@ -38,7 +38,6 @@ const NavBarItem = ({ href, path, target, children, ...props }) => {
             ? { textDecoration: 'underline', textDecorationThickness: '2px' }
             : undefined
         }
-        target={target}
         _hover={{ bg: useColorModeValue('#d1d1d195', '#71717488') }}
         {...props}
       >
@@ -144,9 +143,15 @@ const Navbar = props => {
                 aria-label="Options"
                 borderRadius="lg"
                 borderWidth="2px"
-                borderColor={useColorModeValue('blackAlpha.50', 'whiteAlpha.200')}
+                borderColor={useColorModeValue(
+                  'blackAlpha.50',
+                  'whiteAlpha.200'
+                )}
               />
-              <MenuList bg={useColorModeValue('#f5f5f5', '#313134')}>
+              <MenuList
+                border="none"
+                bg={useColorModeValue('#f5f5f5', '#313134')}
+              >
                 <SideBarItem href="/" path={path}>
                   {t({ id: 'Sidebar.About', defaultMessage: 'Undefined' })}
                 </SideBarItem>
@@ -159,7 +164,7 @@ const Navbar = props => {
                 >
                   {t({ id: 'Sidebar.Source', defaultMessage: 'Undefined' })}
                 </SideBarItem>
-                <MenuDivider />
+                <MenuDivider color={useColorModeValue('#d9dfe7', '#535357')} />
 
                 <MenuItem closeOnSelect={false}>
                   <Box m="0 auto !important">
