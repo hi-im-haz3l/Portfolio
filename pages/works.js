@@ -1,6 +1,6 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import { Section } from '../components/section'
+import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import { useIntl } from 'react-intl'
 
@@ -19,7 +19,7 @@ const Works = () => {
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} m={-3} spacing={2}>
-          <Section>
+          <Section mb={2}>
             <WorkGridItem
               id="ambersbakery"
               title={t({
@@ -35,7 +35,7 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section>
+          <Section mb={2}>
             <WorkGridItem
               id="stickynote"
               title={t({
@@ -51,7 +51,7 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.1}>
+          <Section mb={2} delay={0.1}>
             <WorkGridItem
               id="khanhsportfolio"
               title={t({
@@ -68,7 +68,7 @@ const Works = () => {
           </Section>
         </SimpleGrid>
 
-        <Section delay={0.2}>
+        <Section mb={2} delay={0.2}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
@@ -76,7 +76,7 @@ const Works = () => {
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section delay={0.2}>
+          <Section mb={3} delay={0.2}>
             <WorkGridItem
               id="3dprintermonitor"
               title={t({
@@ -92,7 +92,7 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.2}>
+          <Section mb={3} delay={0.2}>
             <WorkGridItem
               id="bluetoohdoor"
               title={t({
