@@ -20,7 +20,7 @@ const NotFound = () => {
       <Text>{t({ id: '404.Description', defaultMessage: 'Undefined' })}</Text>
       <Divider my={6} />
       <Box my={6} align="center">
-        <NextLink href="/">
+        <NextLink href="/" passHref>
           <Button colorScheme="teal">
             {t({ id: 'Button.Return', defaultMessage: 'Undefined' })}
           </Button>

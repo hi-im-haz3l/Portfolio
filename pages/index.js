@@ -104,7 +104,7 @@ const Home = () => {
             {t({ id: 'Home.Bio.Content', defaultMessage: 'Undefined' })}
           </JustifyParagraph>
           <Box align="center" mt={4}>
-            <NextLink href="/works" scroll={false}>
+            <NextLink href="/works" scroll={false} passHref>
               <Button
                 rightIcon={<ChevronRightIcon />}
                 colorScheme={useColorModeValue('facebook', 'teal')}

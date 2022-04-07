@@ -38,7 +38,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
     _hover={{ bg: useColorModeValue('#f0f2f5', '#464646') }}
     transition="150ms"
   >
-    <NextLink href={`/works/${id}`} scroll={false}>
+    <NextLink href={`/works/${id}`} scroll={false} passHref>
       <LinkBox cursor="pointer">
         <Image
           src={thumbnail}
