@@ -86,7 +86,6 @@ const Comforts = () => {
             bg={useColorModeValue(undefined, '#000')}
             tooltip="Next.js"
           />
-
           <IconBadge
             icon={<SiPhp />}
             color={useColorModeValue('#4b568b', undefined)}
@@ -102,18 +101,18 @@ const Comforts = () => {
             tooltip="Bootstrap"
           />
           <IconBadge
-            icon={<BsLightningChargeFill />}
-            color={useColorModeValue('#4cc8c3', undefined)}
-            bg={useColorModeValue(undefined, '#5bc0c1')}
-            borderColor={useColorModeValue('#4cc8c3', '#408889')}
-            tooltip="Chakra UI"
-          />
-          <IconBadge
             icon={<RiReactjsLine />}
             color={useColorModeValue('#00c2e5', undefined)}
             bg={useColorModeValue(undefined, '#00aec5')}
             borderColor={useColorModeValue('#00c2e5', '#007989')}
             tooltip="React"
+          />
+          <IconBadge
+            icon={<BsLightningChargeFill />}
+            color={useColorModeValue('#4cc8c3', undefined)}
+            bg={useColorModeValue(undefined, '#5bc0c1')}
+            borderColor={useColorModeValue('#4cc8c3', '#408889')}
+            tooltip="Chakra UI"
           />
         </Technologies>
       </Comfort>
@@ -140,18 +139,18 @@ const Comforts = () => {
             tooltip="MariaDB"
           />
           <IconBadge
-            icon={<SiNginx />}
-            color={useColorModeValue('#0c8f49', undefined)}
-            bg={useColorModeValue(undefined, '#097039')}
-            borderColor={useColorModeValue('#097039', undefined)}
-            tooltip="Nginx"
-          />
-          <IconBadge
             icon={<SiPopos />}
             color={useColorModeValue('#2c7078', undefined)}
             bg={useColorModeValue(undefined, '#368b95')}
             borderColor={useColorModeValue('#2c7078', undefined)}
             tooltip="Pop!_OS"
+          />
+          <IconBadge
+            icon={<SiNginx />}
+            color={useColorModeValue('#0c8f49', undefined)}
+            bg={useColorModeValue(undefined, '#097039')}
+            borderColor={useColorModeValue('#097039', undefined)}
+            tooltip="Nginx"
           />
         </Technologies>
       </Comfort>
