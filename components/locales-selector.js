@@ -50,7 +50,7 @@ const LocalesSelector = () => {
 
   return (
     <Tabs position="relative" variant="unstyled" defaultIndex={selected}>
-      <TabList>
+      <TabList aria-label="Choose a language">
         <TabStyling locale="en-US" selected={locale}></TabStyling>
         <TabStyling locale="fi-FI" selected={locale}></TabStyling>
         <TabStyling locale="vi-VN" selected={locale}></TabStyling>
