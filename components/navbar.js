@@ -47,16 +47,15 @@ const NavBarItem = ({ href, path, children, ...props }) => {
   )
 }
 
-const SideBarItem = ({ href, path, children }) => {
+const SideBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
   const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
 
   return (
     <NextLink href={href} passHref>
-      <MenuItem _hover={{ bg: useColorModeValue('#edf2f7', '#414144') }}>
-        <Link
-          variant="no-underline"
+      <Link variant="no_underline" {...props}>
+        <MenuItem
           fontWeight="semibold"
           color={active ? activeColor : inactiveColor}
           css={
@@ -64,10 +63,11 @@ const SideBarItem = ({ href, path, children }) => {
               ? { textDecoration: 'underline', textDecorationThickness: '2px' }
               : undefined
           }
+          _hover={{ bg: useColorModeValue('#edf2f7', '#414144') }}
         >
           {children}
-        </Link>
-      </MenuItem>
+        </MenuItem>
+      </Link>
     </NextLink>
   )
 }
@@ -159,6 +159,7 @@ const Navbar = props => {
                   {t({ id: 'Sidebar.Works', defaultMessage: 'Undefined' })}
                 </SideBarItem>
                 <SideBarItem
+                  target="_blank"
                   href="https://github.com/hi-im-haz3l/portfolio"
                   path={path}
                 >
