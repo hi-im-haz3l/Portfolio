@@ -14,7 +14,7 @@ import { useIntl } from 'react-intl'
 const Events = ({ events }) => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
-  const LineColor = useColorModeValue('#c1c1c1', '#686868')
+  const LineColor = useColorModeValue('#d3d3d3', '#686868')
 
   return (
     <List pb={4}>
