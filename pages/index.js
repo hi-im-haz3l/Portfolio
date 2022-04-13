@@ -149,6 +149,7 @@ const Home = () => {
               variant="ghost"
               display="flex"
               mt={2}
+              mb={1}
               p=".25em .75em"
               h="auto"
               flexDirection="column"
@@ -170,50 +171,38 @@ const Home = () => {
           <List>
             <ListItem>
               <Link
-                variant="no-underline"
+                variant="link_btn"
+                color={AccentColor}
+                _hover={{ bg: HoverColor }}
                 href="https://www.linkedin.com/in/haz3l/"
                 target="_blank"
               >
-                <Button
-                  variant="ghost"
-                  color={AccentColor}
-                  leftIcon={<IoLogoLinkedin />}
-                  _hover={{ bg: HoverColor }}
-                >
-                  Lê Duy Khánh
-                </Button>
+                <IoLogoLinkedin />
+                Lê Duy Khánh
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                variant="no-underline"
+                variant="link_btn"
+                color={AccentColor}
+                _hover={{ bg: HoverColor }}
                 href="https://github.com/hi-im-haz3l"
                 target="_blank"
               >
-                <Button
-                  variant="ghost"
-                  color={AccentColor}
-                  leftIcon={<IoLogoGithub />}
-                  _hover={{ bg: HoverColor }}
-                >
-                  @hi-im-haz3l
-                </Button>
+                <IoLogoGithub />
+                @hi-im-haz3l
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                variant="no-underline"
+                variant="link_btn"
+                color={AccentColor}
+                _hover={{ bg: HoverColor }}
                 href="https://stackoverflow.com/users/11005113/haz3l"
                 target="_blank"
               >
-                <Button
-                  variant="ghost"
-                  color={AccentColor}
-                  leftIcon={<IoLogoStackoverflow />}
-                  _hover={{ bg: HoverColor }}
-                >
-                  Haz3L
-                </Button>
+                <IoLogoStackoverflow />
+                Haz3L
               </Link>
             </ListItem>
           </List>
