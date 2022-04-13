@@ -7,7 +7,7 @@ export const CustomBadge = ({ icon, children }) => (
     m=".25rem .75rem"
     display="inline-flex"
     borderRadius="lg"
-    bg={useColorModeValue('#c6f6d5', '#34403a')}
+    bg={useColorModeValue('#dbf7e4', '#34403a')}
     color={useColorModeValue('green.800', 'green.200')}
     alignItems="center"
     gridGap={1}
@@ -33,6 +33,7 @@ export const IconBadge = ({
     <Tooltip label={tooltip} isOpen={isLabelOpen}>
       <Box
         p={2}
+        as="button"
         border="1px solid"
         borderRadius="full"
         display="inline-flex"
@@ -42,6 +43,11 @@ export const IconBadge = ({
           typeof borderColor === 'undefined' ? defaultBorder : borderColor
         }
         _hover={{ transform: 'scale(1.1)' }}
+        _focusVisible={{
+          outline: useColorModeValue('none', '2px solid #ededee'),
+          transform: 'scale(1.1)',
+          bg: useColorModeValue('#e2e8f0', bg)
+        }}
         onMouseEnter={() => setIsLabelOpen(true)}
         onMouseLeave={() => setIsLabelOpen(false)}
         onClick={() => setIsLabelOpen(true)}
