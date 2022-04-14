@@ -20,14 +20,10 @@ const messages = {
 }
 
 function Portfolio({ Component, pageProps, router }) {
-  const { locale, defaultLocale } = router
+  const { locale } = router
 
   return (
-    <IntlProvider
-      messages={messages[locale]}
-      locale={locale}
-      defaultLocale={defaultLocale}
-    >
+    <IntlProvider messages={messages[locale]} locale={locale}>
       <Chakra cookies={pageProps.cookies}>
         <Fonts />
         <Layout router={router}>

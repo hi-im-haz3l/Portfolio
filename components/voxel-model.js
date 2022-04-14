@@ -1,7 +1,14 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import * as THREE from 'three'
+import {
+  Vector3,
+  Scene,
+  WebGLRenderer,
+  sRGBEncoding,
+  OrthographicCamera,
+  AmbientLight
+} from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { loadGLTFModel } from '../lib/model'
+import LoadGLTFModel from '../lib/model'
 import { ModelSpinner, ModelContainer } from './voxel-model-loader'
 
 function easeOutCirc(x) {
@@ -13,15 +20,11 @@ const VoxelModel = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(0, 3, 0))
+  const [target] = useState(new Vector3(0, 3, 0))
   const [initialCameraPosition] = useState(
-    new THREE.Vector3(
-      20 * Math.sin(0.2 * Math.PI),
-      10,
-      20 * Math.cos(0.2 * Math.PI)
-    )
+    new Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI))
   )
-  const [scene] = useState(new THREE.Scene())
+  const [scene] = useState(new Scene())
   const [_controls, setControls] = useState()
 
   const handleWindowResize = useCallback(() => {
@@ -41,20 +44,20 @@ const VoxelModel = () => {
       const scW = container.clientWidth
       const scH = container.clientHeight
 
-      const renderer = new THREE.WebGLRenderer({
+      const renderer = new WebGLRenderer({
         antialias: true,
         alpha: true
       })
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
-      renderer.outputEncoding = THREE.sRGBEncoding
+      renderer.outputEncoding = sRGBEncoding
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
 
       // 640 -> 240
       // 8   -> 6
       const scale = scH * 0.033 + 4.8
-      const camera = new THREE.OrthographicCamera(
+      const camera = new OrthographicCamera(
         -scale,
         scale,
         scale,
@@ -66,7 +69,7 @@ const VoxelModel = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+      const ambientLight = new AmbientLight(0xcccccc, 1)
       scene.add(ambientLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
@@ -74,7 +77,7 @@ const VoxelModel = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/ATLASnPbody.glb', {
+      LoadGLTFModel(scene, '/ATLASnPbody.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
