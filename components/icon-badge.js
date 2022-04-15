@@ -34,6 +34,7 @@ export const IconBadge = ({
       <Box
         p={2}
         as="button"
+        aria-label={tooltip}
         border="1px solid"
         borderRadius="full"
         display="inline-flex"
