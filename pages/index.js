@@ -67,7 +67,7 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Lê Duy Khánh
             </Heading>
-            <p>{t({ id: 'Home.Description', defaultMessage: 'Undefined' })}</p>
+            <p>{t({ id: 'Home.Hobby', defaultMessage: 'Undefined' })}</p>
           </Box>
           <Box
             flexShrink={0}
