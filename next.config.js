@@ -24,7 +24,7 @@ module.exports = {
       const threeMinifier = new ThreeMinifierPlugin()
       config.plugins.unshift(threeMinifier)
       config.resolve.plugins.unshift(threeMinifier.resolver)
-      config.experiments = { topLevelAwait: true };
+      config.experiments = { topLevelAwait: true }
     }
     return config
   }
