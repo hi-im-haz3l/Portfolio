@@ -21,7 +21,7 @@ const TabStyling = ({ locale, selected }) => {
   const invertColor = useColorModeValue('#ffffff', '#1A202C')
   const title = locale.substring(0, 2).toUpperCase()
 
-  return locale == selected ? (
+  return locale === selected ? (
     <Tab
       position="relative"
       zIndex={1}
