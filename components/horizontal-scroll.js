@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 
 const variants = {
   enter: function (direction) {
@@ -23,11 +24,39 @@ const variants = {
   }
 }
 
-const swipeConfidenceThreshold = 10000
+const SideIndicator = ({ direction, children }) => (
+  <Box
+    position="absolute"
+    top="0"
+    bottom="0"
+    right={direction === 'right' ? 0 : undefined}
+    left={direction === 'left' ? 0 : undefined}
+  >
+    <Box
+      position="relative"
+      left="50%"
+      top="50%"
+      transform="translate(-50%,-50%)"
+      fontSize="24"
+    >
+      <motion.div
+        animate={{
+          x: [0, direction === 'right' ? 7 : -7, 0],
+          opacity: [1, 0.7, 1]
+        }}
+        transition={{ ease: 'easeInOut', duration: 2, repeat: Infinity }}
+      >
+        {children}
+      </motion.div>
+    </Box>
+  </Box>
+)
 
-const HScroll = ({ display, tabs }) => {
+const ConfidenceThreshold = 10000
+
+const HScroll = ({ display, tabs, PagesIndexes }) => {
   const [[page, direction], setPage] = useState([0, 0])
-  const track = useColorModeValue("#525252", "#ededee")
+  const track = useColorModeValue('#525252', '#ededee')
 
   return (
     <Box display={display}>
@@ -57,12 +86,18 @@ const HScroll = ({ display, tabs }) => {
               w="100%"
               h="0.25em"
               borderRadius="full"
-              bg={useColorModeValue("#d3d3d3", "#525252")}
+              bg={useColorModeValue('#d3d3d3', '#525252')}
               position="absolute"
             />
           </Flex>
         </Box>
         <Box h="18.4em" overflow="hidden" position="relative">
+          <SideIndicator direction="right">
+            {page < PagesIndexes ? <ChevronRightIcon /> : undefined}
+          </SideIndicator>
+          <SideIndicator direction="left">
+            {page > 0 ? <ChevronLeftIcon /> : undefined}
+          </SideIndicator>
           <AnimatePresence initial={false} custom={direction}>
             <Box
               w="100%"
@@ -92,9 +127,9 @@ const HScroll = ({ display, tabs }) => {
                 onDragEnd={(e, { offset, velocity }) => {
                   const swipe = Math.abs(offset.x) * velocity.x
 
-                  if (swipe < -swipeConfidenceThreshold) {
-                    if (page < 1) setPage([page + 1, 1])
-                  } else if (swipe > swipeConfidenceThreshold) {
+                  if (swipe < -ConfidenceThreshold) {
+                    if (page < PagesIndexes) setPage([page + 1, 1])
+                  } else if (swipe > ConfidenceThreshold) {
                     if (page > 0) setPage([page - 1, -1])
                   }
                 }}
