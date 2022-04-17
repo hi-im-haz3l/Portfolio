@@ -1,6 +1,7 @@
 import { Flex, Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import ComfortsCore from './comforts-core'
 import HScroll from './horizontal-scroll'
+import { useState, useCallback, useEffect } from 'react'
 
 const Comfort = ({ children, ...props }) => (
   <Flex
@@ -63,11 +64,31 @@ const Switch = ({ base }) => {
   )
 }
 
-const Comforts = () => (
-  <Box>
-    <Switch base="t" />
-    <Switch base="f" />
-  </Box>
-)
+const useMediaQuery = width => {
+  const [targetReached, setTargetReached] = useState(false)
+
+  const updateTarget = useCallback(e => {
+    if (e.matches) {
+      setTargetReached(true)
+    } else {
+      setTargetReached(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`)
+    media.addEventListener('change', updateTarget)
+
+    if (media.matches) {
+      setTargetReached(true)
+    }
+
+    return () => media.removeEventListener('change', updateTarget)
+  }, [])
+
+  return targetReached
+}
+
+const Comforts = () => <Switch base={useMediaQuery(480) ? 't' : 'f'} />
 
 export default Comforts
