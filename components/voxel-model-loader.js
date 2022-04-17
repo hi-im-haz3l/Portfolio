@@ -19,20 +19,18 @@ export const ModelContainer = forwardRef(({ children }, ref) => (
     m="auto"
     mt={['0px', '-60px', '-120px']}
     mb={['-80px', '-140px', '-200px']}
-    w={[300, 480, 640]}
-    h={[300, 480, 640]}
+    w={[290, 450, 640]}
+    h={[290, 450, 640]}
     position="relative"
   >
     {children}
   </Box>
 ))
 
-const Loader = () => {
-  return (
-    <ModelContainer>
-      <ModelSpinner />
-    </ModelContainer>
-  )
-}
+const Loader = () => (
+  <ModelContainer>
+    <ModelSpinner />
+  </ModelContainer>
+)
 
 export default Loader

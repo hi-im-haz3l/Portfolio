@@ -56,7 +56,7 @@ const ConfidenceThreshold = 10000
 
 const HScroll = ({ display, tabs, PagesIndexes }) => {
   const [[page, direction], setPage] = useState([0, 0])
-  const track = useColorModeValue('#525252', '#ededee')
+  const thumb = useColorModeValue('#000', '#fff')
 
   return (
     <Box display={display}>
@@ -73,7 +73,7 @@ const HScroll = ({ display, tabs, PagesIndexes }) => {
                       w="100%"
                       h="0.25em"
                       borderRadius="full"
-                      bg={track}
+                      bg={thumb}
                       position="relative"
                       zIndex={1}
                       layoutId="underline"
@@ -86,7 +86,7 @@ const HScroll = ({ display, tabs, PagesIndexes }) => {
               w="100%"
               h="0.25em"
               borderRadius="full"
-              bg={useColorModeValue('#d3d3d3', '#525252')}
+              bg={useColorModeValue('#d1d1d1', '#525252')}
               position="absolute"
             />
           </Flex>
