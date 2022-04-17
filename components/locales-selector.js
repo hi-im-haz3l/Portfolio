@@ -32,7 +32,11 @@ const TabStyling = ({ locale, selected }) => {
   ) : (
     <NextLink href="" locale={locale} passHref>
       <Link color={color}>
-        <Tab position="relative" zIndex={1} fontWeight="semibold">
+        <Tab
+          position="relative"
+          zIndex={1}
+          fontWeight="semibold"
+        >
           {title}
         </Tab>
       </Link>
@@ -46,7 +50,7 @@ const LocalesSelector = ({ currentLocale }) => {
 
   return (
     <Tabs position="relative" variant="unstyled" defaultIndex={selected}>
-      <TabList aria-label="Choose a language">
+      <TabList>
         <TabStyling locale="en-US" selected={currentLocale}></TabStyling>
         <TabStyling locale="fi-FI" selected={currentLocale}></TabStyling>
         <TabStyling locale="vi-VN" selected={currentLocale}></TabStyling>
