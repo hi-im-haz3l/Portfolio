@@ -9,14 +9,11 @@ import {
 } from '@chakra-ui/react'
 import { useIntl } from 'react-intl'
 
-function LocaleId(locale) {
-  const locales = {
-    'en-US': 0,
-    'fi-FI': 1,
-    'vi-VN': 2,
-    undefined: -1
-  }
-  return locales[locale]
+const LocaleId = {
+  'en-US': 0,
+  'fi-FI': 1,
+  'vi-VN': 2,
+  undefined: -1
 }
 
 const TabStyling = ({ locale, selected }) => {
@@ -46,7 +43,8 @@ const TabStyling = ({ locale, selected }) => {
 
 const LocalesSelector = () => {
   const { locale } = useIntl()
-  const selected = LocaleId(locale) + 1 ? LocaleId(locale) : LocaleId(undefined)
+  const temp = LocaleId[locale]
+  const selected = temp + 1 ? temp : -1
 
   return (
     <Tabs position="relative" variant="unstyled" defaultIndex={selected}>
