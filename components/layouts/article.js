@@ -20,8 +20,8 @@ const Layout = ({ children, title }) => (
     <>
       {title && (
         <Head>
-          <title>{title} - Lê Duy Khánh</title>
-          <meta name="twitter:title" content={title} />
+          <title>{title} - Khánh&#x27;s Portfolio</title>
+          <meta name="theme-color" content="#2d2d2d" />
           <meta property="og:title" content={title} />
         </Head>
       )}
