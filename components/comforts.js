@@ -8,7 +8,7 @@ const Comfort = ({ children, ...props }) => (
     maxW={[300, 'unset']}
     m={['0 auto', 0]}
     borderRadius="xl"
-    bg={useColorModeValue('whiteAlpha.500', 'blackAlpha.300')}
+    bg={useColorModeValue('#ffffff4d', 'blackAlpha.300')}
     justifyContent="space-between"
     alignItems="center"
     flexWrap="wrap"
@@ -25,8 +25,10 @@ const Heading = ({ children }) => <Box w={[200, 150, 200]}>{children}</Box>
 const Switch = ({ base }) => {
   const Core = ComfortsCore()
   const segment = []
+  const PagesCount = 2
+
   if (base == 't') {
-    for (let o = 0; o < 2; o++) {
+    for (let o = 0; o < PagesCount; o++) {
       let temp = o * 3
       segment.push(
         Core.slice(temp, temp + 3).map(({ title, icons }, i) => (
@@ -39,8 +41,12 @@ const Switch = ({ base }) => {
     }
   }
 
-  return base == 't' ? (
-    <HScroll display={{ base: 'block', sm: 'none' }} tabs={segment} />
+  return base === 't' ? (
+    <HScroll
+      display={{ base: 'block', sm: 'none' }}
+      tabs={segment}
+      PagesIndexes={PagesCount - 1}
+    />
   ) : (
     <SimpleGrid
       display={{ base: 'none', sm: 'grid' }}
