@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 
 const variants = {
@@ -27,6 +27,7 @@ const swipeConfidenceThreshold = 10000
 
 const HScroll = ({ display, tabs }) => {
   const [[page, direction], setPage] = useState([0, 0])
+  const track = useColorModeValue("#525252", "#ededee")
 
   return (
     <Box display={display}>
@@ -43,7 +44,7 @@ const HScroll = ({ display, tabs }) => {
                       w="100%"
                       h="0.25em"
                       borderRadius="full"
-                      bg="#ededee"
+                      bg={track}
                       position="relative"
                       zIndex={1}
                       layoutId="underline"
@@ -56,7 +57,7 @@ const HScroll = ({ display, tabs }) => {
               w="100%"
               h="0.25em"
               borderRadius="full"
-              bg="#525252"
+              bg={useColorModeValue("#d3d3d3", "#525252")}
               position="absolute"
             />
           </Flex>
