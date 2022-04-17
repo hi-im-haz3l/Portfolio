@@ -5,9 +5,9 @@ import Chakra from '../components/chakra'
 import { IntlProvider } from 'react-intl'
 import 'focus-visible/dist/focus-visible'
 
-import en from '../locales/en-US.json'
-import vi from '../locales/vi-VN.json'
-import fi from '../locales/fi-FI.json'
+import en from '../data/locales/en-US.json'
+import vi from '../data/locales/vi-VN.json'
+import fi from '../data/locales/fi-FI.json'
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'

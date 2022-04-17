@@ -28,7 +28,7 @@ import {
 import Image from 'next/image'
 import { useIntl } from 'react-intl'
 import Events from '../components/timeline'
-import timeline from '../public/timeline.json'
+import timeline from '../data/timeline.json'
 import { useState } from 'react'
 
 const ProfileImage = chakra(Image, {
