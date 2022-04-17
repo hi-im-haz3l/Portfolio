@@ -7,7 +7,6 @@ import {
   Link,
   useColorModeValue
 } from '@chakra-ui/react'
-import { useIntl } from 'react-intl'
 
 const LocaleId = {
   'en-US': 0,
@@ -41,17 +40,16 @@ const TabStyling = ({ locale, selected }) => {
   )
 }
 
-const LocalesSelector = () => {
-  const { locale } = useIntl()
-  const temp = LocaleId[locale]
+const LocalesSelector = ({ currentLocale }) => {
+  const temp = LocaleId[currentLocale]
   const selected = temp + 1 ? temp : -1
 
   return (
     <Tabs position="relative" variant="unstyled" defaultIndex={selected}>
       <TabList aria-label="Choose a language">
-        <TabStyling locale="en-US" selected={locale}></TabStyling>
-        <TabStyling locale="fi-FI" selected={locale}></TabStyling>
-        <TabStyling locale="vi-VN" selected={locale}></TabStyling>
+        <TabStyling locale="en-US" selected={currentLocale}></TabStyling>
+        <TabStyling locale="fi-FI" selected={currentLocale}></TabStyling>
+        <TabStyling locale="vi-VN" selected={currentLocale}></TabStyling>
       </TabList>
       <TabIndicator
         mt="-40px"

@@ -72,9 +72,9 @@ const SideBarItem = ({ href, path, children, ...props }) => {
   )
 }
 
-const Navbar = props => {
+const Navbar = ({ currentPath, currentLocale }) => {
   const { formatMessage: t } = useIntl()
-  const { path } = props
+  const { path } = currentPath
 
   return (
     <Box
@@ -84,7 +84,6 @@ const Navbar = props => {
       bg={useColorModeValue('#ffffff70', '#44444a80')}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
-      {...props}
     >
       <Container
         display="flex"
@@ -127,7 +126,7 @@ const Navbar = props => {
             bg={useColorModeValue('#d1d1d195', '#71717488')}
             borderRadius="xl"
           >
-            <LocalesSelector />
+            <LocalesSelector currentLocale={currentLocale} />
           </Box>
         </Stack>
 
@@ -169,7 +168,7 @@ const Navbar = props => {
 
                 <MenuItem closeOnSelect={false}>
                   <Box m="0 auto !important">
-                    <LocalesSelector />
+                    <LocalesSelector currentLocale={currentLocale} />
                   </Box>
                 </MenuItem>
               </MenuList>
