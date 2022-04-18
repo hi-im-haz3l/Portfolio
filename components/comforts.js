@@ -1,7 +1,7 @@
 import { Flex, Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import ComfortsCore from './comforts-core'
 import HScroll from './horizontal-scroll'
-import WidthQuery from './width-query'
+import WidthLowerThan from './width-query'
 
 const Comfort = ({ children, ...props }) => (
   <Flex
@@ -56,6 +56,6 @@ const Switch = ({ base }) => {
   )
 }
 
-const Comforts = () => <Switch base={WidthQuery(480) ? 'y' : undefined} />
+const Comforts = () => <Switch base={WidthLowerThan(480) ? 'y' : undefined} />
 
 export default Comforts

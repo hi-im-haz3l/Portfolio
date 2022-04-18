@@ -1,28 +1,27 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
-const WidthQuery = width => {
-  const [targetReached, setTargetReached] = useState(false)
+const WidthLowerThan = width => {
+  const hasWindow = typeof window !== 'undefined'
 
-  const updateTarget = useCallback(e => {
-    if (e.matches) {
-      setTargetReached(true)
-    } else {
-      setTargetReached(false)
-    }
-  }, [])
+  function getWindowDimensions() {
+    if (hasWindow) return window.innerWidth <= width ? true : false
+    return null
+  }
+
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  )
 
   useEffect(() => {
-    const media = window.matchMedia(`(max-width: ${width}px)`)
-    media.addEventListener('change', updateTarget)
-
-    if (media.matches) {
-      setTargetReached(true)
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions())
     }
 
-    return () => media.removeEventListener('change', updateTarget)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  return targetReached
+  return windowDimensions
 }
 
-export default WidthQuery
+export default WidthLowerThan

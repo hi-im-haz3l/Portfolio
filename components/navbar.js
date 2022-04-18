@@ -20,7 +20,7 @@ import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 import LocalesSelector from './locales-selector'
 import { useIntl } from 'react-intl'
-import WidthQuery from './width-query'
+import WidthLowerThan from './width-query'
 
 const NavBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
@@ -76,11 +76,7 @@ const SideBarItem = ({ href, path, children, ...props }) => {
 const Navbar = ({ currentPath, currentLocale }) => {
   const { formatMessage: t } = useIntl()
   const { path } = currentPath
-  const isFull = WidthQuery(768)
-  const localeTrack = useColorModeValue('#d1d1d195', '#71717488')
-  const menuBtnBorder = useColorModeValue('blackAlpha.50', 'whiteAlpha.200')
-  const menuList = useColorModeValue('#f5f5f5', '#313134')
-  const menuDivider = useColorModeValue('#d9dfe7', '#535357')
+  const fullSize = WidthLowerThan(768)
 
   return (
     <Box
@@ -104,78 +100,85 @@ const Navbar = ({ currentPath, currentLocale }) => {
             <Logo />
           </Heading>
         </Flex>
-        {isFull ? (
-          ''
-        ) : (
-          <Stack
-            direction={{ base: 'column', md: 'row' }}
-            display="flex"
-            width={{ base: 'full', md: 'auto' }}
+
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
+          alignItems="center"
+          flexGrow={1}
+          mt={{ base: 4, md: 0 }}
+        >
+          <NavBarItem href="/works" path={path}>
+            {t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}
+          </NavBarItem>
+          <NavBarItem
+            target="_blank"
+            href="https://github.com/hi-im-haz3l/portfolio"
+            path={path}
+            display="inline-flex"
             alignItems="center"
-            flexGrow={1}
-            mt={{ base: 4, md: 0 }}
+            style={{ gap: 4 }}
           >
-            <NavBarItem href="/works" path={path}>
-              {t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}
-            </NavBarItem>
-            <NavBarItem
-              target="_blank"
-              href="https://github.com/hi-im-haz3l/portfolio"
-              path={path}
-              display="inline-flex"
-              alignItems="center"
-              style={{ gap: 4 }}
-            >
-              <IoLogoGithub />
-              {t({ id: 'Navbar.Source', defaultMessage: 'Undefined' })}
-            </NavBarItem>
-            <Box ml="auto !important" bg={localeTrack} borderRadius="xl">
-              <LocalesSelector currentLocale={currentLocale} />
-            </Box>
-          </Stack>
-        )}
+            <IoLogoGithub />
+            {t({ id: 'Navbar.Source', defaultMessage: 'Undefined' })}
+          </NavBarItem>
+          <Box
+            ml="auto !important"
+            bg={useColorModeValue('#d1d1d195', '#71717488')}
+            borderRadius="xl"
+          >
+            {fullSize ? '' : <LocalesSelector currentLocale={currentLocale} />}
+          </Box>
+        </Stack>
 
         <Box ml={7} align="end">
           <ThemeToggleButton />
-          {isFull ? (
-            <Box ml={2} display="inline-block">
-              <Menu isLazy id="navbar-menu" color="blackAlpha.500">
-                <MenuButton
-                  as={IconButton}
-                  icon={<HamburgerIcon />}
-                  variant="outline"
-                  aria-label="Options"
-                  borderRadius="lg"
-                  borderWidth="2px"
-                  borderColor={menuBtnBorder}
-                />
-                <MenuList border="none" bg={menuList}>
-                  <SideBarItem href="/" path={path}>
-                    {t({ id: 'Sidebar.About', defaultMessage: 'Undefined' })}
-                  </SideBarItem>
-                  <SideBarItem href="/works" path={path}>
-                    {t({ id: 'Sidebar.Works', defaultMessage: 'Undefined' })}
-                  </SideBarItem>
-                  <SideBarItem
-                    target="_blank"
-                    href="https://github.com/hi-im-haz3l/portfolio"
-                    path={path}
-                  >
-                    {t({ id: 'Sidebar.Source', defaultMessage: 'Undefined' })}
-                  </SideBarItem>
-                  <MenuDivider color={menuDivider} />
 
-                  <MenuItem closeOnSelect={false}>
-                    <Box m="0 auto !important">
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu isLazy id="navbar-menu" color="blackAlpha.500">
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+                borderRadius="lg"
+                borderWidth="2px"
+                borderColor={useColorModeValue(
+                  'blackAlpha.50',
+                  'whiteAlpha.200'
+                )}
+              />
+              <MenuList
+                border="none"
+                bg={useColorModeValue('#f5f5f5', '#313134')}
+              >
+                <SideBarItem href="/" path={path}>
+                  {t({ id: 'Sidebar.About', defaultMessage: 'Undefined' })}
+                </SideBarItem>
+                <SideBarItem href="/works" path={path}>
+                  {t({ id: 'Sidebar.Works', defaultMessage: 'Undefined' })}
+                </SideBarItem>
+                <SideBarItem
+                  target="_blank"
+                  href="https://github.com/hi-im-haz3l/portfolio"
+                  path={path}
+                >
+                  {t({ id: 'Sidebar.Source', defaultMessage: 'Undefined' })}
+                </SideBarItem>
+                <MenuDivider color={useColorModeValue('#d9dfe7', '#535357')} />
+                <MenuItem closeOnSelect={false}>
+                  <Box m="0 auto !important">
+                    {fullSize ? (
                       <LocalesSelector currentLocale={currentLocale} />
-                    </Box>
-                  </MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
-          ) : (
-            ''
-          )}
+                    ) : (
+                      ''
+                    )}
+                  </Box>
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
         </Box>
       </Container>
     </Box>
