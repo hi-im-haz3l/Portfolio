@@ -32,11 +32,7 @@ const TabStyling = ({ locale, selected }) => {
   ) : (
     <NextLink href="" locale={locale} passHref>
       <Link color={color}>
-        <Tab
-          position="relative"
-          zIndex={1}
-          fontWeight="semibold"
-        >
+        <Tab position="relative" zIndex={1} fontWeight="semibold">
           {title}
         </Tab>
       </Link>
