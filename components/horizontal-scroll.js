@@ -37,12 +37,11 @@ const SideIndicator = ({ direction, children }) => (
       left="50%"
       top="50%"
       transform="translate(-50%,-50%)"
-      fontSize="24"
+      fontSize={26}
     >
       <motion.div
         animate={{
-          x: [0, direction === 'right' ? 7 : -7, 0],
-          opacity: [1, 0.7, 1]
+          x: [0, direction === 'right' ? 7 : -7, 0]
         }}
         transition={{ ease: 'easeInOut', duration: 2, repeat: Infinity }}
       >
