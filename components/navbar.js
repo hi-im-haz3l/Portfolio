@@ -20,7 +20,7 @@ import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 import LocalesSelector from './locales-selector'
 import { useIntl } from 'react-intl'
-import WidthLowerThan from './width-query'
+import { WidthLowerThan } from './width-query'
 
 const NavBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
