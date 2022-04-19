@@ -141,7 +141,7 @@ const Home = () => {
             left="-5%"
             width="110%"
             position="relative"
-            boxShadow={show ? undefined : CollapseShadow}
+            boxShadow={!show && CollapseShadow}
             align="center"
             overflow="auto"
           >
@@ -157,9 +157,9 @@ const Home = () => {
               _hover={{ bg: HoverColor, color: BtnTextColor }}
               onClick={handleToggle}
             >
-              {show ? <ChevronUpIcon /> : undefined}
+              {show && <ChevronUpIcon />}
               {show ? 'Collapse' : 'Expand'}
-              {show ? undefined : <ChevronDownIcon />}
+              {!show && <ChevronDownIcon />}
             </Button>
           </Box>
         </Section>

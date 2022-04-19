@@ -29,8 +29,8 @@ const SideIndicator = ({ direction, children }) => (
     position="absolute"
     top="0"
     bottom="0"
-    right={direction === 'right' ? 0 : undefined}
-    left={direction === 'left' ? 0 : undefined}
+    right={direction === 'right' && 0}
+    left={direction === 'left' && 0}
   >
     <Box
       position="relative"
@@ -91,10 +91,10 @@ const HScroll = ({ tabs, PagesIndexes }) => {
       </Box>
       <Box h="18.4em" overflow="hidden" position="relative">
         <SideIndicator direction="right">
-          {page < PagesIndexes ? <ChevronRightIcon /> : undefined}
+          {page < PagesIndexes && <ChevronRightIcon />}
         </SideIndicator>
         <SideIndicator direction="left">
-          {page > 0 ? <ChevronLeftIcon /> : undefined}
+          {page > 0 && <ChevronLeftIcon />}
         </SideIndicator>
         <AnimatePresence initial={false} custom={direction}>
           <Box

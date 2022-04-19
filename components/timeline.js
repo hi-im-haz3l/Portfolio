@@ -27,7 +27,7 @@ const Events = ({ events }) => {
 
         return (
           <ListItem key={title} zIndex={0} pt={4} position="relative">
-            {shouldConnectDots ? (
+            {shouldConnectDots && (
               <Flex
                 left="5px"
                 top={isFirstElement ? 5 : 0}
@@ -38,7 +38,7 @@ const Events = ({ events }) => {
                 position="absolute"
                 bg={LineColor}
               />
-            ) : null}
+            )}
             <HStack
               width="full"
               alignItems="flex-start"
