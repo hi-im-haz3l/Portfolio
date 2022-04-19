@@ -1,7 +1,12 @@
-import { Flex, Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
+import dynamic from 'next/dynamic'
+import { Flex, Box, useColorModeValue } from '@chakra-ui/react'
 import ComfortsCore from './comforts-core'
-import HScroll from './horizontal-scroll'
-import { WidthLowerThanCompat } from './width-query'
+import WidthLowerThan from './width-query'
+
+const DynamicGrid = dynamic(() =>
+  import('@chakra-ui/react').then(mod => mod.SimpleGrid)
+)
+const DynamicHScroll = dynamic(() => import('./horizontal-scroll'))
 
 const Comfort = ({ children, ...props }) => (
   <Flex
@@ -43,21 +48,19 @@ const Switch = ({ base }) => {
   }
 
   return base ? (
-    <HScroll tabs={segment} PagesIndexes={PagesCount - 1} />
+    <DynamicHScroll tabs={segment} PagesIndexes={PagesCount - 1} />
   ) : (
-    <SimpleGrid columns={[1, 1, 2]} spacing={3}>
+    <DynamicGrid columns={[1, 1, 2]} spacing={3}>
       {core.map(({ title, icons }, i) => (
         <Comfort key={i}>
           <Heading>{title}</Heading>
           {icons}
         </Comfort>
       ))}
-    </SimpleGrid>
+    </DynamicGrid>
   )
 }
 
-const Comforts = () => (
-  <Switch base={WidthLowerThanCompat(480) ? 'y' : undefined} />
-)
+const Comforts = () => <Switch base={WidthLowerThan(480) && 'y'} />
 
 export default Comforts
