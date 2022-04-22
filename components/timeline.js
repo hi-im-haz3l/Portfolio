@@ -4,7 +4,6 @@ import {
   ListItem,
   VStack,
   Box,
-  Flex,
   Heading,
   Text,
   useColorModeValue
@@ -28,7 +27,7 @@ const Events = ({ events }) => {
         return (
           <ListItem key={title} zIndex={0} pt={4} position="relative">
             {shouldConnectDots && (
-              <Flex
+              <Box
                 left="5px"
                 top={isFirstElement ? 5 : 0}
                 w="4px"
@@ -53,12 +52,11 @@ const Events = ({ events }) => {
               />
               <VStack w="full" spacing={2} textAlign="left">
                 <Heading w="full" variant="timeline-title" textAlign="left">
-                  {t({ id: TitleID, defaultMessage: '' })}
+                  {t({ id: TitleID, defaultMessage: 'Undefined' })}
                 </Heading>
                 <Text w="full" textAlign="left">
-                  {typeof description === 'undefined'
-                    ? ''
-                    : t({ id: DescriptionID, defaultMessage: 'Undefined' })}
+                  {!(typeof description === 'undefined') &&
+                    t({ id: DescriptionID, defaultMessage: 'Undefined' })}
                 </Text>
               </VStack>
             </HStack>

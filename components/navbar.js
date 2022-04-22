@@ -6,7 +6,6 @@ import {
   Link,
   Stack,
   Heading,
-  Flex,
   Menu,
   MenuItem,
   MenuList,
@@ -94,32 +93,28 @@ const Navbar = ({ currentPath, currentLocale }) => {
         p={2}
         maxW="container.md"
         wrap="wrap"
-        align="center"
         justifyContent="space-between"
       >
-        <Flex align="center" mr={3}>
+        <Box display="flex" alignItems="center" mr={3}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
             <Logo />
           </Heading>
-        </Flex>
+        </Box>
 
         <Stack
-          direction={{ base: 'column', md: 'row' }}
+          direction="row"
           display={{ base: 'none', md: 'flex' }}
-          w={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, md: 0 }}
         >
           <NavBarItem href="/works" path={path}>
             {t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}
           </NavBarItem>
           <NavBarItem
+            variant="align_icon"
             target="_blank"
             href="https://github.com/hi-im-haz3l/portfolio"
             path={path}
-            display="inline-flex"
-            alignItems="center"
             style={{ gap: 4 }}
           >
             <IoLogoGithub />

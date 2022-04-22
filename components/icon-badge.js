@@ -37,7 +37,6 @@ export const IconBadge = ({
         aria-label={tooltip}
         border="1px solid"
         borderRadius="full"
-        display="inline-flex"
         bg={bg}
         color={color}
         borderColor={

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
@@ -27,8 +27,8 @@ const variants = {
 const SideIndicator = ({ direction, children }) => (
   <Box
     position="absolute"
-    top="0"
-    bottom="0"
+    top={0}
+    bottom={0}
     right={direction === 'right' && 0}
     left={direction === 'left' && 0}
   >
@@ -64,7 +64,12 @@ const HScroll = ({ tabs, PagesIndexes }) => {
   return (
     <AnimateSharedLayout>
       <Box w="59px" mt="-1.7em" ml="auto" pb={6}>
-        <Flex mt={2} justifyContent="space-between" position="relative">
+        <Box
+          display="flex"
+          mt={2}
+          justifyContent="space-between"
+          position="relative"
+        >
           {tabs.map((e, i) => {
             const isActive = i === page
             return (
@@ -91,7 +96,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
             bg={useColorModeValue('#d1d1d1', '#525252')}
             position="absolute"
           />
-        </Flex>
+        </Box>
       </Box>
       <Box h="18.4em" overflow="hidden" position="relative">
         <SideIndicator direction="right">

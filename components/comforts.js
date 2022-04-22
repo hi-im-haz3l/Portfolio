@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { Flex, Box, useColorModeValue } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 import ComfortsCore from './comforts-core'
 import WidthLowerThan from './width-query'
 
@@ -9,7 +9,8 @@ const DynamicGrid = dynamic(() =>
 const DynamicHScroll = dynamic(() => import('./horizontal-scroll'))
 
 const Comfort = ({ children, ...props }) => (
-  <Flex
+  <Box
+    display="flex"
     p=".75rem 1rem"
     borderRadius="xl"
     bg={useColorModeValue('#ffffff4d', 'blackAlpha.300')}
@@ -21,7 +22,7 @@ const Comfort = ({ children, ...props }) => (
     {...props}
   >
     {children}
-  </Flex>
+  </Box>
 )
 
 const Heading = ({ children }) => <Box w={[200, 150, 200]}>{children}</Box>
