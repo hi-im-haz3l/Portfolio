@@ -11,8 +11,6 @@ const DynamicHScroll = dynamic(() => import('./horizontal-scroll'))
 const Comfort = ({ children, ...props }) => (
   <Flex
     p=".75rem 1rem"
-    maxW={[300, 'unset']}
-    m={['0 auto', 0]}
     borderRadius="xl"
     bg={useColorModeValue('#ffffff4d', 'blackAlpha.300')}
     justifyContent="space-between"
@@ -38,7 +36,7 @@ const Switch = ({ base }) => {
       let temp = o * 3
       segment.push(
         core.slice(temp, temp + 3).map(({ title, icons }, i) => (
-          <Comfort key={i} mb={3}>
+          <Comfort key={i} m="0 auto" mb={3} maxW="80%" minW={240}>
             <Heading>{title}</Heading>
             {icons}
           </Comfort>

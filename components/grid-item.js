@@ -30,7 +30,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
   <Box
     w="100%"
-    maxW="421px"
+    maxW={421}
     p={3}
     m="0 auto"
     textAlign="center"
