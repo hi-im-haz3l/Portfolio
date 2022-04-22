@@ -11,11 +11,7 @@ import {
   chakra,
   Collapse
 } from '@chakra-ui/react'
-import {
-  ChevronRightIcon,
-  ChevronUpIcon,
-  ChevronDownIcon
-} from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import { JustifyParagraph } from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -116,7 +112,7 @@ const Home = () => {
           </Box>
         </Section>
 
-        <Section mb={8} delay={0.2}>
+        <Section mb={10} delay={0.2}>
           <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Comfortable.Title', defaultMessage: 'Undefined' })}
           </Heading>
@@ -139,7 +135,7 @@ const Home = () => {
           </Collapse>
           <Box
             left="-5%"
-            width="110%"
+            w="110%"
             position="relative"
             boxShadow={!show && CollapseShadow}
             align="center"
@@ -151,15 +147,27 @@ const Home = () => {
               mt={2}
               mb={1}
               p=".25em .75em"
+              pb={show && '.5em'}
               h="auto"
               flexDirection="column"
               color={useColorModeValue('#979797', '#686868')}
               _hover={{ bg: HoverColor, color: BtnTextColor }}
               onClick={handleToggle}
             >
-              {show && <ChevronUpIcon />}
+              <Box
+                mb={-1}
+                display={show ? 'inline-flex' : 'none'}
+                transform="rotate(-90deg)"
+              >
+                <ChevronRightIcon />
+              </Box>
               {show ? 'Collapse' : 'Expand'}
-              {!show && <ChevronDownIcon />}
+              <Box
+                display={show ? 'none' : 'inline-flex'}
+                transform="rotate(90deg)"
+              >
+                <ChevronRightIcon />
+              </Box>
             </Button>
           </Box>
         </Section>

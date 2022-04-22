@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
-import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const variants = {
   enter: function (direction) {
@@ -36,7 +36,11 @@ const SideIndicator = ({ direction, children }) => (
       position="relative"
       left="50%"
       top="50%"
-      transform="translate(-50%,-50%)"
+      transform={
+        direction === 'right'
+          ? 'translate(-50%,-50%)'
+          : 'translate(-50%,-50%) rotate(180deg)'
+      }
       fontSize={26}
     >
       <motion.div
@@ -94,7 +98,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
           {page < PagesIndexes && <ChevronRightIcon />}
         </SideIndicator>
         <SideIndicator direction="left">
-          {page > 0 && <ChevronLeftIcon />}
+          {page > 0 && <ChevronRightIcon />}
         </SideIndicator>
         <AnimatePresence initial={false} custom={direction}>
           <Box
