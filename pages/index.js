@@ -11,7 +11,7 @@ import {
   chakra,
   Collapse
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, InfoOutlineIcon } from '@chakra-ui/icons'
 import { JustifyParagraph } from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -49,13 +49,30 @@ const Home = () => {
     <Layout>
       <Container>
         <Box
+          position="absolute"
+          top={['-200px', '-240px', '-310px']}
+          right={0}
           borderRadius="lg"
+          bg={useColorModeValue('#f5f9ffb0', '#181818ba')}
+        >
+          <Box
+            display="flex"
+            p=".4em .75em"
+            alignItems="center"
+            fontWeight="semibold"
+          >
+            <InfoOutlineIcon mr={1.5} />
+            {t({ id: 'Home.InteractHint', defaultMessage: 'Undefined' })}!
+          </Box>
+        </Box>
+        <Box
           mb={6}
           p={3}
+          bg={useColorModeValue('#f5f9ffb0', '#323232c4')}
           textAlign="center"
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          borderRadius="lg"
         >
-          {t({ id: 'Home.Greeting', defaultMessage: 'Undefined' })}
+          {t({ id: 'Home.Greeting', defaultMessage: 'Undefined' })}!
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -75,8 +92,8 @@ const Home = () => {
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
-              w="100px"
-              h="100px"
+              w={100}
+              h={100}
               display="inline-block"
               borderRadius="full"
               overflow="hidden"
@@ -102,11 +119,12 @@ const Home = () => {
           <Box align="center" mt={4}>
             <NextLink href="/works" scroll={false} passHref>
               <Button
-                rightIcon={<ChevronRightIcon />}
+                pr={2.5}
                 colorScheme={useColorModeValue('facebook', 'teal')}
                 boxShadow="lg"
               >
                 {t({ id: 'Home.Works.Button', defaultMessage: 'Undefined' })}
+                <ChevronRightIcon ml={1} />
               </Button>
             </NextLink>
           </Box>

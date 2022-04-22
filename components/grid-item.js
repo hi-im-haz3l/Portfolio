@@ -35,7 +35,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
     m="0 auto"
     textAlign="center"
     borderRadius="xl"
-    _hover={{ bg: useColorModeValue('#f0f2f5', '#464646') }}
+    _hover={{ bg: useColorModeValue('#f5f9ffb0', '#323232c4') }}
     transition="150ms"
   >
     <NextLink href={`/works/${id}`} scroll={false} passHref>

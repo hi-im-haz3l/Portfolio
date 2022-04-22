@@ -10,7 +10,8 @@
   "Sidebar.Works": "My Works",
   "Sidebar.Source": "View Source",
 
-  "Home.Greeting": "Hello, welcome to my portfolio!",
+  "Home.InteractHint": "Interactable",
+  "Home.Greeting": "Hello, welcome to my portfolio",
   "Home.Hobby": "Programming Enthusiast",
   "Home.Bio.Title": "Bio",
   "Home.Bio.Content": "Everything from a maker to an electrician, a designer to a developer, I'm a jack of all trades but a master of none, always on a balancing act. I was born and raised in Hanoi, Vietnam, and currently studying in Mikkeli, Finland. With a passion for creating values, I've always been eager to explore the bleeding edge of technology. When not working, I often hang out on Github and LinkedIn to learn, socialize, or get inspired.",
