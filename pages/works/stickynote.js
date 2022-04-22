@@ -19,7 +19,7 @@ const Work = () => {
       })}
     >
       <Container>
-        <Title>
+        <Title parent={t({ id: 'Works.Title', defaultMessage: 'Undefined' })}>
           {t({ id: 'Works.Web.Stickynote.Title', defaultMessage: 'Undefined' })}
           <Badge ml={3}>
             {t({
@@ -40,11 +40,12 @@ const Work = () => {
               {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <Link
+              variant="align_icon"
               target="_blank"
               href="https://portfolio.haz3l.duckdns.org/prototype/Stickynote"
             >
               Prototype/Stickynote
-              <ExternalLinkIcon mx="2px" />
+              <ExternalLinkIcon mx={1} />
             </Link>
           </ListItem>
           <ListItem>

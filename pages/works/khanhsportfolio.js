@@ -1,5 +1,6 @@
 import NextLink from 'next/link'
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { LinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage } from '../../components/work'
 import { Paragraph } from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
@@ -19,7 +20,7 @@ const Work = () => {
       })}
     >
       <Container>
-        <Title>
+        <Title parent={t({ id: 'Works.Title', defaultMessage: 'Undefined' })}>
           {t({
             id: 'Works.Web.khanhsportfolio.Title',
             defaultMessage: 'Undefined'
@@ -43,8 +44,9 @@ const Work = () => {
               {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <NextLink href="/" passHref>
-              <Link>
+              <Link variant="align_icon">
                 {t({ id: 'Button.Return', defaultMessage: 'Undefined' })}
+                <LinkIcon mx={1} />
               </Link>
             </NextLink>
           </ListItem>
