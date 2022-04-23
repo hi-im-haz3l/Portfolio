@@ -25,6 +25,7 @@ const NavBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
   const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
+  console.log(path)
 
   return (
     <NextLink href={href} passHref>
@@ -76,7 +77,6 @@ const SideBarItem = ({ href, path, children, ...props }) => {
 
 const Navbar = ({ currentPath, currentLocale }) => {
   const { formatMessage: t } = useIntl()
-  const { path } = currentPath
   const fullSize = WidthLowerThan(768)
 
   return (
@@ -107,14 +107,14 @@ const Navbar = ({ currentPath, currentLocale }) => {
           alignItems="center"
           flexGrow={1}
         >
-          <NavBarItem href="/works" path={path}>
+          <NavBarItem href="/works" path={currentPath}>
             {t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}
           </NavBarItem>
           <NavBarItem
             variant="align_icon"
             target="_blank"
             href="https://github.com/hi-im-haz3l/portfolio"
-            path={path}
+            path={currentPath}
             style={{ gap: 4 }}
           >
             <IoLogoGithub />
@@ -150,16 +150,16 @@ const Navbar = ({ currentPath, currentLocale }) => {
                 border="none"
                 bg={useColorModeValue('#f5f5f5', '#313134')}
               >
-                <SideBarItem href="/" path={path}>
+                <SideBarItem href="/" path={currentPath}>
                   {t({ id: 'Sidebar.About', defaultMessage: 'Undefined' })}
                 </SideBarItem>
-                <SideBarItem href="/works" path={path}>
+                <SideBarItem href="/works" path={currentPath}>
                   {t({ id: 'Sidebar.Works', defaultMessage: 'Undefined' })}
                 </SideBarItem>
                 <SideBarItem
                   target="_blank"
                   href="https://github.com/hi-im-haz3l/portfolio"
-                  path={path}
+                  path={currentPath}
                 >
                   {t({ id: 'Sidebar.Source', defaultMessage: 'Undefined' })}
                 </SideBarItem>
