@@ -25,7 +25,6 @@ const NavBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
   const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
-  console.log(path)
 
   return (
     <NextLink href={href} passHref>
