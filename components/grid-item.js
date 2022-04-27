@@ -43,7 +43,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
         <Box
           display="flex"
           borderRadius="12px"
-          boxShadow="rgba(0, 0, 0, 0.36) 0px 5px 15px"
+          boxShadow={useColorModeValue("#20202363 0px 5px 15px", "#00000063 0px 5px 15px")}
         >
           <Image
             src={thumbnail}
