@@ -37,6 +37,7 @@ const Events = ({ events }) => {
                 zIndex={-1}
                 position="absolute"
                 bg={LineColor}
+                mt={-1.5}
               />
             )}
             <HStack
@@ -47,7 +48,7 @@ const Events = ({ events }) => {
               <Box
                 minW="34px"
                 h="34px"
-                mt={1}
+                mt={-1.5}
                 borderRadius="full"
                 bg={AccentColor}
                 border={BackgroundColor}
