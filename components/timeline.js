@@ -14,6 +14,7 @@ const Events = ({ events }) => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
   const LineColor = useColorModeValue('#d3d3d3', '#686868')
+  const BackgroundColor = useColorModeValue('10px solid #e2e8f0', '10px solid #202023')
 
   return (
     <List pb={4}>
@@ -28,9 +29,9 @@ const Events = ({ events }) => {
           <ListItem key={title} zIndex={0} pt={4} position="relative">
             {shouldConnectDots && (
               <Box
-                left="5px"
+                left="15.5px"
                 top={isFirstElement ? 5 : 0}
-                w="4px"
+                w="3px"
                 bottom={0}
                 h={isLastElement ? 5 : 'unset'}
                 zIndex={-1}
@@ -44,11 +45,12 @@ const Events = ({ events }) => {
               justifyContent="flex-start"
             >
               <Box
-                minW="14px"
-                h="14px"
+                minW="34px"
+                h="34px"
                 mt={1}
                 borderRadius="full"
                 bg={AccentColor}
+                border={BackgroundColor}
               />
               <VStack w="full" spacing={2} textAlign="left">
                 <Heading w="full" variant="timeline-title" textAlign="left">
