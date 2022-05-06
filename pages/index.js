@@ -122,9 +122,16 @@ const Home = () => {
                 pr={2.5}
                 colorScheme={useColorModeValue('facebook', 'teal')}
                 boxShadow="lg"
+                _hover={{
+                  '&>svg': { transform: 'translateX(0)', opacity: '1'},
+                  '&>div': { transform: 'translateX(0)' },
+                }}
+                transition='1s'
               >
+                <Box transform='translateX(7px)' transition='.3s'>
                 {t({ id: 'Home.Works.Button', defaultMessage: 'Undefined' })}
-                <ChevronRightIcon ml={1} />
+                </Box>
+                <ChevronRightIcon ml={1} transform='translateX(-7px)' opacity='0' transition='.3s' />
               </Button>
             </NextLink>
           </Box>
