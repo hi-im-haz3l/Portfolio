@@ -14,7 +14,10 @@ const Events = ({ events }) => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
   const LineColor = useColorModeValue('#d3d3d3', '#686868')
-  const BackgroundColor = useColorModeValue('10px solid #e2e8f0', '10px solid #202023')
+  const BackgroundColor = useColorModeValue(
+    '10px solid #e2e8f0',
+    '10px solid #202023'
+  )
 
   return (
     <List pb={4}>
