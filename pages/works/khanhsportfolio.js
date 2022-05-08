@@ -5,7 +5,8 @@ import { Title, WorkImage } from '../../components/work'
 import { Paragraph } from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import { FaFileAlt } from 'react-icons/fa'
-import { GiPlatform, GiStack } from 'react-icons/gi'
+import { GiPlatform } from 'react-icons/gi'
+import { RiCodeSSlashFill } from 'react-icons/ri'
 import { CustomBadge } from '../../components/icon-badge'
 import { useIntl } from 'react-intl'
 
@@ -65,7 +66,7 @@ const Work = () => {
             </span>
           </ListItem>
           <ListItem>
-            <CustomBadge icon={<GiStack />}>
+            <CustomBadge icon={<RiCodeSSlashFill />}>
               {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <span>Next.js, Chakra UI, Emotion, Three.js, Framer Motion</span>
