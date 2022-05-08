@@ -63,7 +63,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
 
   return (
     <AnimateSharedLayout>
-      <Box w="59px" mt="-1.7em" ml="auto" pb={6}>
+      <Box w="59px" mt={-8} ml="auto" pb={6}>
         <Box
           display="flex"
           mt={2}
@@ -98,7 +98,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
           />
         </Box>
       </Box>
-      <Box h="18.4em" overflow="hidden" position="relative">
+      <Box h="18.4em" mt={1} overflow="hidden" position="relative">
         <SideIndicator direction="right">
           {page < PagesIndexes && <ChevronRightIcon />}
         </SideIndicator>
