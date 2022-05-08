@@ -1,4 +1,3 @@
-import NextLink from 'next/link'
 import {
   Link,
   Container,
@@ -16,16 +15,13 @@ import { JustifyParagraph } from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Comforts from '../components/comforts'
-import {
-  IoLogoStackoverflow,
-  IoLogoLinkedin,
-  IoLogoGithub
-} from 'react-icons/io5'
+import { SiStackoverflow, SiLinkedin, SiGithub } from 'react-icons/si'
 import Image from 'next/image'
 import { useIntl } from 'react-intl'
 import Events from '../components/timeline'
 import timeline from '../data/timeline.json'
 import { useState } from 'react'
+import SlidingButton from '../components/slide-button'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -117,27 +113,9 @@ const Home = () => {
             {t({ id: 'Home.Bio.Content', defaultMessage: 'Undefined' })}
           </JustifyParagraph>
           <Box align="center" mt={4}>
-            <NextLink href="/works" scroll={false} passHref>
-              <Button
-                pr={2.5}
-                colorScheme={useColorModeValue('facebook', 'teal')}
-                boxShadow="lg"
-                _hover={{
-                  '&>svg': { transform: 'translateX(0)', opacity: '1' },
-                  '&>div': { transform: 'translateX(0)' }
-                }}
-              >
-                <Box transform="translateX(7px)" transition="300ms">
-                  {t({ id: 'Home.Works.Button', defaultMessage: 'Undefined' })}
-                </Box>
-                <ChevronRightIcon
-                  ml={1}
-                  transform="translateX(-7px)"
-                  opacity="0"
-                  transition="300ms"
-                />
-              </Button>
-            </NextLink>
+            <SlidingButton icon={<ChevronRightIcon />} href="/works">
+              {t({ id: 'Home.Works.Button', defaultMessage: 'Undefined' })}
+            </SlidingButton>
           </Box>
         </Section>
 
@@ -214,7 +192,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/haz3l/"
                 target="_blank"
               >
-                <IoLogoLinkedin />
+                <SiLinkedin />
                 Lê Duy Khánh
               </Link>
             </ListItem>
@@ -226,7 +204,7 @@ const Home = () => {
                 href="https://github.com/hi-im-haz3l"
                 target="_blank"
               >
-                <IoLogoGithub />
+                <SiGithub />
                 @hi-im-haz3l
               </Link>
             </ListItem>
@@ -238,7 +216,7 @@ const Home = () => {
                 href="https://stackoverflow.com/users/11005113/haz3l"
                 target="_blank"
               >
-                <IoLogoStackoverflow />
+                <SiStackoverflow />
                 Haz3L
               </Link>
             </ListItem>
