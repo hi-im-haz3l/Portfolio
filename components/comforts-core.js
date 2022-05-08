@@ -6,12 +6,12 @@ import {
   SiNextdotjs,
   SiBootstrap,
   SiPhp,
+  SiDocker,
   SiArduino,
   SiEspressif,
   SiC,
   SiPopos,
   SiNginx,
-  SiGnubash,
   SiMariadb,
   SiBlender,
   SiAutodesk,
@@ -51,9 +51,9 @@ const ComfortsCore = () => {
           />
           <IconBadge
             icon={<SiPhp />}
-            color={useColorModeValue('#4b568b', undefined)}
+            color={useColorModeValue('#7685cf', undefined)}
             bg={useColorModeValue(undefined, '#5d6aab')}
-            borderColor={useColorModeValue('#4b568b', undefined)}
+            borderColor={useColorModeValue('#7685cf', undefined)}
             tooltip="PHP"
           />
           <IconBadge
@@ -88,24 +88,24 @@ const ComfortsCore = () => {
       icons: (
         <Technologies>
           <IconBadge
-            icon={<SiGnubash />}
-            color={useColorModeValue('#313134', undefined)}
-            bg={useColorModeValue(undefined, '#313134')}
-            borderColor={useColorModeValue('#013143', undefined)}
-            tooltip="Powerlevel10k"
-          />
-          <IconBadge
             icon={<SiMariadb />}
-            color={useColorModeValue('#013143', undefined)}
+            color={useColorModeValue('#0078a5', undefined)}
             bg={useColorModeValue(undefined, '#013143')}
-            borderColor={useColorModeValue('#013143', undefined)}
+            borderColor={useColorModeValue('#0078a5', undefined)}
             tooltip="MariaDB"
           />
           <IconBadge
+            icon={<SiDocker />}
+            color={useColorModeValue('#1c75bb', undefined)}
+            bg={useColorModeValue(undefined, '#005fa9')}
+            borderColor={useColorModeValue('#1c75bb', undefined)}
+            tooltip="Docker"
+          />
+          <IconBadge
             icon={<SiPopos />}
-            color={useColorModeValue('#2c7078', undefined)}
-            bg={useColorModeValue(undefined, '#368b95')}
-            borderColor={useColorModeValue('#2c7078', undefined)}
+            color={useColorModeValue('#3e9ba7', undefined)}
+            bg={useColorModeValue(undefined, '#40b1bf')}
+            borderColor={useColorModeValue('#3e9ba7', undefined)}
             tooltip="Pop!_OS"
           />
           <IconBadge
@@ -134,9 +134,9 @@ const ComfortsCore = () => {
           />
           <IconBadge
             icon={<SiC />}
-            color={useColorModeValue('#014b95', undefined)}
+            color={useColorModeValue('#0072cd', undefined)}
             bg={useColorModeValue(undefined, '#00589d')}
-            borderColor={useColorModeValue('#014b95', undefined)}
+            borderColor={useColorModeValue('#0072cd', undefined)}
             tooltip={
               'C (' +
               t({
@@ -148,9 +148,9 @@ const ComfortsCore = () => {
           />
           <IconBadge
             icon={<SiArduino />}
-            color={useColorModeValue('#008184', undefined)}
+            color={useColorModeValue('#00979d', undefined)}
             bg={useColorModeValue(undefined, '#00979d')}
-            borderColor={useColorModeValue('#008184', undefined)}
+            borderColor={useColorModeValue('#00979d', undefined)}
             tooltip="Arduino"
           />
         </Technologies>
@@ -179,9 +179,9 @@ const ComfortsCore = () => {
           />
           <IconBadge
             icon={<GiCubes />}
-            color={useColorModeValue('#3b3b7a', undefined)}
+            color={useColorModeValue('#6f6f9b', undefined)}
             bg={useColorModeValue(undefined, '#4b4b9b')}
-            borderColor={useColorModeValue('#3b3b7a', undefined)}
+            borderColor={useColorModeValue('#6f6f9b', undefined)}
             tooltip="MagicaVoxel"
           />
         </Technologies>
@@ -196,16 +196,16 @@ const ComfortsCore = () => {
         <Technologies>
           <IconBadge
             icon={<SiOpencv />}
-            color={useColorModeValue('#013143', undefined)}
+            color={useColorModeValue('#727285', undefined)}
             bg={useColorModeValue(undefined, '#313134')}
-            borderColor={useColorModeValue('#013143', undefined)}
+            borderColor={useColorModeValue('#727285', undefined)}
             tooltip="OpenCV"
           />
           <IconBadge
             icon={<SiPython />}
-            color={useColorModeValue('#014b95', undefined)}
+            color={useColorModeValue('#064e87', undefined)}
             bg={useColorModeValue(undefined, '#0e5e99')}
-            borderColor={useColorModeValue('#014b95', undefined)}
+            borderColor={useColorModeValue('#064e87', undefined)}
             tooltip="Python"
           />
         </Technologies>
@@ -220,14 +220,14 @@ const ComfortsCore = () => {
         <Technologies>
           <IconBadge
             icon={<SiAdobeillustrator />}
-            color={useColorModeValue('#833a00', '#300000')}
+            color={useColorModeValue('#974300', '#300000')}
             bg={useColorModeValue(undefined, '#df9713')}
             borderColor={useColorModeValue('#d58101', '#7e5200')}
             tooltip="Adobe Illustrator"
           />
           <IconBadge
             icon={<SiAdobephotoshop />}
-            color={useColorModeValue('#00566e', '#00242e')}
+            color={useColorModeValue('#00617c', '#00242e')}
             bg={useColorModeValue(undefined, '#01afd3')}
             borderColor={useColorModeValue('#01afd3', '#006276')}
             tooltip="Adobe Photoshop"
