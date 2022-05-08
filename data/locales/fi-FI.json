@@ -1,7 +1,7 @@
 {
   "lang": "FI",
   "Timeline.Now": "Nyt",
-  "Button.Return": "Palaa etusivulle",
+  "Button.Return": "Paluun kotisivu",
 
   "Navbar.Works": "Projektit",
   "Navbar.Source": "Lähdekoodi",
@@ -82,6 +82,7 @@
 
   "404.Title": "Voi harmi",
   "404.Description": "Etsimääsi sivua ei löytynyt.",
+  "404.Return": "Hakeutua",
 
   "Works.Experimental": "Kokeellinen",
 
