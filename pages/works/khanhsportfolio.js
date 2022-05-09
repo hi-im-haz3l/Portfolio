@@ -1,6 +1,5 @@
 import NextLink from 'next/link'
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
-import { LinkIcon } from '@chakra-ui/icons'
+import { Container, Box, Badge, Link, List, ListItem } from '@chakra-ui/react'
 import { Title, WorkImage } from '../../components/work'
 import { Paragraph } from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
@@ -8,6 +7,7 @@ import { FaFileAlt } from 'react-icons/fa'
 import { GiPlatform } from 'react-icons/gi'
 import { RiCodeSSlashFill } from 'react-icons/ri'
 import { CustomBadge } from '../../components/icon-badge'
+import { RiPantoneLine } from 'react-icons/ri'
 import { useIntl } from 'react-intl'
 
 const Work = () => {
@@ -15,17 +15,11 @@ const Work = () => {
 
   return (
     <Layout
-      title={t({
-        id: 'Works.Web.khanhsportfolio.Title',
-        defaultMessage: 'Undefined'
-      })}
+      title="Khánh's Portfolio"
     >
       <Container>
-        <Title parent={t({ id: 'Works.Title', defaultMessage: 'Undefined' })}>
-          {t({
-            id: 'Works.Web.khanhsportfolio.Title',
-            defaultMessage: 'Undefined'
-          })}
+        <Title parent={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
+        Khánh&apos;s Portfolio
           <Badge ml={3}>
             {t({
               id: 'Works.Web.khanhsportfolio.Lifespan',
@@ -47,7 +41,9 @@ const Work = () => {
             <NextLink href="/" passHref>
               <Link variant="align_icon">
                 {t({ id: 'Button.Return', defaultMessage: 'Undefined' })}
-                <LinkIcon mx={1} />
+                <Box mx={1}>
+                  <RiPantoneLine />
+                </Box>
               </Link>
             </NextLink>
           </ListItem>

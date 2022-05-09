@@ -14,14 +14,11 @@ const Work = () => {
 
   return (
     <Layout
-      title={t({
-        id: 'Works.Web.Stickynote.Title',
-        defaultMessage: 'Undefined'
-      })}
+      title="Sticky Note"
     >
       <Container>
-        <Title parent={t({ id: 'Works.Title', defaultMessage: 'Undefined' })}>
-          {t({ id: 'Works.Web.Stickynote.Title', defaultMessage: 'Undefined' })}
+        <Title parent={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
+        Sticky Note
           <Badge ml={3}>
             {t({
               id: 'Works.Web.Stickynote.Lifespan',

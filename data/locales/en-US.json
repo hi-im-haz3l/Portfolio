@@ -60,8 +60,6 @@
 
   "Home.Social.Title": "Other platforms",
 
-  "Works.Title": "My works",
-
   "Works.Web.Title": "Web applications",
   "Works.Web.Badge.Demo": "Demo",
   "Works.Web.Badge.Platform": "Platform",
@@ -70,17 +68,15 @@
   "Works.Web.Platform.Description": "Web application, cross-platform",
 
   "Works.Web.Ambersbakery.Lifespan": "Jan - June 2021",
-  "Works.Web.Ambersbakery.Title": "Amber's Bakery",
   "Works.Web.Ambersbakery.Description": "A online bakery with robust orders, products, and HR management system.",
   "Works.Web.Ambersbakery.Management": "Management console",
   "Works.Web.Stickynote.Lifespan": "March 2021",
-  "Works.Web.Stickynote.Title": "Sticky Note",
   "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",
   "Works.Web.khanhsportfolio.Lifespan": "March 2022",
-  "Works.Web.khanhsportfolio.Title": "Khánh's portfolio",
   "Works.Web.khanhsportfolio.Description": "Responsive, localized, and  dynamically render portfolio application.",
 
-  "404.Title": "Bummer",
+  "404.Title": "Not Found",
+  "404.Header": "Bummer",
   "404.Description": "The page you're looking for was not found.",
   "404.Return": "Homepage",
 

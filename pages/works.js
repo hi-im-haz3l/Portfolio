@@ -12,20 +12,17 @@ const Works = () => {
   const { formatMessage: t } = useIntl()
 
   return (
-    <Layout title="Works">
+    <Layout title={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
       <Container maxW="container.sm">
         <Heading as="h3" fontSize={20} mb={6}>
-          {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
+          {t({ id: 'Sidebar.Works', defaultMessage: 'Undefined' })}
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} m={-3} spacing={2}>
           <Section mb={2}>
             <WorkGridItem
               id="ambersbakery"
-              title={t({
-                id: 'Works.Web.Ambersbakery.Title',
-                defaultMessage: 'Undefined'
-              })}
+              title="Amber's Bakery"
               thumbnail={thumbAmbersbakery}
             >
               {t({
@@ -38,10 +35,7 @@ const Works = () => {
           <Section mb={2}>
             <WorkGridItem
               id="stickynote"
-              title={t({
-                id: 'Works.Web.Stickynote.Title',
-                defaultMessage: 'Undefined'
-              })}
+              title="Sticky Note"
               thumbnail={thumbStickynote}
             >
               {t({
@@ -54,10 +48,7 @@ const Works = () => {
           <Section mb={2} delay={0.1}>
             <WorkGridItem
               id="khanhsportfolio"
-              title={t({
-                id: 'Works.Web.khanhsportfolio.Title',
-                defaultMessage: 'Undefined'
-              })}
+              title="Khánh's Portfolio"
               thumbnail={thumbKhanhsportfolio}
             >
               {t({

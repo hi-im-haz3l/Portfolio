@@ -14,17 +14,11 @@ const Work = () => {
 
   return (
     <Layout
-      title={t({
-        id: 'Works.Web.Ambersbakery.Title',
-        defaultMessage: 'Undefined'
-      })}
+      title="Amber's Bakery"
     >
       <Container>
-        <Title parent={t({ id: 'Works.Title', defaultMessage: 'Undefined' })}>
-          {t({
-            id: 'Works.Web.Ambersbakery.Title',
-            defaultMessage: 'Undefined'
-          })}
+        <Title parent={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
+        Amber&apos;s Bakery
           <Badge ml={3}>
             {t({
               id: 'Works.Web.Ambersbakery.Lifespan',
