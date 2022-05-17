@@ -20,9 +20,9 @@ const VoxelModel = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new Vector3(0, 3, 0))
+  const [target] = useState(new Vector3(1, 8, 0))
   const [initialCameraPosition] = useState(
-    new Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI))
+    new Vector3(20 * Math.sin(.2 * Math.PI), 10, 20 * Math.cos(.2 * Math.PI))
   )
   const [scene] = useState(new Scene())
   const [_controls, setControls] = useState()
@@ -56,13 +56,13 @@ const VoxelModel = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scH * 0.033 + 4.8
+      const scale = scH * .01 + 4.8
       const camera = new OrthographicCamera(
         -scale,
         scale,
         scale,
         -scale,
-        0.01,
+        .01,
         50000
       )
       camera.position.copy(initialCameraPosition)
@@ -96,7 +96,7 @@ const VoxelModel = () => {
           const p = initialCameraPosition
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
-          camera.position.y = 10
+          camera.position.y = 12
           camera.position.x =
             p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
           camera.position.z =

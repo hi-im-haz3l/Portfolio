@@ -18,7 +18,7 @@ export const ModelContainer = forwardRef(({ children }, ref) => (
     className="voxel-model"
     m="auto"
     mt={['0px', '-60px', '-120px']}
-    mb={['-80px', '-140px', '-200px']}
+    mb={['-70px', '-130px', '-200px']}
     w={[290, 450, 640]}
     h={[290, 450, 640]}
     position="relative"
