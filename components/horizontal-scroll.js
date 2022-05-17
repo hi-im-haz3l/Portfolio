@@ -78,7 +78,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
                   <Box
                     as={motion.div}
                     w="100%"
-                    h="0.25em"
+                    h=".25em"
                     borderRadius="full"
                     bg={thumb}
                     position="relative"
@@ -91,7 +91,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
           })}
           <Box
             w="100%"
-            h="0.25em"
+            h=".25em"
             borderRadius="full"
             bg={useColorModeValue('#d1d1d1', '#525252')}
             position="absolute"

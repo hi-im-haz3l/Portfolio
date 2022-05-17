@@ -13,12 +13,10 @@ const Work = () => {
   const { formatMessage: t } = useIntl()
 
   return (
-    <Layout
-      title="Sticky Note"
-    >
+    <Layout title="Sticky Note">
       <Container>
         <Title parent={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
-        Sticky Note
+          Sticky Note
           <Badge ml={3}>
             {t({
               id: 'Works.Web.Stickynote.Lifespan',

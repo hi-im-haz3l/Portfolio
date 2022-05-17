@@ -13,12 +13,10 @@ const Work = () => {
   const { formatMessage: t } = useIntl()
 
   return (
-    <Layout
-      title="Amber's Bakery"
-    >
+    <Layout title="Amber's Bakery">
       <Container>
         <Title parent={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
-        Amber&apos;s Bakery
+          Amber&apos;s Bakery
           <Badge ml={3}>
             {t({
               id: 'Works.Web.Ambersbakery.Lifespan',

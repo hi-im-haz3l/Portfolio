@@ -14,12 +14,10 @@ const Work = () => {
   const { formatMessage: t } = useIntl()
 
   return (
-    <Layout
-      title="Khánh's Portfolio"
-    >
+    <Layout title="Khánh's Portfolio">
       <Container>
         <Title parent={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
-        Khánh&apos;s Portfolio
+          Khánh&apos;s Portfolio
           <Badge ml={3}>
             {t({
               id: 'Works.Web.khanhsportfolio.Lifespan',
