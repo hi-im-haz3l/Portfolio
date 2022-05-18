@@ -1,9 +1,10 @@
 import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
-import Chakra from '../components/chakra'
+import { ChakraProvider } from '@chakra-ui/react'
 import { IntlProvider } from 'react-intl'
 import 'focus-visible/dist/focus-visible'
+import Theme from '../lib/theme'
 
 import en from '../data/locales/en-US.json'
 import vi from '../data/locales/vi-VN.json'
@@ -24,7 +25,7 @@ function Portfolio({ Component, pageProps, router }) {
 
   return (
     <IntlProvider messages={messages[locale]} locale={locale}>
-      <Chakra cookies={pageProps.cookies}>
+      <ChakraProvider theme={Theme}>
         <Fonts />
         <Layout router={router}>
           <AnimatePresence
@@ -39,7 +40,7 @@ function Portfolio({ Component, pageProps, router }) {
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </Layout>
-      </Chakra>
+      </ChakraProvider>
     </IntlProvider>
   )
 }
