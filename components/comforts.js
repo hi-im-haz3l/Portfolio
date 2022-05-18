@@ -60,6 +60,6 @@ const Switch = ({ base }) => {
   )
 }
 
-const Comforts = () => <Switch base={WidthLowerThan(480) && 'y'} />
+const Comforts = () => <Switch base={WidthLowerThan(30) && 'y'} />
 
 export default Comforts

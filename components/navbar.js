@@ -76,7 +76,7 @@ const SideBarItem = ({ href, path, children, ...props }) => {
 
 const Navbar = ({ currentPath, currentLocale }) => {
   const { formatMessage: t } = useIntl()
-  const fullSize = WidthLowerThan(768)
+  const fullSize = WidthLowerThan(48)
 
   return (
     <Box
@@ -84,7 +84,7 @@ const Navbar = ({ currentPath, currentLocale }) => {
       as="nav"
       w="100%"
       bg={useColorModeValue('#ffffff70', '#44444a80')}
-      css={{ backdropFilter: 'blur(10px)' }}
+      css={{ backdropFilter: 'blur(.7em)' }}
       zIndex={2}
     >
       <Container
@@ -128,7 +128,7 @@ const Navbar = ({ currentPath, currentLocale }) => {
           </Box>
         </Stack>
 
-        <Box ml={7} align="end">
+        <Box ml={{ base: 0, md: 7 }} align="end">
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

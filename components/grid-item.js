@@ -42,10 +42,10 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
       <LinkBox cursor="pointer">
         <Box
           display="flex"
-          borderRadius="12px"
+          borderRadius=".75em"
           boxShadow={useColorModeValue(
-            '#20202363 0px 5px 15px',
-            '#00000063 0px 5px 15px'
+            '#20202363 0 .3em 1em',
+            '#00000063 0 .3em 1em'
           )}
         >
           <Image
@@ -70,7 +70,7 @@ export const GridItemStyle = () => (
   <Global
     styles={`
       .grid-item-thumbnail {
-        border-radius: 12px
+        border-radius: .75em
       }
     `}
   />

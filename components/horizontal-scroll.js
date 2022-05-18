@@ -63,7 +63,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
 
   return (
     <AnimateSharedLayout>
-      <Box w="59px" mt={-8} ml="auto" pb={6}>
+      <Box w="3.7em" mt={-8} ml="auto" pb={6}>
         <Box
           display="flex"
           mt={2}

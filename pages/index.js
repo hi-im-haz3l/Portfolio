@@ -30,11 +30,11 @@ const ProfileImage = chakra(Image, {
 const Home = () => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
-  const HoverColor = useColorModeValue('#f0f2f5', '#464646')
-  const BtnTextColor = useColorModeValue('#979797', '#ededee')
+  const HoverColor = useColorModeValue('#ebeff5', '#464646')
+  const BtnTextColor = useColorModeValue('#7a7a7a', '#ededee')
   const CollapseShadow = useColorModeValue(
-    '0px -20px 20px -23px #000',
-    '0px -30px 20px -20px #000'
+    '0 -1.25em 1.25em -1.5em #000',
+    '0 -1.9em 1.25em -1.25em #000'
   )
   const [show, setShow] = useState(false)
   const handleToggle = () => {
@@ -43,10 +43,10 @@ const Home = () => {
 
   return (
     <Layout>
-      <Container>
+      <Container maxW="32.5em" overflow="hidden">
         <Box
           position="absolute"
-          top={['-200px', '-240px', '-310px']}
+          top={['-12.5em', '-15em', '-19.4em']}
           right={0}
           borderRadius="lg"
           bg={useColorModeValue('#f5f9ffb0', '#181818ba')}
