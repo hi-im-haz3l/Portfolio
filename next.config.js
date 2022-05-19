@@ -1,24 +1,16 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const isAnalyze = typeof process.env.BUNDLE_ANALYZE !== 'undefined'
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.BUNDLE_ANALYZE === 'true'
+})
 const ThreeMinifierPlugin = require('@yushijinhun/three-minifier-webpack')
 
-module.exports = {
+module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   swcMinify: true,
   i18n: {
     locales: ['en-US', 'vi-VN', 'fi-FI'],
     defaultLocale: 'en-US'
   },
-  webpack: (config, { dev, isServer }) => {
-    if (isAnalyze) {
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'server',
-          analyzerPort: isServer ? 1111 : 1112,
-          openAnalyzer: true
-        })
-      )
-    }
+  webpack: (config, { dev }) => {
     if (!dev) {
       config.cache = false
       const threeMinifier = new ThreeMinifierPlugin()
@@ -28,4 +20,4 @@ module.exports = {
     }
     return config
   }
-}
+})
