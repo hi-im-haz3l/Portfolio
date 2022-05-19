@@ -14,27 +14,27 @@
   "author": "Lê Duy Khánh",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/css-reset": "^1.1.3",
-    "@chakra-ui/icons": "^1.1.1",
-    "@chakra-ui/react": "^1.7.2",
+    "@chakra-ui/css-reset": "^2.0.0",
+    "@chakra-ui/icons": "^2.0.0",
+    "@chakra-ui/react": "^2.0.2",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@next/bundle-analyzer": "^12.1.5",
     "focus-visible": "^5.2.0",
-    "framer-motion": "^5.3.0",
+    "framer-motion": "^6.3.3",
     "next": "^12.1.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "react-intl": "^5.24.7",
     "sharp": "^0.30.4",
-    "three": "^0.134.0"
+    "three": "^0.140.2"
   },
   "devDependencies": {
     "@yushijinhun/three-minifier-webpack": "^0.3.1",
     "babel-plugin-minify-dead-code-elimination": "^0.5.1",
     "cross-env": "^7.0.3",
-    "eslint": "^7.32.0",
+    "eslint": "^8.15.0",
     "eslint-config-next": "^12.0.4",
     "prettier": "^2.4.1"
   }
