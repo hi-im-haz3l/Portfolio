@@ -1,19 +1,18 @@
 import { useState, useEffect } from 'react'
 
 const WidthLowerThan = width => {
-  const getWindowDimensions = () => {
-    return window.innerWidth /
-      parseFloat(
-        getComputedStyle(document.querySelector('body'))['font-size']
-      ) <
-      width
-      ? true
-      : false
-  }
-
   const [windowDimensions, setWindowDimensions] = useState(null)
 
   useEffect(() => {
+    const getWindowDimensions = () => {
+      return window.innerWidth /
+        parseFloat(
+          getComputedStyle(document.querySelector('body'))['font-size']
+        ) <
+        width
+        ? true
+        : false
+    }
     const handleResize = () => setWindowDimensions(getWindowDimensions())
 
     handleResize()
