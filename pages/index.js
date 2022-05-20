@@ -27,7 +27,7 @@ const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
-const Home = () => {
+const Home = ({ windowWidth }) => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
   const HoverColor = useColorModeValue('#ebeff5', '#464646')
@@ -123,7 +123,7 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Comfortable.Title', defaultMessage: 'Undefined' })}
           </Heading>
-          <Comforts />
+          <Comforts windowWidth={windowWidth} />
         </Section>
 
         <Section mb={6} delay={0.3}>
@@ -144,7 +144,7 @@ const Home = () => {
             left="-5%"
             w="110%"
             position="relative"
-            boxShadow={!show && CollapseShadow}
+            boxShadow={show || CollapseShadow}
             align="center"
             overflow="auto"
           >

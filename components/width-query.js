@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react'
 
-const WidthLowerThan = width => {
+const WidthQuery = () => {
   const [windowDimensions, setWindowDimensions] = useState(null)
 
   useEffect(() => {
     const getWindowDimensions = () => {
-      return window.innerWidth /
+      return Math.trunc(window.innerWidth /
         parseFloat(
           getComputedStyle(document.querySelector('body'))['font-size']
-        ) <
-        width
-        ? true
-        : false
+        )
+      )
     }
     const handleResize = () => setWindowDimensions(getWindowDimensions())
 
@@ -24,4 +22,4 @@ const WidthLowerThan = width => {
   return windowDimensions
 }
 
-export default WidthLowerThan
+export default WidthQuery

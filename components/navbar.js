@@ -19,7 +19,6 @@ import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 import LocalesSelector from './locales-selector'
 import { useIntl } from 'react-intl'
-import WidthLowerThan from './width-query'
 
 const NavBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
@@ -74,9 +73,9 @@ const SideBarItem = ({ href, path, children, ...props }) => {
   )
 }
 
-const Navbar = ({ currentPath, currentLocale }) => {
+const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
   const { formatMessage: t } = useIntl()
-  const fullSize = WidthLowerThan(48)
+  const fullSize = windowWidth >= 48
 
   return (
     <Box
@@ -124,7 +123,7 @@ const Navbar = ({ currentPath, currentLocale }) => {
             bg={useColorModeValue('#d1d1d195', '#71717488')}
             borderRadius="xl"
           >
-            {!fullSize && <LocalesSelector currentLocale={currentLocale} />}
+            {fullSize && <LocalesSelector currentLocale={currentLocale} />}
           </Box>
         </Stack>
 
@@ -165,7 +164,7 @@ const Navbar = ({ currentPath, currentLocale }) => {
                 <MenuDivider color={useColorModeValue('#d9dfe7', '#535357')} />
                 <MenuItem closeOnSelect={false}>
                   <Box m="0 auto !important">
-                    {fullSize && (
+                    {fullSize || (
                       <LocalesSelector currentLocale={currentLocale} />
                     )}
                   </Box>

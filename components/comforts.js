@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic'
 import { Box, useColorModeValue } from '@chakra-ui/react'
 import ComfortsCore from './comforts-core'
-import WidthLowerThan from './width-query'
 
 const DynamicGrid = dynamic(() =>
   import('@chakra-ui/react').then(mod => mod.SimpleGrid)
@@ -60,6 +59,6 @@ const Switch = ({ base }) => {
   )
 }
 
-const Comforts = () => <Switch base={WidthLowerThan(30) && 'y'} />
+const Comforts = ({ windowWidth }) => <Switch base={windowWidth < 30 && true} />
 
 export default Comforts

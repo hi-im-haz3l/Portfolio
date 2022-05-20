@@ -10,7 +10,7 @@ const ATLASnPbody = dynamic(() => import('../voxel-model'), {
   loading: () => <VoxelModelLoader />
 })
 
-const Main = ({ children, router }) => (
+const Main = ({ children, router, windowWidth }) => (
   <Box as="main" pb={8}>
     <Head>
       <title>Khánh&#x27;s Portfolio</title>
@@ -28,7 +28,11 @@ const Main = ({ children, router }) => (
       <meta property="og:image" content="/placeholder.png" />
     </Head>
 
-    <NavBar currentPath={router.asPath} currentLocale={router.locale} />
+    <NavBar
+      currentPath={router.asPath}
+      currentLocale={router.locale}
+      windowWidth={windowWidth}
+    />
 
     <Container maxW="container.md" pt={14}>
       <ATLASnPbody />

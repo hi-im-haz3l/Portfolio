@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { IntlProvider } from 'react-intl'
 import 'focus-visible/dist/focus-visible'
 import Theme from '../lib/theme'
+import WidthQuery from '../components/width-query'
 
 import en from '../data/locales/en-US.json'
 import vi from '../data/locales/vi-VN.json'
@@ -22,12 +23,13 @@ const messages = {
 
 function Portfolio({ Component, pageProps, router }) {
   const { locale } = router
+  const windowWidth = WidthQuery()
 
   return (
     <IntlProvider messages={messages[locale]} locale={locale}>
       <ChakraProvider theme={Theme}>
         <Fonts />
-        <Layout router={router}>
+        <Layout router={router} windowWidth={windowWidth}>
           <AnimatePresence
             exitBeforeEnter
             initial={true}
@@ -37,7 +39,11 @@ function Portfolio({ Component, pageProps, router }) {
               }
             }}
           >
-            <Component {...pageProps} key={router.route} />
+            <Component
+              {...pageProps}
+              key={router.route}
+              windowWidth={windowWidth}
+            />
           </AnimatePresence>
         </Layout>
       </ChakraProvider>
