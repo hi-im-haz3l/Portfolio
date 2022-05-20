@@ -61,7 +61,7 @@ const Events = ({ events }) => {
                   {t({ id: TitleID, defaultMessage: 'Undefined' })}
                 </Heading>
                 <Text w="full" textAlign="left">
-                  {!(typeof description === 'undefined') &&
+                  {typeof description === 'undefined' ||
                     t({ id: DescriptionID, defaultMessage: 'Undefined' })}
                 </Text>
               </VStack>
