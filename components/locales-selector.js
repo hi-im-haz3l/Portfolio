@@ -3,6 +3,7 @@ import {
   Tab,
   Tabs,
   TabList,
+  Text,
   TabIndicator,
   Link,
   useColorModeValue
@@ -16,7 +17,7 @@ const LocaleId = {
 }
 
 const TabStyling = ({ locale, selected }) => {
-  const color = useColorModeValue('gray200', 'whiteAlpha.900')
+  const color = useColorModeValue('gray200', '#e9e9ea')
   const invertColor = useColorModeValue('#ffffff', '#1A202C')
   const title = locale.substring(0, 2).toUpperCase()
 
@@ -24,19 +25,19 @@ const TabStyling = ({ locale, selected }) => {
     <Tab
       position="relative"
       zIndex={1}
-      color={invertColor}
       fontWeight="semibold"
+      color={invertColor}
     >
       {title}
     </Tab>
   ) : (
-    <NextLink href="" locale={locale} passHref>
-      <Link color={color}>
-        <Tab position="relative" zIndex={1} fontWeight="semibold">
+    <Tab position="relative" zIndex={1} fontWeight="semibold" p={0}>
+      <Link as={NextLink} href="" locale={locale} passHref>
+        <Text color={color} p=".5em 1em">
           {title}
-        </Tab>
+        </Text>
       </Link>
-    </NextLink>
+    </Tab>
   )
 }
 
