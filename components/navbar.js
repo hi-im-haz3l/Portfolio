@@ -23,7 +23,7 @@ import { useIntl } from 'react-intl'
 const NavBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
-  const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.700', '#efefef')
 
   return (
     <NextLink href={href} passHref>
@@ -50,7 +50,7 @@ const NavBarItem = ({ href, path, children, ...props }) => {
 const SideBarItem = ({ href, path, children, ...props }) => {
   const active = path === href
   const activeColor = useColorModeValue('#385898', 'teal.200')
-  const inactiveColor = useColorModeValue('gray.700', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.700', '#efefef')
 
   return (
     <NextLink href={href} passHref>

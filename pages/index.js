@@ -157,7 +157,7 @@ const Home = ({ windowWidth }) => {
               pb={show && '.5em'}
               h="auto"
               flexDirection="column"
-              color={useColorModeValue('#979797', '#686868')}
+              color={useColorModeValue('#979797', '#707070')}
               _hover={{ bg: HoverColor, color: BtnTextColor }}
               onClick={handleToggle}
             >
