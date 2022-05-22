@@ -86,7 +86,7 @@ const Work = () => {
         </List>
 
         <WorkImage
-          src="/images/works/ambersbakery_landing.png"
+          src="/images/works/ambersbakery_thumbnail_large.png"
           alt="LandingImage"
         />
         <WorkImage
