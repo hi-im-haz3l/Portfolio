@@ -5,10 +5,11 @@ const WidthQuery = () => {
 
   useEffect(() => {
     const getWindowDimensions = () => {
-      return Math.trunc(window.innerWidth /
-        parseFloat(
-          getComputedStyle(document.querySelector('body'))['font-size']
-        )
+      return Math.trunc(
+        window.innerWidth /
+          parseFloat(
+            getComputedStyle(document.querySelector('body'))['font-size']
+          )
       )
     }
     const handleResize = () => setWindowDimensions(getWindowDimensions())

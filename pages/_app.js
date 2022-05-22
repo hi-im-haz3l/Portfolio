@@ -40,9 +40,9 @@ function Portfolio({ Component, pageProps, router }) {
             }}
           >
             <Component
-              {...pageProps}
               key={router.route}
               windowWidth={windowWidth}
+              {...pageProps}
             />
           </AnimatePresence>
         </Layout>
