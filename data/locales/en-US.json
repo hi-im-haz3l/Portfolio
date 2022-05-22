@@ -72,8 +72,15 @@
   "Works.Web.Ambersbakery.Management": "Management console",
   "Works.Web.Stickynote.Lifespan": "March 2021",
   "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",
+  "Works.Web.Cronus.Lifespan": "Nov - Dec 2021",
+  "Works.Web.Cronus.Description": "A bot for managing and monitoring 3D printers.",
+  "Works.Web.Cronus.Source": "Source code",
   "Works.Web.khanhsportfolio.Lifespan": "March 2022",
   "Works.Web.khanhsportfolio.Description": "Responsive, localized, and  dynamically render portfolio application.",
+
+  "Works.Assignment": "University Assignments",
+
+  "Works.Assignment.ProjectMikkeli.Description": "A compilation of interesting spots and places during my studies in Mikkeli.",
 
   "404.Title": "Not Found",
   "404.Header": "Bummer",

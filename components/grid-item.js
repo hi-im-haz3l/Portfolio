@@ -10,15 +10,33 @@ import {
 import { Global } from '@emotion/react'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
+  <Box
+    w="100%"
+    maxW={421}
+    p={3}
+    m="0 auto"
+    textAlign="center"
+    borderRadius="xl"
+    _hover={{ bg: useColorModeValue('#f5f9ffb0', '#323232c4') }}
+    transition="150ms"
+  >
     <LinkBox cursor="pointer">
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-        loading="lazy"
-      />
+      <Box
+        display="flex"
+        borderRadius=".75em"
+        boxShadow={useColorModeValue(
+          '#20202363 0 .3em 1em',
+          '#00000063 0 .3em 1em'
+        )}
+      >
+        <Image
+          src={thumbnail}
+          alt={title}
+          className="grid-item-thumbnail"
+          placeholder="blur"
+          loading="lazy"
+        />
+      </Box>
       <LinkOverlay href={href} target="_blank">
         <Text mt={2}>{title}</Text>
       </LinkOverlay>
@@ -53,6 +71,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
             alt={title}
             className="grid-item-thumbnail"
             placeholder="blur"
+            loading="lazy"
           />
         </Box>
         <LinkOverlay href={`/works/${id}`}>

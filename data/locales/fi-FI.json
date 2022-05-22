@@ -67,13 +67,20 @@
   "Works.Web.Badge.Backend": "Tausta",
   "Works.Web.Platform.Description": "Verkkosovellus, monialustainen",
 
-  "Works.Web.Ambersbakery.Lifespan": "Tammi - Kesäkuun 2021",
+  "Works.Web.Ambersbakery.Lifespan": "Tammi - Kesä 2021",
   "Works.Web.Ambersbakery.Description": "Verkkoleipomo, jossa on vahvat tilaukset, tuotteet ja henkilöstöhallintajärjestelmä.",
   "Works.Web.Ambersbakery.Management": "Hallintajärjestelmä",
-  "Works.Web.Stickynote.Lifespan": "Maaliskuun 2021",
+  "Works.Web.Stickynote.Lifespan": "Maalis 2021",
   "Works.Web.Stickynote.Description": "Kevyt, monialustainen ja synkroninen tekstin jako verkkosovellus.",
-  "Works.Web.khanhsportfolio.Lifespan": "Maaliskuun 2022",
+  "Works.Web.Cronus.Lifespan": "Marras - Joulu 2021",
+  "Works.Web.Cronus.Description": "Botti 3D-tulostimien hallintaan ja valvontaan.",
+  "Works.Web.Cronus.Source": "Lähdekoodi",
+  "Works.Web.khanhsportfolio.Lifespan": "Maalis 2022",
   "Works.Web.khanhsportfolio.Description": "Responsiivinen, lokalisoitu ja dynaamisesti renderöidä portfolio sovellus.",
+
+  "Works.Assignment": "Yliopistotehtävät",
+
+  "Works.Assignment.ProjectMikkeli.Description": "Kokoelma mielenkiintoisista paikoista ja paikoista opiskelun aikana Mikkelissä.",
 
   "404.Title": "Ei Löydy",
   "404.Header": "Voi harmi",

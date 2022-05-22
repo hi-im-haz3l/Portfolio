@@ -1,12 +1,14 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { GridItem, WorkGridItem } from '../components/grid-item'
 import { useIntl } from 'react-intl'
 
 import thumbAmbersbakery from '../public/images/works/ambersbakery_thumbnail.png'
 import thumbStickynote from '../public/images/works/stickynote_thumbnail.png'
 import thumbKhanhsportfolio from '../public/placeholder.png'
+import thumbCronus from '../public/images/works/cronus_thumbnail.png'
+import thumbProjectMikkeli from '../public/images/works/projectmikkeli_thumbnail.png'
 
 const Works = () => {
   const { formatMessage: t } = useIntl()
@@ -45,6 +47,15 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
+          <Section mb={3} delay={0.1}>
+            <WorkGridItem id="cronus" title="Cronus" thumbnail={thumbCronus}>
+              {t({
+                id: 'Works.Web.Cronus.Description',
+                defaultMessage: 'Undefined'
+              })}
+            </WorkGridItem>
+          </Section>
+
           <Section mb={2} delay={0.1}>
             <WorkGridItem
               id="khanhsportfolio"
@@ -62,20 +73,35 @@ const Works = () => {
         <Section mb={2} delay={0.2}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
-            {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
+            {t({ id: 'Works.Assignment', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section mb={3} delay={0.2}>
-            <WorkGridItem
-              id="3dprintermonitor"
-              title={t({
-                id: 'Works.Web.3Dprintermonitor.Title',
+            <GridItem
+              title="Project Mikkeli"
+              thumbnail={thumbProjectMikkeli}
+              href="https://www.youtube.com/watch?v=MPBXjJQDMdA"
+            >
+              {t({
+                id: 'Works.Assignment.ProjectMikkeli.Description',
                 defaultMessage: 'Undefined'
               })}
-              thumbnail=""
-            >
+            </GridItem>
+          </Section>
+        </SimpleGrid>
+
+        <Section mb={2} delay={0.3}>
+          <Divider my={6} />
+          <Heading as="h3" fontSize={20} mb={4}>
+            {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
+          </Heading>
+        </Section>
+
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section mb={3} delay={0.3}>
+            <WorkGridItem id="3dprintermonitor" title="" thumbnail="">
               {t({
                 id: 'Works.Web.3Dprintermonitor.Description',
                 defaultMessage: 'Undefined'
@@ -83,15 +109,8 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section mb={3} delay={0.2}>
-            <WorkGridItem
-              id="bluetoohdoor"
-              title={t({
-                id: 'Works.Web.Bluetoohdoor.Title',
-                defaultMessage: 'Undefined'
-              })}
-              thumbnail=""
-            >
+          <Section mb={3} delay={0.3}>
+            <WorkGridItem id="bluetoohdoor" title="" thumbnail="">
               {t({
                 id: 'Works.Web.Bluetoohdoor.Description',
                 defaultMessage: 'Undefined'
