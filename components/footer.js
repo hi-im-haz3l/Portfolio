@@ -12,6 +12,7 @@ const Footer = () => {
         rel="noopener noreferrer"
         href="https://github.com/hi-im-haz3l"
         color={useColorModeValue('#3d7aed', '#ff63c3')}
+        borderRadius="sm"
       >
         @hi-im-haz3l
       </Link>
