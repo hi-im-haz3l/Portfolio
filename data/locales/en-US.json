@@ -10,6 +10,10 @@
   "Sidebar.Works": "My Works",
   "Sidebar.Source": "View Source",
 
+  "ariaLabel.themeToggle": "Toggle theme",
+  "ariaLabel.Navigation": "Navigation",
+  "ariaLabel.timelineToggle": "Collapse/expand timeline",
+
   "Home.InteractHint": "Interactable",
   "Home.Greeting": "Hello, welcome to my portfolio",
   "Home.Hobby": "Programming Enthusiast",

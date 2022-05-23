@@ -10,6 +10,10 @@
   "Sidebar.Works": "Omat Projektit",
   "Sidebar.Source": "Näytä Lähdekoodi",
 
+  "ariaLabel.themeToggle": "Vaihda teemaa",
+  "ariaLabel.Navigation": "Navigointi",
+  "ariaLabel.timelineToggle": "Tiivistä/laajenna matkani",
+
   "Home.InteractHint": "Vuorovaikutteinen",
   "Home.Greeting": "Tervetuloa, tämä on portfolioni",
   "Home.Hobby": "Ohjelmoinnin Harrastaja",

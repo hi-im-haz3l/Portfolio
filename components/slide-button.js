@@ -1,7 +1,7 @@
 import NextLink from 'next/link'
 import { Text, Button, Box, useColorModeValue } from '@chakra-ui/react'
 
-const SlidingButton = ({ icon, colorScheme, href, children }) => {
+const SlidingButton = ({ ariaLabel, icon, colorScheme, href, children }) => {
   const defaultScheme = useColorModeValue('facebook', 'teal')
 
   return (
@@ -16,6 +16,7 @@ const SlidingButton = ({ icon, colorScheme, href, children }) => {
           '&>div': { transform: 'translateX(0)', opacity: '1' },
           '&>p': { transform: 'translateX(0)' }
         }}
+        aria-label={ariaLabel}
       >
         <Text transform="translateX(7px)" transition="300ms">
           {children}

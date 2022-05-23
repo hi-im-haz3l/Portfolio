@@ -113,7 +113,7 @@ const Home = ({ windowWidth }) => {
             {t({ id: 'Home.Bio.Content', defaultMessage: 'Undefined' })}
           </JustifyParagraph>
           <Box align="center" mt={4}>
-            <SlidingButton icon={<ChevronRightIcon />} href="/works">
+            <SlidingButton ariaLabel={t({ id: 'Home.Works.Button', defaultMessage: 'Undefined' })} icon={<ChevronRightIcon />} href="/works">
               {t({ id: 'Home.Works.Button', defaultMessage: 'Undefined' })}
             </SlidingButton>
           </Box>
@@ -160,6 +160,7 @@ const Home = ({ windowWidth }) => {
               color={useColorModeValue('#979797', '#707070')}
               _hover={{ bg: HoverColor, color: BtnTextColor }}
               onClick={handleToggle}
+              aria-label={t({ id: 'ariaLabel.timelineToggle', defaultMessage: 'Undefined' })}
             >
               <Box
                 mb={-1}

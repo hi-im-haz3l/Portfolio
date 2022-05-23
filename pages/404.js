@@ -6,6 +6,7 @@ import SlidingButton from '../components/slide-button'
 
 const NotFound = () => {
   const { formatMessage: t } = useIntl()
+  const returnHome = t({ id: '404.Return', defaultMessage: 'Undefined' })
 
   return (
     <Layout title={t({ id: '404.Title', defaultMessage: 'Undefined' })}>
@@ -15,8 +16,8 @@ const NotFound = () => {
         </Heading>
         <Text>{t({ id: '404.Description', defaultMessage: 'Undefined' })}</Text>
         <Box my={6} align="center">
-          <SlidingButton icon={<RiPantoneLine />} href="/">
-            {t({ id: '404.Return', defaultMessage: 'Undefined' })}
+          <SlidingButton ariaLabel={returnHome} icon={<RiPantoneLine />} href="/">
+            {returnHome}
           </SlidingButton>
         </Box>
       </Container>

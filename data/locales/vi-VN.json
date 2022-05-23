@@ -10,6 +10,10 @@
   "Sidebar.Works": "Dự Án Đã Làm",
   "Sidebar.Source": "Xem Mã Nguồn",
 
+  "ariaLabel.themeToggle": "Toggle theme",
+  "ariaLabel.Navigation": "Phương hướng",
+  "ariaLabel.timelineToggle": "Thu gọn / mở rộng dòng thời gian",
+
   "Home.InteractHint": "Hãy tương tác",
   "Home.Greeting": "Hi, đây là sơ yếu lý lịch của tôi",
   "Home.Hobby": "Đam Mê Lập Trình",
