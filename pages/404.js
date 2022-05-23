@@ -16,7 +16,11 @@ const NotFound = () => {
         </Heading>
         <Text>{t({ id: '404.Description', defaultMessage: 'Undefined' })}</Text>
         <Box my={6} align="center">
-          <SlidingButton ariaLabel={returnHome} icon={<RiPantoneLine />} href="/">
+          <SlidingButton
+            ariaLabel={returnHome}
+            icon={<RiPantoneLine />}
+            href="/"
+          >
             {returnHome}
           </SlidingButton>
         </Box>

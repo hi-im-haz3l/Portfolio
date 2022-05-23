@@ -127,8 +127,13 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
           </Box>
         </Stack>
 
-        <Box ml={{ base: 0, md: 7 }} align="end">
-          <ThemeToggleButton ariaLabel={t({ id: 'ariaLabel.themeToggle', defaultMessage: 'Undefined' })} />
+        <Box ml={{ base: 0, md: 7 }} align="end" display="flex">
+          <ThemeToggleButton
+            ariaLabel={t({
+              id: 'ariaLabel.themeToggle',
+              defaultMessage: 'Undefined'
+            })}
+          />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu" color="blackAlpha.500">
@@ -136,7 +141,10 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
-                aria-label={t({ id: 'ariaLabel.Options', defaultMessage: 'Undefined' })}
+                aria-label={t({
+                  id: 'ariaLabel.Options',
+                  defaultMessage: 'Undefined'
+                })}
                 borderRadius="lg"
                 borderWidth="2px"
                 borderColor={useColorModeValue(
