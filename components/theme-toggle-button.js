@@ -31,13 +31,12 @@ const ThemeToggleButton = ({ ariaLabel }) => {
           color={useColorModeValue('white', 'black')}
           onClick={toggleColorMode}
           _hover={{
-            '&>span': {
-              transform: 'translateX(-.2em) translateY(.25em)',
-              opacity: '1'
-            },
             '&>div': {
-              transform: 'translateX(.7em) translateY(-.8em)',
-              fontSize: '10'
+              transform: 'translateX(.5em) translateY(-.5em) scale(.6)'
+            },
+            '&>span': {
+              transform: 'translateX(-.2em) translateY(.3em)',
+              opacity: '1'
             }
           }}
         >
@@ -52,10 +51,10 @@ const ThemeToggleButton = ({ ariaLabel }) => {
           <Box
             as="span"
             position="absolute"
-            transform="translateX(-1em) translateY(.25em)"
+            transform="translateX(-1em) translateY(.3em)"
             opacity="0"
-            transition="350ms"
             fontSize={18}
+            transition="350ms"
           >
             <RiPantoneLine />
           </Box>
