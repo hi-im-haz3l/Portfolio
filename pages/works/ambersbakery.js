@@ -19,14 +19,14 @@ const Work = () => {
           Amber&apos;s Bakery
           <Badge ml={3}>
             {t({
-              id: 'Works.Web.Ambersbakery.Lifespan',
+              id: 'Works.Web.AmbersBakery.Lifespan',
               defaultMessage: 'Undefined'
             })}
           </Badge>
         </Title>
         <Paragraph>
           {t({
-            id: 'Works.Web.Ambersbakery.Description',
+            id: 'Works.Web.AmbersBakery.Description',
             defaultMessage: 'Undefined'
           })}
         </Paragraph>
@@ -38,9 +38,9 @@ const Work = () => {
             <Link
               variant="align_icon"
               target="_blank"
-              href="https://portfolio.haz3l.duckdns.org/prototype/Ambersbakery"
+              href="https://portfolio.haz3l.duckdns.org/prototype/AmbersBakery"
             >
-              Prototype/Ambersbakery
+              Prototype/AmbersBakery
               <ExternalLinkIcon mx={1} />
             </Link>
           </ListItem>
@@ -54,10 +54,10 @@ const Work = () => {
             <Link
               variant="align_icon"
               target="_blank"
-              href="https://portfolio.haz3l.duckdns.org/prototype/Ambersbakery/management"
+              href="https://portfolio.haz3l.duckdns.org/prototype/AmbersBakery/management"
             >
               {t({
-                id: 'Works.Web.Ambersbakery.Management',
+                id: 'Works.Web.AmbersBakery.Management',
                 defaultMessage: 'Undefined'
               })}
               <ExternalLinkIcon mx={1} />

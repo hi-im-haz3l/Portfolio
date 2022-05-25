@@ -71,16 +71,18 @@
   "Works.Web.Badge.Backend": "Backend",
   "Works.Web.Platform.Description": "Web application, cross-platform",
 
-  "Works.Web.Ambersbakery.Lifespan": "Jan - June 2021",
-  "Works.Web.Ambersbakery.Description": "A online bakery with robust orders, products, and HR management system.",
-  "Works.Web.Ambersbakery.Management": "Management console",
+  "Works.Web.AmbersBakery.Lifespan": "Jan - June 2021",
+  "Works.Web.AmbersBakery.Description": "A online bakery with robust orders, products, and HR management system.",
+  "Works.Web.AmbersBakery.Management": "Management console",
   "Works.Web.Stickynote.Lifespan": "March 2021",
   "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",
   "Works.Web.Cronus.Lifespan": "Nov - Dec 2021",
   "Works.Web.Cronus.Description": "A bot for managing and monitoring 3D printers.",
   "Works.Web.Cronus.Source": "Source code",
-  "Works.Web.khanhsportfolio.Lifespan": "March 2022",
-  "Works.Web.khanhsportfolio.Description": "Responsive, localized, and statically generated web application.",
+  "Works.Web.KhanhsPortfolio.Lifespan": "March 2022",
+  "Works.Web.KhanhsPortfolio.Description": "Responsive, localized, and statically generated web application.",
+  "Works.Web.BadApple.Lifespan": "May 2022",
+  "Works.Web.BadApple.Description": "Bad Apple!! but it's an HTML ASCII art attempt.",
 
   "Works.Assignment": "University Assignments",
 

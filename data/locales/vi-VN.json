@@ -71,16 +71,18 @@
   "Works.Web.Badge.Backend": "Backend",
   "Works.Web.Platform.Description": "Ứng dụng Web, đa nền tảng",
 
-  "Works.Web.Ambersbakery.Lifespan": "Tháng 1 - 6, 2021",
-  "Works.Web.Ambersbakery.Description": "Tiệm bánh online kết hợp với hệ thống số giúp kiểm soát linh hoạt đơn hàng, mặt hàng, và nhân lực.",
-  "Works.Web.Ambersbakery.Management": "Hệ thống kiểm soát",
+  "Works.Web.AmbersBakery.Lifespan": "Tháng 1 - 6, 2021",
+  "Works.Web.AmbersBakery.Description": "Tiệm bánh online kết hợp với hệ thống số giúp kiểm soát linh hoạt đơn hàng, mặt hàng, và nhân lực.",
+  "Works.Web.AmbersBakery.Management": "Hệ thống kiểm soát",
   "Works.Web.Stickynote.Lifespan": "Tháng 3, 2021",
   "Works.Web.Stickynote.Description": "Ứng dụng web chuyên lưu trữ thông tin nhỏ gọn, đa nền tảng, và luôn đồ bộ hóa.",
   "Works.Web.Cronus.Lifespan": "Tháng 11 - 12, 2021",
   "Works.Web.Cronus.Description": "Bot quản lý và giám sát máy in 3D.",
   "Works.Web.Cronus.Source": "Mã nguồn",
-  "Works.Web.khanhsportfolio.Lifespan": "Tháng 3, 2022",
-  "Works.Web.khanhsportfolio.Description": "Sơ yếu lý lịch web đa tương thích, đa ngôn ngữ, và thông dịch linh hoạt.",
+  "Works.Web.KhanhsPortfolio.Lifespan": "Tháng 3, 2022",
+  "Works.Web.KhanhsPortfolio.Description": "Sơ yếu lý lịch web đa tương thích, đa ngôn ngữ, và thông dịch linh hoạt.",
+  "Works.Web.BadApple.Lifespan": "Tháng 5, 2022",
+  "Works.Web.BadApple.Description": "Bad Apple!! nhưng dưới dạng HTML ASCII art.",
 
   "Works.Assignment": "Bài Tập Đại Học",
 

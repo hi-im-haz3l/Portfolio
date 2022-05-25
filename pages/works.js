@@ -4,10 +4,11 @@ import Section from '../components/section'
 import { GridItem, WorkGridItem } from '../components/grid-item'
 import { useIntl } from 'react-intl'
 
-import thumbAmbersbakery from '../public/images/works/ambersbakery_thumbnail.png'
+import thumbAmbersBakery from '../public/images/works/ambersbakery_thumbnail.png'
 import thumbStickynote from '../public/images/works/stickynote_thumbnail.png'
-import thumbKhanhsportfolio from '../public/placeholder.png'
 import thumbCronus from '../public/images/works/cronus_thumbnail.png'
+import thumbKhanhsPortfolio from '../public/placeholder.png'
+import thumbBadApple from '../public/images/works/badapple_thumbnail.png'
 import thumbProjectMikkeli from '../public/images/works/projectmikkeli_thumbnail.png'
 
 const Works = () => {
@@ -25,10 +26,10 @@ const Works = () => {
             <WorkGridItem
               id="ambersbakery"
               title="Amber's Bakery"
-              thumbnail={thumbAmbersbakery}
+              thumbnail={thumbAmbersBakery}
             >
               {t({
-                id: 'Works.Web.Ambersbakery.Description',
+                id: 'Works.Web.AmbersBakery.Description',
                 defaultMessage: 'Undefined'
               })}
             </WorkGridItem>
@@ -60,17 +61,30 @@ const Works = () => {
             <WorkGridItem
               id="khanhsportfolio"
               title="Khánh's Portfolio"
-              thumbnail={thumbKhanhsportfolio}
+              thumbnail={thumbKhanhsPortfolio}
             >
               {t({
-                id: 'Works.Web.khanhsportfolio.Description',
+                id: 'Works.Web.KhanhsPortfolio.Description',
+                defaultMessage: 'Undefined'
+              })}
+            </WorkGridItem>
+          </Section>
+
+          <Section mb={2} delay={0.2}>
+            <WorkGridItem
+              id="badapple"
+              title="Bad Apple!!"
+              thumbnail={thumbBadApple}
+            >
+              {t({
+                id: 'Works.Web.BadApple.Description',
                 defaultMessage: 'Undefined'
               })}
             </WorkGridItem>
           </Section>
         </SimpleGrid>
 
-        <Section mb={2} delay={0.2}>
+        <Section mb={2} delay={0.3}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({ id: 'Works.Assignment', defaultMessage: 'Undefined' })}
@@ -78,7 +92,7 @@ const Works = () => {
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section mb={3} delay={0.2}>
+          <Section mb={3} delay={0.3}>
             <GridItem
               title="Project Mikkeli"
               thumbnail={thumbProjectMikkeli}
@@ -92,32 +106,12 @@ const Works = () => {
           </Section>
         </SimpleGrid>
 
-        <Section mb={2} delay={0.3}>
+        <Section mb={2} delay={0.4}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
-
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section mb={3} delay={0.3}>
-            <WorkGridItem id="3dprintermonitor" title="" thumbnail="">
-              {t({
-                id: 'Works.Web.3Dprintermonitor.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </WorkGridItem>
-          </Section>
-
-          <Section mb={3} delay={0.3}>
-            <WorkGridItem id="bluetoohdoor" title="" thumbnail="">
-              {t({
-                id: 'Works.Web.Bluetoohdoor.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </WorkGridItem>
-          </Section>
-        </SimpleGrid>
       </Container>
     </Layout>
   )
