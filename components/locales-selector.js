@@ -33,7 +33,11 @@ const TabStyling = ({ locale, selected }) => {
   ) : (
     <Tab position="relative" zIndex={1} fontWeight="semibold" p={0}>
       <Link as={NextLink} href="" locale={locale} passHref>
-        <Text color={color} p=".5em 1em">
+        <Text
+          color={color}
+          p=".5em 1em"
+          _hover={{ textDecoration: 'underline 2px', textUnderlineOffset: 3 }}
+        >
           {title}
         </Text>
       </Link>
