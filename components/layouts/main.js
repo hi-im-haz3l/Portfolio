@@ -15,17 +15,49 @@ const Main = ({ children, router, windowWidth }) => (
     <Head>
       <title>Khánh&#x27;s Portfolio</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Khánh&#x27;s Portfolio" />
+      <meta
+        name="description"
+        content="Hi! I&#x27;m Lê Duy Khánh and this is my portfolio"
+      />
       <meta name="author" content="Lê Duy Khánh" />
-      <meta name="theme-color" content="#2d2d2d" />
-      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta
+        name="apple-mobile-web-app-title"
+        content="Kh&aacute;nh's Portfolio"
+      />
+      <meta name="application-name" content="Kh&aacute;nh's Portfolio" />
+      <meta name="msapplication-TileColor" content="#333333" />
+      <meta name="theme-color" content="#333333" />
       <meta name="github:card" content="summary_large_image" />
-      <meta name="github:site" content="@hi-im-haz3l" />
+      <meta name="github:site" content="https://portfolio.haz3l.dev/" />
       <meta name="github:creator" content="@hi-im-haz3l" />
-      <meta property="og:site_name" content="Khánh&#x27;s Portfolio" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="/placeholder.png" />
+      <meta name="og:site_name" content="Khánh&#x27;s Portfolio" />
+      <meta name="og:title" content="My portfolio" />
+      <meta name="og:type" content="portfolio" />
+      <meta name="og:image" content="/placeholder.png" />
+      <meta
+        name="og:description"
+        content="Hi! I&#x27;m Lê Duy Khánh and this is my portfolio"
+      />
+      <meta name="og:email" content="haz3l@haz3l.duckdns.org" />
     </Head>
 
     <NavBar
