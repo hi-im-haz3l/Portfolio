@@ -95,7 +95,7 @@ const Home = ({ windowWidth }) => {
               overflow="hidden"
             >
               <ProfileImage
-                src="/images/sad_keanu.jpg"
+                src="/images/profile_pic.png"
                 alt="Profile image"
                 borderRadius="full"
                 width="100%"
