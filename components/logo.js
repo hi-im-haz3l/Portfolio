@@ -22,7 +22,7 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const dinoImg = `/images/dino${useColorModeValue('-dark', '-light')}.png`
+  const dinoImg = `/images/dino${useColorModeValue('_dark', '_light')}.png`
 
   return (
     <Link href="/" scroll={false}>
