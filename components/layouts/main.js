@@ -17,7 +17,7 @@ const Main = ({ children, router, windowWidth }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="description"
-        content="Hi! I&#x27;m Lê Duy Khánh and this is my portfolio"
+        content="Hi! I'm Lê Duy Khánh and this is my portfolio"
       />
       <meta name="author" content="Lê Duy Khánh" />
       <link
@@ -49,13 +49,12 @@ const Main = ({ children, router, windowWidth }) => (
       <meta name="github:card" content="summary_large_image" />
       <meta name="github:site" content="https://portfolio.haz3l.dev/" />
       <meta name="github:creator" content="@hi-im-haz3l" />
-      <meta name="og:site_name" content="Khánh&#x27;s Portfolio" />
-      <meta name="og:title" content="My portfolio" />
+      <meta name="og:site_name" content="Khánh's Portfolio" />
       <meta name="og:type" content="portfolio" />
       <meta name="og:image" content="/placeholder.png" />
       <meta
         name="og:description"
-        content="Hi! I&#x27;m Lê Duy Khánh and this is my portfolio"
+        content="Hi! I'm Lê Duy Khánh and this is my portfolio"
       />
       <meta name="og:email" content="haz3l@haz3l.duckdns.org" />
     </Head>
