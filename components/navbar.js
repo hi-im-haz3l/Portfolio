@@ -142,7 +142,7 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label={t({
-                  id: 'ariaLabel.Options',
+                  id: 'ariaLabel.Navigation',
                   defaultMessage: 'Undefined'
                 })}
                 borderRadius="lg"
