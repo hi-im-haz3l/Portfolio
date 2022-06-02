@@ -58,7 +58,7 @@ const Work = () => {
               href="https://github.com/hacklabmikkeli/cronus-bot"
             >
               <SiGithub />
-              <Text ml={1}>hacklabmikkeli/cronus-bot</Text>
+              <Text ml={1}>Hacklabmikkeli/cronus-bot</Text>
               <ExternalLinkIcon mx={1} />
             </Link>
           </ListItem>

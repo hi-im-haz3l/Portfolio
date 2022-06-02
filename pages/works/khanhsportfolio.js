@@ -1,11 +1,13 @@
 import NextLink from 'next/link'
-import { Container, Box, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { Container, Box, Badge, Link, Text, List, ListItem } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage } from '../../components/work'
 import { Paragraph } from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
-import { FaFileAlt } from 'react-icons/fa'
+import { FaFileAlt, FaFileSignature } from 'react-icons/fa'
 import { GiPlatform } from 'react-icons/gi'
 import { RiCodeSSlashFill } from 'react-icons/ri'
+import { SiGithub } from 'react-icons/si'
 import { CustomBadge } from '../../components/icon-badge'
 import { RiPantoneLine } from 'react-icons/ri'
 import { useIntl } from 'react-intl'
@@ -44,6 +46,23 @@ const Work = () => {
                 </Box>
               </Link>
             </NextLink>
+          </ListItem>
+          <ListItem>
+            <CustomBadge icon={<FaFileSignature />}>
+              {t({
+                id: 'Works.Web.Cronus.Source',
+                defaultMessage: 'Undefined'
+              })}
+            </CustomBadge>
+            <Link
+              variant="align_icon"
+              target="_blank"
+              href="https://github.com/hi-im-haz3l/portfolio"
+            >
+              <SiGithub />
+              <Text ml={1}>hi-im-haz3l/Portfolio</Text>
+              <ExternalLinkIcon mx={1} />
+            </Link>
           </ListItem>
           <ListItem>
             <CustomBadge icon={<GiPlatform />}>

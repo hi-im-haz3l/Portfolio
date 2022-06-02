@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub } from 'react-icons/io5'
+import { SiGithub } from 'react-icons/si'
 import LocalesSelector from './locales-selector'
 import { useIntl } from 'react-intl'
 
@@ -115,7 +115,7 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
             path={currentPath}
             style={{ gap: 4 }}
           >
-            <IoLogoGithub />
+            <SiGithub />
             {t({ id: 'Navbar.Source', defaultMessage: 'Undefined' })}
           </NavBarItem>
           <Box
