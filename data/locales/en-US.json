@@ -24,7 +24,7 @@
   "Home.Comfortable.Title": "Familiar with",
   "Home.Comfortable.Content.Web": "Web Development",
   "Home.Comfortable.Content.Linux": "Utilities",
-  "Home.Comfortable.Content.Embedded": "Embedded System",
+  "Home.Comfortable.Content.Embedded": "Embedded Systems",
   "Home.Comfortable.Content.Embedded.C": "programming language",
   "Home.Comfortable.Content.3D": "3D Modeling",
   "Home.Comfortable.Content.Vision": "Computer Vision",
@@ -63,17 +63,18 @@
   "Home.Timeline.Content.22.Description": "As spring break began, I figured it might be a great opportunity to look back and reflect upon what I've learned throughout the years.",
 
   "Home.Social.Title": "Other platforms",
+  
+  "Works.Badge.Demo": "Demo",
+  "Works.Badge.Platform": "Platform",
+  "Works.Badge.Stack": "Stack",
+  "Works.Badge.Backend": "Backend",
+  "Works.Management": "Management console",
 
   "Works.Web.Title": "Web applications",
-  "Works.Web.Badge.Demo": "Demo",
-  "Works.Web.Badge.Platform": "Platform",
-  "Works.Web.Badge.Stack": "Stack",
-  "Works.Web.Badge.Backend": "Backend",
   "Works.Web.Platform.Description": "Web application, cross-platform",
 
   "Works.Web.AmbersBakery.Lifespan": "Jan - June 2021",
   "Works.Web.AmbersBakery.Description": "A online bakery with robust orders, products, and HR management system.",
-  "Works.Web.AmbersBakery.Management": "Management console",
   "Works.Web.Stickynote.Lifespan": "March 2021",
   "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",
   "Works.Web.Cronus.Lifespan": "Nov - Dec 2021",
@@ -83,6 +84,9 @@
   "Works.Web.KhanhsPortfolio.Description": "My portfolio.",
   "Works.Web.BadApple.Lifespan": "May 2022",
   "Works.Web.BadApple.Description": "Bad Apple!! but it's an HTML ASCII art attempt.",
+
+  "Works.Embedded.LoadBalancer.Lifespan": "Nov - Dec 2018",
+  "Works.Embedded.LoadBalancer.Description": "Balancing energy consumption and minimizing down-time during power outages.",
 
   "Works.Assignment": "University Assignments",
 

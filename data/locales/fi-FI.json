@@ -24,7 +24,7 @@
   "Home.Comfortable.Title": "Perehtynyt",
   "Home.Comfortable.Content.Web": "Verkkokehitys",
   "Home.Comfortable.Content.Linux": "Apuohjelmia",
-  "Home.Comfortable.Content.Embedded": "Sulautettu Järjestelmä",
+  "Home.Comfortable.Content.Embedded": "Sulautetut Järjestelmät",
   "Home.Comfortable.Content.Embedded.C": "ohjelmointikieli",
   "Home.Comfortable.Content.3D": "3D-mallinnus",
   "Home.Comfortable.Content.Vision": "Konenäkö",
@@ -64,16 +64,17 @@
 
   "Home.Social.Title": "Muut alustat",
 
+  "Works.Badge.Demo": "Esittely",
+  "Works.Badge.Platform": "Sovellusalusta",
+  "Works.Badge.Stack": "Pino",
+  "Works.Badge.Backend": "Tausta",
+  "Works.Management": "Hallintajärjestelmä",
+
   "Works.Web.Title": "Verkkosovellukset",
-  "Works.Web.Badge.Demo": "Esittely",
-  "Works.Web.Badge.Platform": "Sovellusalusta",
-  "Works.Web.Badge.Stack": "Pino",
-  "Works.Web.Badge.Backend": "Tausta",
   "Works.Web.Platform.Description": "Verkkosovellus, monialustainen",
 
   "Works.Web.AmbersBakery.Lifespan": "Tammik - Kesäk 2021",
   "Works.Web.AmbersBakery.Description": "Verkkoleipomo, jossa on vahvat tilaukset, tuotteet ja henkilöstöhallintajärjestelmä.",
-  "Works.Web.AmbersBakery.Management": "Hallintajärjestelmä",
   "Works.Web.Stickynote.Lifespan": "Maalisk 2021",
   "Works.Web.Stickynote.Description": "Kevyt, monialustainen ja synkroninen tekstin jako verkkosovellus.",
   "Works.Web.Cronus.Lifespan": "Marrask - Jouluk 2021",
@@ -83,6 +84,9 @@
   "Works.Web.KhanhsPortfolio.Description": "Portfolioni.",
   "Works.Web.BadApple.Lifespan": "Toukok 2022",
   "Works.Web.BadApple.Description": "Bad Apple!! mutta se on HTML ASCII -taideyritys.",
+
+  "Works.Embedded.LoadBalancer.Lifespan": "Marrask - Jouluk 2018",
+  "Works.Embedded.LoadBalancer.Description": "Tasapainottaa energiankulutusta ja minimoi seisokit sähkökatkojen aikana.",
 
   "Works.Assignment": "Yliopistotehtävät",
 

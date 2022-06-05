@@ -9,6 +9,7 @@ import thumbStickynote from '../public/images/works/stickynote_thumbnail.png'
 import thumbCronus from '../public/images/works/cronus_thumbnail.png'
 import thumbKhanhsPortfolio from '../public/placeholder.png'
 import thumbBadApple from '../public/images/works/badapple_thumbnail.png'
+import thumbLoadBalancer from '../public/images/works/loadbalancer_thumbnail.png'
 import thumbProjectMikkeli from '../public/images/works/projectmikkeli_thumbnail.png'
 
 const Works = () => {
@@ -18,7 +19,7 @@ const Works = () => {
     <Layout title={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
       <Container maxW="container.sm">
         <Heading as="h3" fontSize={20} mb={6}>
-          {t({ id: 'Sidebar.Works', defaultMessage: 'Undefined' })}
+          {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} m={-3} spacing={2}>
@@ -87,12 +88,34 @@ const Works = () => {
         <Section mb={2} delay={0.3}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
-            {t({ id: 'Works.Assignment', defaultMessage: 'Undefined' })}
+            {t({ id: 'Home.Comfortable.Content.Embedded', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section mb={3} delay={0.3}>
+            <WorkGridItem
+              id="loadbalancer"
+              title="Load Balancer"
+              thumbnail={thumbLoadBalancer}
+            >
+              {t({
+                id: 'Works.Embedded.LoadBalancer.Description',
+                defaultMessage: 'Undefined'
+              })}
+            </WorkGridItem>
+          </Section>
+        </SimpleGrid>
+
+        <Section mb={2} delay={0.4}>
+          <Divider my={6} />
+          <Heading as="h3" fontSize={20} mb={4}>
+            {t({ id: 'Works.Assignment', defaultMessage: 'Undefined' })}
+          </Heading>
+        </Section>
+
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section mb={3} delay={0.4}>
             <GridItem
               title="Project Mikkeli"
               thumbnail={thumbProjectMikkeli}
