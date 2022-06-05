@@ -11,6 +11,8 @@ import { useIntl } from 'react-intl'
 
 const Work = () => {
   const { formatMessage: t } = useIntl()
+  const images = ["/images/works/badapple_thumbnail_large.png"]
+  const alt = ["Thumbnail"]
 
   return (
     <Layout title="Bad Apple!!">
@@ -33,7 +35,7 @@ const Work = () => {
         <List ml={4} my={4}>
           <ListItem>
             <CustomBadge icon={<FaFileAlt />}>
-              {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Demo', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <Link
               variant="align_icon"
@@ -47,7 +49,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<GiPlatform />}>
               {t({
-                id: 'Works.Web.Badge.Platform',
+                id: 'Works.Badge.Platform',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -60,16 +62,13 @@ const Work = () => {
           </ListItem>
           <ListItem>
             <CustomBadge icon={<RiCodeSSlashFill />}>
-              {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Stack', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <span>aalib.js 2.0, Bad Apple!! ＰＶ</span>
           </ListItem>
         </List>
 
-        <WorkImage
-          src="/images/works/badapple_thumbnail_large.png"
-          alt="Thumbnail"
-        />
+        <WorkImage images={images} alt={alt} />
       </Container>
     </Layout>
   )

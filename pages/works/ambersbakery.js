@@ -11,6 +11,8 @@ import { useIntl } from 'react-intl'
 
 const Work = () => {
   const { formatMessage: t } = useIntl()
+  const images = ["/images/works/ambersbakery_thumbnail_large.png", "/images/works/ambersbakery_customize.png", "/images/works/ambersbakery_cart.png"]
+  const alt = ["LandingImage", "CustomizeImage", "CartImage"]
 
   return (
     <Layout title="Amber's Bakery">
@@ -33,7 +35,7 @@ const Work = () => {
         <List ml={4} my={4}>
           <ListItem>
             <CustomBadge icon={<FaFileAlt />}>
-              {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Demo', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <Link
               variant="align_icon"
@@ -47,7 +49,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<FaFileSignature />}>
               {t({
-                id: 'Works.Web.Badge.Backend',
+                id: 'Works.Badge.Backend',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -57,7 +59,7 @@ const Work = () => {
               href="https://portfolio.haz3l.duckdns.org/prototype/AmbersBakery/management"
             >
               {t({
-                id: 'Works.Web.AmbersBakery.Management',
+                id: 'Works.Management',
                 defaultMessage: 'Undefined'
               })}
               <ExternalLinkIcon mx={1} />
@@ -66,7 +68,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<GiPlatform />}>
               {t({
-                id: 'Works.Web.Badge.Platform',
+                id: 'Works.Badge.Platform',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -79,21 +81,13 @@ const Work = () => {
           </ListItem>
           <ListItem>
             <CustomBadge icon={<RiCodeSSlashFill />}>
-              {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Stack', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <span>PHP 7.4, Bootstrap 5.1, jQuery 3.6, MariaDB 10.7</span>
           </ListItem>
         </List>
 
-        <WorkImage
-          src="/images/works/ambersbakery_thumbnail_large.png"
-          alt="LandingImage"
-        />
-        <WorkImage
-          src="/images/works/ambersbakery_customize.png"
-          alt="CustomizeImage"
-        />
-        <WorkImage src="/images/works/ambersbakery_cart.png" alt="CartImage" />
+        <WorkImage images={images} alt={alt} />
       </Container>
     </Layout>
   )

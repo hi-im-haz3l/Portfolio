@@ -11,12 +11,14 @@ import { useIntl } from 'react-intl'
 
 const Work = () => {
   const { formatMessage: t } = useIntl()
+  const images = ["/images/works/stickynote_thumbnail_large.png", "/images/works/stickynote_edit.png", "/images/works/stickynote_merge.png"]
+  const alt = ["LandingImage", "EditImage", "MergeImage"]
 
   return (
-    <Layout title="Sticky Note">
+    <Layout title="Stickynote">
       <Container>
         <Title parent={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
-          Sticky Note
+          Stickynote
           <Badge ml={3}>
             {t({
               id: 'Works.Web.Stickynote.Lifespan',
@@ -33,7 +35,7 @@ const Work = () => {
         <List ml={4} my={4}>
           <ListItem>
             <CustomBadge icon={<FaFileAlt />}>
-              {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Demo', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <Link
               variant="align_icon"
@@ -47,7 +49,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<GiPlatform />}>
               {t({
-                id: 'Works.Web.Badge.Platform',
+                id: 'Works.Badge.Platform',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -60,18 +62,13 @@ const Work = () => {
           </ListItem>
           <ListItem>
             <CustomBadge icon={<RiCodeSSlashFill />}>
-              {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Stack', defaultMessage: 'Undefined' })}
             </CustomBadge>
             PHP 7.4, jQuery 3.6, Bootstrap 5.1, MariaDB 10.7
           </ListItem>
         </List>
 
-        <WorkImage
-          src="/images/works/stickynote_thumbnail_large.png"
-          alt="LandingImage"
-        />
-        <WorkImage src="/images/works/stickynote_edit.png" alt="EditImage" />
-        <WorkImage src="/images/works/stickynote_merge.png" alt="MergeImage" />
+        <WorkImage images={images} alt={alt} />
       </Container>
     </Layout>
   )

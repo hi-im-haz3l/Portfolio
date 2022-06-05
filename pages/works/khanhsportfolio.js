@@ -1,5 +1,13 @@
 import NextLink from 'next/link'
-import { Container, Box, Badge, Link, Text, List, ListItem } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Badge,
+  Link,
+  Text,
+  List,
+  ListItem
+} from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage } from '../../components/work'
 import { Paragraph } from '../../components/paragraph'
@@ -14,6 +22,8 @@ import { useIntl } from 'react-intl'
 
 const Work = () => {
   const { formatMessage: t } = useIntl()
+  const images = ["/images/works/khanhsportfolio_thumbnail_large.png", "/images/works/khanhsportfolio_works.png"]
+  const alt = ["Thumbnail", "WorksImage"]
 
   return (
     <Layout title="Khánh's Portfolio">
@@ -36,7 +46,7 @@ const Work = () => {
         <List ml={4} my={4}>
           <ListItem>
             <CustomBadge icon={<FaFileAlt />}>
-              {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Demo', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <NextLink href="/" passHref>
               <Link variant="align_icon">
@@ -50,7 +60,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<FaFileSignature />}>
               {t({
-                id: 'Works.Web.Cronus.Source',
+                id: 'Works.Source',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -67,7 +77,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<GiPlatform />}>
               {t({
-                id: 'Works.Web.Badge.Platform',
+                id: 'Works.Badge.Platform',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -80,20 +90,13 @@ const Work = () => {
           </ListItem>
           <ListItem>
             <CustomBadge icon={<RiCodeSSlashFill />}>
-              {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Stack', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <span>Next.js, Chakra UI, Emotion, Three.js, Framer Motion</span>
           </ListItem>
         </List>
 
-        <WorkImage
-          src="/images/works/khanhsportfolio_thumbnail_large.png"
-          alt="Thumbnail"
-        />
-        <WorkImage
-          src="/images/works/khanhsportfolio_works.png"
-          alt="WorksImage"
-        />
+        <WorkImage images={images} alt={alt} />
       </Container>
     </Layout>
   )

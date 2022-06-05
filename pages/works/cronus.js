@@ -12,6 +12,8 @@ import { useIntl } from 'react-intl'
 
 const Work = () => {
   const { formatMessage: t } = useIntl()
+  const images = ["/images/works/cronus_thumbnail_large.png"]
+  const alt = ["LandingImage"]
 
   return (
     <Layout title="Cronus">
@@ -34,7 +36,7 @@ const Work = () => {
         <List ml={4} my={4}>
           <ListItem>
             <CustomBadge icon={<FaFileAlt />}>
-              {t({ id: 'Works.Web.Badge.Demo', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Demo', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <Link
               variant="align_icon"
@@ -48,7 +50,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<FaFileSignature />}>
               {t({
-                id: 'Works.Web.Cronus.Source',
+                id: 'Works.Source',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -65,7 +67,7 @@ const Work = () => {
           <ListItem>
             <CustomBadge icon={<GiPlatform />}>
               {t({
-                id: 'Works.Web.Badge.Platform',
+                id: 'Works.Badge.Platform',
                 defaultMessage: 'Undefined'
               })}
             </CustomBadge>
@@ -78,16 +80,13 @@ const Work = () => {
           </ListItem>
           <ListItem>
             <CustomBadge icon={<RiCodeSSlashFill />}>
-              {t({ id: 'Works.Web.Badge.Stack', defaultMessage: 'Undefined' })}
+              {t({ id: 'Works.Badge.Stack', defaultMessage: 'Undefined' })}
             </CustomBadge>
             <span>PHP 7.4, jQuery 3.6, Python 3.8, Discord.py 1.7</span>
           </ListItem>
         </List>
 
-        <WorkImage
-          src="/images/works/cronus_thumbnail_large.png"
-          alt="LandingImage"
-        />
+        <WorkImage images={images} alt={alt} />
       </Container>
     </Layout>
   )
