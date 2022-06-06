@@ -13,7 +13,7 @@ export const ModelSpinner = () => (
 )
 
 export const ModelContainer = forwardRef(({ children }, ref) => (
-  <Box w="100%" display="flex" justifyContent="center" overflow="hidden">
+  <Box w="100%" display="flex" justifyContent="center">
     <Box
       ref={ref}
       className="voxel-model"
