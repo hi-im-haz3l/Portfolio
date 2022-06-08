@@ -44,9 +44,11 @@ const Main = ({ children, router, windowWidth }) => (
       <meta name="github:card" content="summary_large_image" />
       <meta name="github:site" content="https://portfolio.haz3l.dev/" />
       <meta name="github:creator" content="@hi-im-haz3l" />
+      <meta name="og:title" content="Khánh's Portfolio" />
       <meta name="og:site_name" content="Khánh's Portfolio" />
       <meta name="og:type" content="portfolio" />
-      <meta name="og:image" content="/placeholder.png" />
+      <meta name="og:image" content="https://portfolio.haz3l.dev/placeholder.png" />
+      <meta name="og:url" content="portfolio.haz3l.dev" />
       <meta
         name="og:description"
         content="Hi! I'm Lê Duy Khánh and this is my portfolio"
