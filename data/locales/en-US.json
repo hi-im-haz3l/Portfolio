@@ -91,13 +91,13 @@
   "Works.Assignment": "University Assignments",
 
   "Works.Assignment.ProjectMikkeli.Description": "A compilation of interesting spots and places during my studies in Mikkeli.",
+  
+  "Works.Experimental": "Experimental",
 
   "404.Title": "Not Found",
   "404.Header": "Bummer",
-  "404.Description": "The page you're looking for was not found.",
+  "404.Description": "The page you're looking for cannot be found.",
   "404.Return": "Homepage",
-
-  "Works.Experimental": "Experimental",
 
   "Footer": "Made with ❤️ by"
 }

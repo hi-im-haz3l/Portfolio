@@ -18,7 +18,7 @@
   "Home.Greeting": "Tervetuloa, tämä on portfolioni",
   "Home.Hobby": "Ohjelmoinnin Harrastaja",
   "Home.Bio.Title": "Elämäkerta",
-  "Home.Bio.Content": "Olen kaiken valmistajasta sähköasentajaan, suunnittelijasta kehittäjään, mutta olen kaiken ammatin mestari, mutta en minkään, usein parempi kuin yhden. Syntynyt ja kasvanut Hanoissa, Vietnamissa, opiskelen tällä hetkellä Mikkelissä. Intohimona arvojen luomiseen olen aina rakastanut oppimista ja mielenkiintoisten asioiden tekemistä. Ideoiden toteuttaminen on aina tuottanut minulle loputonta tyydytystä.",
+  "Home.Bio.Content": "Olen kaikenlainen tekijä, sähköasentaja, suunnittelija ja kehittäjä, olen kaikkien alojen ammattilainen, mutta en minkään alan mestari, usein parempi kuin yhden alan mestari. Olen syntynyt ja kasvanut Vietnamin Hanoissa ja opiskelen tällä hetkellä Mikkelissä. Minulla on intohimo luoda arvoja, ja olen aina rakastanut oppimista ja mielenkiintoisten asioiden tekemistä. Ideoiden herättäminen henkiin on aina antanut minulle loputtoman tyydytyksen.",
   "Home.Works.Button": "Omat Teokset",
 
   "Home.Comfortable.Title": "Perehtynyt",
@@ -59,8 +59,8 @@
   "Home.Timeline.Content.21.2": "Kokeillut OpenCV:tä ja Computer Vision -alaa",
   "Home.Timeline.Content.21.3": "Liity Hacklab Mikkeliin",
   "Home.Timeline.Content.21.3.Description": "Yhteisö tieteestä, teknologiasta ja digitaalisesta taiteesta kiinnostuneille tavata, viettää aikaa yhdessä ja työskennellä joko henkilökohtaisen tai yhteistyön parissa.",
-  "Home.Timeline.Content.22": "Aloin työstää portfolioni rakentamista",
-  "Home.Timeline.Content.22.Description": "Kevätloman alkaessa ajattelin, että se voisi olla loistava tilaisuus katsoa taaksepäin ja pohtia, mitä olen oppinut vuosien varrella.",
+  "Home.Timeline.Content.22": "Aloitin salkkuni rakentamisen",
+  "Home.Timeline.Content.22.Description": "Kun kevätloma alkoi, ajattelin, että se voisi olla hyvä tilaisuus katsoa taaksepäin ja miettiä, mitä olen oppinut vuosien varrella.",
 
   "Home.Social.Title": "Muut alustat",
 
@@ -90,14 +90,14 @@
 
   "Works.Assignment": "Yliopistotehtävät",
 
-  "Works.Assignment.ProjectMikkeli.Description": "Kokoelma mielenkiintoisista paikoista ja paikoista opiskelun aikana Mikkelissä.",
-
-  "404.Title": "Ei Löydy",
-  "404.Header": "Voi harmi",
-  "404.Description": "Etsimääsi sivua ei löytynyt.",
-  "404.Return": "Hakeutua",
-
+  "Works.Assignment.ProjectMikkeli.Description": "Kooste mielenkiintoisista kohteista ja paikoista opiskeluaikana Mikkelissä.",
+  
   "Works.Experimental": "Kokeellinen",
+
+  "404.Title": "Ei Löytynyt",
+  "404.Header": "Harmi",
+  "404.Description": "Etsimääsi sivua ei löydy.",
+  "404.Return": "Hakeutua",
 
   "Footer": "Tehnyt ❤️"
 }
