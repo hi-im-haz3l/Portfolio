@@ -11,8 +11,8 @@ import { useIntl } from 'react-intl'
 
 const Work = () => {
   const { formatMessage: t } = useIntl()
-  const images = ["/images/works/badapple_thumbnail_large.png"]
-  const alt = ["Thumbnail"]
+  const images = ['/images/works/badapple_thumbnail_large.png']
+  const alt = ['Thumbnail']
 
   return (
     <Layout title="Bad Apple!!">

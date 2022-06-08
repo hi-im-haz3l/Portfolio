@@ -88,7 +88,10 @@ const Works = () => {
         <Section mb={2} delay={0.3}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
-            {t({ id: 'Home.Comfortable.Content.Embedded', defaultMessage: 'Undefined' })}
+            {t({
+              id: 'Home.Comfortable.Content.Embedded',
+              defaultMessage: 'Undefined'
+            })}
           </Heading>
         </Section>
 

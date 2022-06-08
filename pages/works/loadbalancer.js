@@ -9,8 +9,8 @@ import { useIntl } from 'react-intl'
 
 const Work = () => {
   const { formatMessage: t } = useIntl()
-  const images = ["/images/works/loadbalancer_thumbnail_large.png"]
-  const alt = ["Full diagram"]
+  const images = ['/images/works/loadbalancer_thumbnail_large.png']
+  const alt = ['Full diagram']
 
   return (
     <Layout title="Load Balancer">
