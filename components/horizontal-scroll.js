@@ -24,7 +24,7 @@ const variants = {
   }
 }
 
-const SideIndicator = ({ direction, children }) => (
+const SideIndicator = ({ direction, onClick, children }) => (
   <Box
     position="absolute"
     top={0}
@@ -34,18 +34,29 @@ const SideIndicator = ({ direction, children }) => (
   >
     <Box
       position="relative"
-      left="50%"
+      textAlign="right"
       top="50%"
       transform={
         direction === 'right'
-          ? 'translate(-50%,-50%)'
-          : 'translate(-50%,-50%) rotate(180deg)'
+          ? 'translateY(-50%)'
+          : 'translateY(-50%) rotate(180deg)'
       }
       fontSize={26}
+      onClick={onClick}
+      cursor="pointer"
+      zIndex={1}
+      css={{
+        '&>div>svg': {
+          filter: useColorModeValue(
+            'drop-shadow(1px 2px 2px rgb(0, 0, 0, 0.4))',
+            'drop-shadow(1px 2px 2px rgb(255, 255, 255, 0.3))'
+          )
+        }
+      }}
     >
       <motion.div
         animate={{
-          x: [0, direction === 'right' ? 7 : -7, 0]
+          x: [2, 5, 2]
         }}
         transition={{ ease: 'easeInOut', duration: 2, repeat: Infinity }}
       >
@@ -98,11 +109,28 @@ const HScroll = ({ tabs, PagesIndexes }) => {
           />
         </Box>
       </Box>
-      <Box h="18.4em" mt={2} overflow="hidden" position="relative">
-        <SideIndicator direction="right">
+      <Box
+        h="18.4em"
+        w="110%"
+        left="-5%"
+        mt={2}
+        overflow="hidden"
+        position="relative"
+      >
+        <SideIndicator
+          direction="right"
+          onClick={() => {
+            page < PagesIndexes && setPage([page + 1, 1])
+          }}
+        >
           {page < PagesIndexes && <ChevronRightIcon />}
         </SideIndicator>
-        <SideIndicator direction="left">
+        <SideIndicator
+          direction="left"
+          onClick={() => {
+            page > 0 && setPage([page - 1, -1])
+          }}
+        >
           {page > 0 && <ChevronRightIcon />}
         </SideIndicator>
         <AnimatePresence initial={false} custom={direction}>
