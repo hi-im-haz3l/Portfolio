@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
-export const GridItem = ({ children, href, title, thumbnail }) => (
+export const HrefGridItem = ({ children, href, title, thumbnail }) => (
   <Box
     w="100%"
     maxW={421}
@@ -47,7 +47,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
+export const GridItem = ({ children, id, title, thumbnail }) => (
   <Box
     w="100%"
     maxW={421}

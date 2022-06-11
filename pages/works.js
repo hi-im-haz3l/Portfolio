@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem, WorkGridItem } from '../components/grid-item'
+import { HrefGridItem, GridItem } from '../components/grid-item'
 import { useIntl } from 'react-intl'
 
 import thumbAmbersBakery from '../public/images/works/ambersbakery_thumbnail.png'
@@ -24,7 +24,7 @@ const Works = () => {
 
         <SimpleGrid columns={[1, 1, 2]} m={-3} spacing={2}>
           <Section mb={2}>
-            <WorkGridItem
+            <GridItem
               id="ambersbakery"
               title="Amber's Bakery"
               thumbnail={thumbAmbersBakery}
@@ -33,11 +33,11 @@ const Works = () => {
                 id: 'Works.Web.AmbersBakery.Description',
                 defaultMessage: 'Undefined'
               })}
-            </WorkGridItem>
+            </GridItem>
           </Section>
 
           <Section mb={2}>
-            <WorkGridItem
+            <GridItem
               id="stickynote"
               title="Sticky Note"
               thumbnail={thumbStickynote}
@@ -46,20 +46,20 @@ const Works = () => {
                 id: 'Works.Web.Stickynote.Description',
                 defaultMessage: 'Undefined'
               })}
-            </WorkGridItem>
+            </GridItem>
           </Section>
 
           <Section mb={3} delay={0.1}>
-            <WorkGridItem id="cronus" title="Cronus" thumbnail={thumbCronus}>
+            <GridItem id="cronus" title="Cronus" thumbnail={thumbCronus}>
               {t({
                 id: 'Works.Web.Cronus.Description',
                 defaultMessage: 'Undefined'
               })}
-            </WorkGridItem>
+            </GridItem>
           </Section>
 
           <Section mb={2} delay={0.1}>
-            <WorkGridItem
+            <GridItem
               id="khanhsportfolio"
               title="Khánh's Portfolio"
               thumbnail={thumbKhanhsPortfolio}
@@ -68,11 +68,11 @@ const Works = () => {
                 id: 'Works.Web.KhanhsPortfolio.Description',
                 defaultMessage: 'Undefined'
               })}
-            </WorkGridItem>
+            </GridItem>
           </Section>
 
           <Section mb={2} delay={0.2}>
-            <WorkGridItem
+            <GridItem
               id="badapple"
               title="Bad Apple!!"
               thumbnail={thumbBadApple}
@@ -81,7 +81,7 @@ const Works = () => {
                 id: 'Works.Web.BadApple.Description',
                 defaultMessage: 'Undefined'
               })}
-            </WorkGridItem>
+            </GridItem>
           </Section>
         </SimpleGrid>
 
@@ -97,7 +97,7 @@ const Works = () => {
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section mb={3} delay={0.3}>
-            <WorkGridItem
+            <GridItem
               id="loadbalancer"
               title="Load Balancer"
               thumbnail={thumbLoadBalancer}
@@ -106,7 +106,7 @@ const Works = () => {
                 id: 'Works.Embedded.LoadBalancer.Description',
                 defaultMessage: 'Undefined'
               })}
-            </WorkGridItem>
+            </GridItem>
           </Section>
         </SimpleGrid>
 
@@ -119,7 +119,7 @@ const Works = () => {
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section mb={3} delay={0.4}>
-            <GridItem
+            <HrefGridItem
               title="Project Mikkeli"
               thumbnail={thumbProjectMikkeli}
               href="https://www.youtube.com/watch?v=MPBXjJQDMdA"
@@ -128,7 +128,7 @@ const Works = () => {
                 id: 'Works.Assignment.ProjectMikkeli.Description',
                 defaultMessage: 'Undefined'
               })}
-            </GridItem>
+            </HrefGridItem>
           </Section>
         </SimpleGrid>
 
