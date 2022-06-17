@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
@@ -25,7 +25,7 @@ const Logo = () => {
   const dinoImg = `/images/dino${useColorModeValue('_dark', '_light')}.png`
 
   return (
-    <Link href="/" scroll={false}>
+    <NextLink href="/" passHref scroll={false}>
       <a>
         <LogoBox>
           <Image src={dinoImg} width={20} height={20} alt="logo" />
@@ -34,7 +34,7 @@ const Logo = () => {
           </Text>
         </LogoBox>
       </a>
-    </Link>
+    </NextLink>
   )
 }
 

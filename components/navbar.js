@@ -26,7 +26,7 @@ const NavBarItem = ({ href, path, children, ...props }) => {
   const inactiveColor = useColorModeValue('gray.700', '#efefef')
 
   return (
-    <NextLink href={href} passHref>
+    <NextLink href={href} passHref scroll={false}>
       <Link
         p=".5rem .75rem"
         borderRadius="lg"
@@ -53,7 +53,7 @@ const SideBarItem = ({ href, path, children, ...props }) => {
   const inactiveColor = useColorModeValue('gray.700', '#efefef')
 
   return (
-    <NextLink href={href} passHref>
+    <NextLink href={href} passHref scroll={false}>
       <Link variant="no_underline" {...props}>
         <MenuItem
           fontWeight="semibold"
@@ -94,7 +94,7 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
         justifyContent="space-between"
       >
         <Box display="flex" alignItems="center" mr={3}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+          <Heading as="h1" size="lg" letterSpacing='tighter'>
             <Logo />
           </Heading>
         </Box>
