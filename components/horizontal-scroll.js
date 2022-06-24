@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Box, useColorModeValue } from '@chakra-ui/react'
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const variants = {
@@ -73,7 +73,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
   const thumb = useColorModeValue('#000', '#fff')
 
   return (
-    <AnimateSharedLayout>
+    <>
       <Box w="3.7em" mt={-7} ml="auto" pb={6}>
         <Box
           display="flex"
@@ -174,7 +174,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
           </Box>
         </AnimatePresence>
       </Box>
-    </AnimateSharedLayout>
+    </>
   )
 }
 

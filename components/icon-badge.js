@@ -4,7 +4,7 @@ import { useState } from 'react'
 export const CustomBadge = ({ icon, children }) => (
   <Box
     p=".25rem .5rem"
-    m=".25rem .75rem"
+    m=".25rem .75rem .25rem 0"
     display="inline-flex"
     borderRadius="lg"
     bg={useColorModeValue('#dbf7e4', '#34403a')}

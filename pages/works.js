@@ -1,9 +1,15 @@
+import Head from 'next/head'
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { HrefGridItem, GridItem } from '../components/grid-item'
+import { HrefGridItem } from '../components/grid-item'
 import { useIntl } from 'react-intl'
+import { useState } from 'react'
+import lockScroll from 'react-lock-scroll'
+import { AnimatePresence } from 'framer-motion'
+import { Boilerplate, CondensedBoilerplate } from '../components/work-detail'
 
+import details from '../data/works-detail.json'
 import thumbAmbersBakery from '../public/images/works/ambersbakery_thumbnail.png'
 import thumbStickynote from '../public/images/works/stickynote_thumbnail.png'
 import thumbCronus from '../public/images/works/cronus_thumbnail.png'
@@ -14,6 +20,8 @@ import thumbProjectMikkeli from '../public/images/works/projectmikkeli_thumbnail
 
 const Works = () => {
   const { formatMessage: t } = useIntl()
+  const [isOpen, setState] = useState(false)
+  lockScroll(isOpen)
 
   return (
     <Layout title={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
@@ -21,67 +29,55 @@ const Works = () => {
         <Heading as="h3" fontSize={20} mb={6}>
           {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
         </Heading>
-
         <SimpleGrid columns={[1, 1, 2]} m={-3} spacing={2}>
           <Section mb={2}>
-            <GridItem
-              id="ambersbakery"
+            <CondensedBoilerplate
               title="Amber's Bakery"
+              id="AmbersBakery"
+              category="Web"
               thumbnail={thumbAmbersBakery}
-            >
-              {t({
-                id: 'Works.Web.AmbersBakery.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </GridItem>
+              setOpen={setState}
+            />
           </Section>
 
           <Section mb={2}>
-            <GridItem
-              id="stickynote"
+            <CondensedBoilerplate
               title="Sticky Note"
+              id="Stickynote"
+              category="Web"
               thumbnail={thumbStickynote}
-            >
-              {t({
-                id: 'Works.Web.Stickynote.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </GridItem>
+              setOpen={setState}
+            />
           </Section>
 
           <Section mb={3} delay={0.1}>
-            <GridItem id="cronus" title="Cronus" thumbnail={thumbCronus}>
-              {t({
-                id: 'Works.Web.Cronus.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </GridItem>
+            <CondensedBoilerplate
+              title="Cronus"
+              id="Cronus"
+              category="Web"
+              thumbnail={thumbCronus}
+              setOpen={setState}
+            />
           </Section>
 
           <Section mb={2} delay={0.1}>
-            <GridItem
-              id="khanhsportfolio"
+            <CondensedBoilerplate
               title="Khánh's Portfolio"
+              id="KhanhsPortfolio"
+              category="Web"
               thumbnail={thumbKhanhsPortfolio}
-            >
-              {t({
-                id: 'Works.Web.KhanhsPortfolio.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </GridItem>
+              setOpen={setState}
+            />
           </Section>
 
           <Section mb={2} delay={0.2}>
-            <GridItem
-              id="badapple"
+            <CondensedBoilerplate
               title="Bad Apple!!"
+              id="BadApple"
+              category="Web"
               thumbnail={thumbBadApple}
-            >
-              {t({
-                id: 'Works.Web.BadApple.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </GridItem>
+              setOpen={setState}
+            />
           </Section>
         </SimpleGrid>
 
@@ -97,16 +93,13 @@ const Works = () => {
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section mb={3} delay={0.3}>
-            <GridItem
-              id="loadbalancer"
+            <CondensedBoilerplate
               title="Load Balancer"
+              id="LoadBalancer"
+              category="Embedded"
               thumbnail={thumbLoadBalancer}
-            >
-              {t({
-                id: 'Works.Embedded.LoadBalancer.Description',
-                defaultMessage: 'Undefined'
-              })}
-            </GridItem>
+              setOpen={setState}
+            />
           </Section>
         </SimpleGrid>
 
@@ -138,6 +131,24 @@ const Works = () => {
             {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
+
+        <AnimatePresence>
+          {isOpen && (
+            <>
+              <Head>
+                <title>{isOpen.title} - Khánh&#x27;s Portfolio</title>
+              </Head>
+              <Boilerplate
+                title={isOpen.title}
+                id={isOpen.id}
+                category={isOpen.category}
+                thumbnail={isOpen.thumbnail}
+                setOpen={setState}
+                details={details[isOpen.id]}
+              />
+            </>
+          )}
+        </AnimatePresence>
       </Container>
     </Layout>
   )

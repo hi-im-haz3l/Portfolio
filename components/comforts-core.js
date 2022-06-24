@@ -137,14 +137,11 @@ const ComfortsCore = () => {
             color={useColorModeValue('#0072cd', undefined)}
             bg={useColorModeValue(undefined, '#00589d')}
             borderColor={useColorModeValue('#0072cd', undefined)}
-            tooltip={
-              'C (' +
-              t({
+            tooltip={`C (
+              ${t({
                 id: 'Home.Comfortable.Content.Embedded.C',
                 defaultMessage: 'Undefined'
-              }) +
-              ')'
-            }
+              })})`}
           />
           <IconBadge
             icon={<SiArduino />}

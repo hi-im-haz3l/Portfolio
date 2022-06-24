@@ -3,8 +3,8 @@
     "year": "2022",
     "events": [
       {
-        "title": "22",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   },
@@ -12,15 +12,15 @@
     "year": "2021",
     "events": [
       {
-        "title": "21.3",
-        "description": ""
+        "title": "3",
+        "description": true
       },
       {
-        "title": "21.2"
+        "title": "2"
       },
       {
-        "title": "21.1",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   },
@@ -28,12 +28,12 @@
     "year": "2020",
     "events": [
       {
-        "title": "20.2",
-        "description": ""
+        "title": "2",
+        "description": true
       },
       {
-        "title": "20.1",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   },
@@ -41,8 +41,8 @@
     "year": "2019",
     "events": [
       {
-        "title": "19",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   },
@@ -50,19 +50,19 @@
     "year": "2018",
     "events": [
       {
-        "title": "18.4",
-        "description": ""
+        "title": "4",
+        "description": true
       },
       {
-        "title": "18.3"
+        "title": "3"
       },
       {
-        "title": "18.2",
-        "description": ""
+        "title": "2",
+        "description": true
       },
       {
-        "title": "18.1",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   },
@@ -70,16 +70,16 @@
     "year": "2017",
     "events": [
       {
-        "title": "17.3",
-        "description": ""
+        "title": "3",
+        "description": true
       },
       {
-        "title": "17.2",
-        "description": ""
+        "title": "2",
+        "description": true
       },
       {
-        "title": "17.1",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   },
@@ -87,8 +87,8 @@
     "year": "2014",
     "events": [
       {
-        "title": "14",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   },
@@ -96,8 +96,8 @@
     "year": "2002",
     "events": [
       {
-        "title": "02",
-        "description": ""
+        "title": "1",
+        "description": true
       }
     ]
   }

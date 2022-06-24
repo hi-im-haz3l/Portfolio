@@ -3175,6 +3175,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-lock-scroll@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/react-lock-scroll/-/react-lock-scroll-0.1.8.tgz#e83d1aa4092d6065c7fd5626fefcd9dfb1b6b3c2"
+  integrity sha512-wK2/sT8z0WNBudQrfaGJGQ3v0N2Meobvdz98vcOackwXjwNGabRcaxvcBKW53WIsQ3bBuHQ5KxOWb1rmCDTq0g==
+
 react-remove-scroll-bar@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.1.tgz#9f13b05b249eaa57c8d646c1ebb83006b3581f5f"

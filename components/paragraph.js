@@ -6,5 +6,5 @@ export const JustifyParagraph = styled.p`
 `
 
 export const Paragraph = styled.p`
-  text-indent: 1em;
+  text-indent: 0.7em;
 `

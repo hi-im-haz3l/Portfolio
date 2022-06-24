@@ -137,12 +137,12 @@ const Home = ({ windowWidth }) => {
           <Heading as="h3" variant="section-title">
             {t({ id: 'Home.Timeline.Title', defaultMessage: 'Undefined' })}
           </Heading>
-          <Collapse startingHeight={531} in={show} duration={5000}>
+          <Collapse startingHeight={531} in={show}>
             <List spacing={4} mb={-4}>
               {(timeline ?? []).map(({ year, events }) => (
                 <ListItem key={year}>
                   <Heading variant="year-title">{year}</Heading>
-                  <Events events={events} />
+                  <Events events={events} year={year} />
                 </ListItem>
               ))}
             </List>

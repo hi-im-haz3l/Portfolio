@@ -94,7 +94,7 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
         justifyContent="space-between"
       >
         <Box display="flex" alignItems="center" mr={3}>
-          <Heading as="h1" size="lg" letterSpacing='tighter'>
+          <Heading as="h1" size="lg" letterSpacing="tighter">
             <Logo />
           </Heading>
         </Box>
