@@ -84,15 +84,18 @@
   "Works.Web.Cronus.Source": "Lähdekoodi",
   "Works.Web.KhanhsPortfolio.Lifespan": "Maalisk 2022",
   "Works.Web.KhanhsPortfolio.Description": "Portfolioni :O",
-  "Works.Web.BadApple.Lifespan": "Toukok 2022",
-  "Works.Web.BadApple.Description": "Bad Apple!! mutta se on HTML ASCII -taideyritys.",
+
+  "Works.Embedded": "Sulautetut järjestelmät",
 
   "Works.Embedded.LoadBalancer.Lifespan": "Marrask - Jouluk 2018",
   "Works.Embedded.LoadBalancer.Description": "Tasapainottaa energiankulutusta ja minimoi seisokit sähkökatkojen aikana.",
 
-  "Works.Assignment": "Yliopistotehtävät",
+  "Works.Hobbies": "Harrastukset",
 
-  "Works.Assignment.ProjectMikkeli.Description": "Kooste mielenkiintoisista kohteista ja paikoista opiskeluaikana Mikkelissä.",
+  "Works.Hobbies.ProjectMikkeli.Lifespan": "Toukok 2022",
+  "Works.Hobbies.ProjectMikkeli.Description": "Kooste mielenkiintoisista kohteista ja paikoista opiskeluaikana Mikkelissä.",
+  "Works.Hobbies.BadApple.Lifespan": "Kesäk 2022",
+  "Works.Hobbies.BadApple.Description": "Bad Apple!! mutta se on HTML ASCII -taideyritys.",
 
   "Works.Experimental": "Kokeellinen",
 

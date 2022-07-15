@@ -75,24 +75,27 @@
   "Works.Web.Title": "Web applications",
   "Works.Web.Platform.Description": "Web application, cross-platform",
 
-  "Works.Web.AmbersBakery.Lifespan": "Jan - June 2021",
+  "Works.Web.AmbersBakery.Lifespan": "Jan - Jun 2021",
   "Works.Web.AmbersBakery.Description": "A online bakery with robust orders, products, and HR management system.",
-  "Works.Web.Stickynote.Lifespan": "March 2021",
+  "Works.Web.Stickynote.Lifespan": "Mar 2021",
   "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",
   "Works.Web.Cronus.Lifespan": "Nov - Dec 2021",
   "Works.Web.Cronus.Description": "A bot for managing and monitoring 3D printers.",
   "Works.Web.Cronus.Source": "Source code",
-  "Works.Web.KhanhsPortfolio.Lifespan": "March 2022",
+  "Works.Web.KhanhsPortfolio.Lifespan": "Mar 2022",
   "Works.Web.KhanhsPortfolio.Description": "My portfolio :O",
-  "Works.Web.BadApple.Lifespan": "May 2022",
-  "Works.Web.BadApple.Description": "Bad Apple!! but it's an HTML ASCII art attempt.",
+
+  "Works.Embedded": "Embedded systems",
 
   "Works.Embedded.LoadBalancer.Lifespan": "Nov - Dec 2018",
   "Works.Embedded.LoadBalancer.Description": "Balancing energy consumption and minimizing down-time during power outages.",
 
-  "Works.Assignment": "University Assignments",
+  "Works.Hobbies": "Hobbies",
 
-  "Works.Assignment.ProjectMikkeli.Description": "A compilation of interesting spots and places during my studies in Mikkeli.",
+  "Works.Hobbies.ProjectMikkeli.Lifespan": "May 2022",
+  "Works.Hobbies.ProjectMikkeli.Description": "A compilation of interesting spots and places during my studies in Mikkeli.",
+  "Works.Hobbies.BadApple.Lifespan": "Jun 2022",
+  "Works.Hobbies.BadApple.Description": "Bad Apple!! but it's an HTML ASCII art attempt.",
 
   "Works.Experimental": "Experimental",
 

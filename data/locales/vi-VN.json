@@ -84,15 +84,18 @@
   "Works.Web.Cronus.Source": "Mã nguồn",
   "Works.Web.KhanhsPortfolio.Lifespan": "Tháng 3, 2022",
   "Works.Web.KhanhsPortfolio.Description": "Sơ yếu lý lịch của tôi :O",
-  "Works.Web.BadApple.Lifespan": "Tháng 5, 2022",
-  "Works.Web.BadApple.Description": "Bad Apple!! nhưng dưới dạng HTML ASCII art.",
+
+  "Works.Embedded": "Hệ thống nhúng",
 
   "Works.Embedded.LoadBalancer.Lifespan": "Tháng 11 - 12, 2018",
   "Works.Embedded.LoadBalancer.Description": "Cân bằng mức tiêu thụ năng lượng và giảm thiểu thời gian ngừng hoạt động khi mất điện.",
 
-  "Works.Assignment": "Bài Tập Đại Học",
+  "Works.Hobbies": "Thú vui",
 
-  "Works.Assignment.ProjectMikkeli.Description": "Tổng hợp các địa điểm thú vị trong quá trình học tập của tôi ở Mikkeli.",
+  "Works.Hobbies.ProjectMikkeli.Lifespan": "Tháng 5, 2022",
+  "Works.Hobbies.ProjectMikkeli.Description": "Tổng hợp các địa điểm thú vị trong quá trình học tập của tôi ở Mikkeli.",
+  "Works.Hobbies.BadApple.Lifespan": "Tháng 6, 2022",
+  "Works.Hobbies.BadApple.Description": "Bad Apple!! nhưng dưới dạng HTML ASCII art.",
 
   "404.Title": "Không Tồn Tại",
   "404.Header": "Rất tiếc",

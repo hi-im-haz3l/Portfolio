@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react'
 import { SmallCloseIcon } from '@chakra-ui/icons'
 import { Title, CondensedTitle } from './work'
-import { Paragraph } from './paragraph'
+import { JustifyParagraph } from './paragraph'
 import { useIntl } from 'react-intl'
 import { motion } from 'framer-motion'
 import { CustomBadge } from '../components/icon-badge'
@@ -168,16 +168,19 @@ export const Boilerplate = ({
               </Badge>
             </Title>
           </motion.div>
-          <motion.div layoutId={`description-container-${id}`}>
-            <Paragraph>
+          <motion.div
+            layoutId={`description-container-${id}`}
+            style={{ marginTop: '.25em', marginBottom: '.75em' }}
+          >
+            <JustifyParagraph>
               {t({
                 id: `Works.${category}.${id}.Description`,
                 defaultMessage: 'Undefined'
               })}
-            </Paragraph>
+            </JustifyParagraph>
           </motion.div>
 
-          <List as={motion.div} mt={3}>
+          <List as={motion.div} mx={3}>
             {typeof details.demo === 'undefined' || (
               <ListItem>
                 <CustomBadge icon={<FaFileAlt />}>
@@ -233,20 +236,22 @@ export const Boilerplate = ({
                 </Link>
               </ListItem>
             )}
-            <ListItem>
-              <CustomBadge icon={<GiPlatform />}>
-                {t({
-                  id: 'Works.Badge.Platform',
-                  defaultMessage: 'Undefined'
-                })}
-              </CustomBadge>
-              <span>
-                {t({
-                  id: `Works.${category}.Platform.Description`,
-                  defaultMessage: 'Undefined'
-                })}
-              </span>
-            </ListItem>
+            {category == 'Web' && (
+              <ListItem>
+                <CustomBadge icon={<GiPlatform />}>
+                  {t({
+                    id: 'Works.Badge.Platform',
+                    defaultMessage: 'Undefined'
+                  })}
+                </CustomBadge>
+                <span>
+                  {t({
+                    id: `Works.${category}.Platform.Description`,
+                    defaultMessage: 'Undefined'
+                  })}
+                </span>
+              </ListItem>
+            )}
             {typeof details.stack === 'undefined' || (
               <ListItem>
                 <CustomBadge icon={<RiCodeSSlashFill />}>
@@ -346,12 +351,12 @@ export const CondensedBoilerplate = ({
           </CondensedTitle>
         </motion.div>
         <motion.div layoutId={`description-container-${id}`}>
-          <Paragraph>
+          <Text fontSize={14}>
             {t({
               id: `Works.${category}.${id}.Description`,
               defaultMessage: 'Undefined'
             })}
-          </Paragraph>
+          </Text>
         </motion.div>
       </>
     </Box>

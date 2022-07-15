@@ -69,23 +69,13 @@ const Works = () => {
               setOpen={setState}
             />
           </Section>
-
-          <Section mb={2} delay={0.2}>
-            <CondensedBoilerplate
-              title="Bad Apple!!"
-              id="BadApple"
-              category="Web"
-              thumbnail={thumbBadApple}
-              setOpen={setState}
-            />
-          </Section>
         </SimpleGrid>
 
         <Section mb={2} delay={0.3}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({
-              id: 'Home.Comfortable.Content.Embedded',
+              id: 'Works.Embedded',
               defaultMessage: 'Undefined'
             })}
           </Heading>
@@ -106,7 +96,7 @@ const Works = () => {
         <Section mb={2} delay={0.4}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
-            {t({ id: 'Works.Assignment', defaultMessage: 'Undefined' })}
+            {t({ id: 'Works.Hobbies', defaultMessage: 'Undefined' })}
           </Heading>
         </Section>
 
@@ -116,12 +106,26 @@ const Works = () => {
               title="Project Mikkeli"
               thumbnail={thumbProjectMikkeli}
               href="https://www.youtube.com/watch?v=MPBXjJQDMdA"
+              lifespan={t({
+                id: 'Works.Hobbies.ProjectMikkeli.Lifespan',
+                defaultMessage: 'Undefined'
+              })}
             >
               {t({
-                id: 'Works.Assignment.ProjectMikkeli.Description',
+                id: 'Works.Hobbies.ProjectMikkeli.Description',
                 defaultMessage: 'Undefined'
               })}
             </HrefGridItem>
+          </Section>
+
+          <Section mb={2} delay={0.4}>
+            <CondensedBoilerplate
+              title="Bad Apple!!"
+              id="BadApple"
+              category="Hobbies"
+              thumbnail={thumbBadApple}
+              setOpen={setState}
+            />
           </Section>
         </SimpleGrid>
 

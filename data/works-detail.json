@@ -59,7 +59,7 @@
     "images": ["/images/works/badapple_thumbnail_large.png"]
   },
   "LoadBalancer": {
-    "stack": "Esp8266 3.0.2, NodeMCU (ESP-12)",
+    "stack": "NodeMCU (ESP-12), C++11, Esp8266 3.0.2",
     "images": ["/images/works/loadbalancer_thumbnail_large.png"]
   }
 }
