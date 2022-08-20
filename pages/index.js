@@ -95,7 +95,7 @@ const Home = ({ windowWidth }) => {
               overflow="hidden"
             >
               <ProfileImage
-                src="/images/profile_pic.png"
+                src="/images/profile_pic.webp"
                 alt="Profile image"
                 borderRadius="full"
                 width="100%"

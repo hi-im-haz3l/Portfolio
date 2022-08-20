@@ -82,7 +82,7 @@
   "Works.Web.Cronus.Lifespan": "Tháng 11 - 12, 2021",
   "Works.Web.Cronus.Description": "Bot quản lý và giám sát máy in 3D.",
   "Works.Web.Cronus.Source": "Mã nguồn",
-  "Works.Web.KhanhsPortfolio.Lifespan": "Tháng 3, 2022",
+  "Works.Web.KhanhsPortfolio.Lifespan": "Tháng 3, 2022 - Nay",
   "Works.Web.KhanhsPortfolio.Description": "Sơ yếu lý lịch của tôi :O",
 
   "Works.Embedded": "Hệ thống nhúng",
@@ -96,6 +96,11 @@
   "Works.Hobbies.ProjectMikkeli.Description": "Tổng hợp các địa điểm thú vị trong quá trình học tập của tôi ở Mikkeli.",
   "Works.Hobbies.BadApple.Lifespan": "Tháng 6, 2022",
   "Works.Hobbies.BadApple.Description": "Bad Apple!! nhưng dưới dạng HTML ASCII art.",
+
+  "Works.Wildcards": "Wildcards",
+
+  "Works.Wildcards.Docgi.Lifespan": "Tháng 6, 2022 - Nay",
+  "Works.Wildcards.Docgi.Description": "Khám phá và thể hiện niềm đam mê đọc sách của bạn với bạn đọc khắp thế giới.",
 
   "404.Title": "Không Tồn Tại",
   "404.Header": "Rất tiếc",

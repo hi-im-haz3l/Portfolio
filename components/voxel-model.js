@@ -118,9 +118,7 @@ const VoxelModel = () => {
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize, false)
-    return () => {
-      window.removeEventListener('resize', handleWindowResize, false)
-    }
+    return () => window.removeEventListener('resize', handleWindowResize, false)
   }, [renderer, handleWindowResize])
 
   return (

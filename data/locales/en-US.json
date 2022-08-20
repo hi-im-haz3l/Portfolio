@@ -82,7 +82,7 @@
   "Works.Web.Cronus.Lifespan": "Nov - Dec 2021",
   "Works.Web.Cronus.Description": "A bot for managing and monitoring 3D printers.",
   "Works.Web.Cronus.Source": "Source code",
-  "Works.Web.KhanhsPortfolio.Lifespan": "Mar 2022",
+  "Works.Web.KhanhsPortfolio.Lifespan": "Mar 2022 - Now",
   "Works.Web.KhanhsPortfolio.Description": "My portfolio :O",
 
   "Works.Embedded": "Embedded systems",
@@ -96,6 +96,11 @@
   "Works.Hobbies.ProjectMikkeli.Description": "A compilation of interesting spots and places during my studies in Mikkeli.",
   "Works.Hobbies.BadApple.Lifespan": "Jun 2022",
   "Works.Hobbies.BadApple.Description": "Bad Apple!! but it's an HTML ASCII art attempt.",
+
+  "Works.Wildcards": "Wildcards",
+
+  "Works.Wildcards.Docgi.Lifespan": "Jun 2022 - Now",
+  "Works.Wildcards.Docgi.Description": "Explore and express your passion for reading with others.",
 
   "Works.Experimental": "Experimental",
 

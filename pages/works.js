@@ -10,13 +10,14 @@ import { AnimatePresence } from 'framer-motion'
 import { Boilerplate, CondensedBoilerplate } from '../components/work-detail'
 
 import details from '../data/works-detail.json'
-import thumbAmbersBakery from '../public/images/works/ambersbakery_thumbnail.png'
-import thumbStickynote from '../public/images/works/stickynote_thumbnail.png'
-import thumbCronus from '../public/images/works/cronus_thumbnail.png'
-import thumbKhanhsPortfolio from '../public/placeholder.png'
-import thumbBadApple from '../public/images/works/badapple_thumbnail.png'
-import thumbLoadBalancer from '../public/images/works/loadbalancer_thumbnail.png'
-import thumbProjectMikkeli from '../public/images/works/projectmikkeli_thumbnail.png'
+import thumbAmbersBakery from '../public/images/works/ambersbakery_thumbnail.webp'
+import thumbStickynote from '../public/images/works/stickynote_thumbnail.webp'
+import thumbCronus from '../public/images/works/cronus_thumbnail.webp'
+import thumbKhanhsPortfolio from '../public/placeholder.webp'
+import thumbBadApple from '../public/images/works/badapple_thumbnail.webp'
+import thumbLoadBalancer from '../public/images/works/loadbalancer_thumbnail.webp'
+import thumbProjectMikkeli from '../public/images/works/projectmikkeli_thumbnail.webp'
+import thumbDocgi from '../public/images/works/docgi_thumbnail.webp'
 
 const Works = () => {
   const { formatMessage: t } = useIntl()
@@ -129,7 +130,26 @@ const Works = () => {
           </Section>
         </SimpleGrid>
 
-        <Section mb={2} delay={0.4}>
+        <Section mb={2} delay={0.5}>
+          <Divider my={6} />
+          <Heading as="h3" fontSize={20} mb={4}>
+            {t({ id: 'Works.Wildcards', defaultMessage: 'Undefined' })}
+          </Heading>
+        </Section>
+
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section mb={2} delay={0.5}>
+            <CondensedBoilerplate
+              title="Docgi"
+              id="Docgi"
+              category="Wildcards"
+              thumbnail={thumbDocgi}
+              setOpen={setState}
+            />
+          </Section>
+        </SimpleGrid>
+
+        <Section mb={2} delay={0.6}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}

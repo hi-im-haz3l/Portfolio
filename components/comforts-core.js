@@ -5,7 +5,7 @@ import { RiReactjsLine } from 'react-icons/ri'
 import {
   SiNextdotjs,
   SiBootstrap,
-  SiPhp,
+  SiFirebase,
   SiDocker,
   SiArduino,
   SiEspressif,
@@ -50,11 +50,11 @@ const ComfortsCore = () => {
             tooltip="Next.js"
           />
           <IconBadge
-            icon={<SiPhp />}
-            color={useColorModeValue('#7685cf', undefined)}
-            bg={useColorModeValue(undefined, '#5d6aab')}
-            borderColor={useColorModeValue('#7685cf', undefined)}
-            tooltip="PHP"
+            icon={<SiFirebase />}
+            color={useColorModeValue('#e7b218', '#f2c22c')}
+            bg={useColorModeValue(undefined, '#313134')}
+            borderColor={useColorModeValue('#e7b218', undefined)}
+            tooltip="Firebase"
           />
           <IconBadge
             icon={<SiBootstrap />}

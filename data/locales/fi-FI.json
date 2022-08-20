@@ -82,7 +82,7 @@
   "Works.Web.Cronus.Lifespan": "Marrask - Jouluk 2021",
   "Works.Web.Cronus.Description": "Botti 3D-tulostimien hallintaan ja valvontaan.",
   "Works.Web.Cronus.Source": "Lähdekoodi",
-  "Works.Web.KhanhsPortfolio.Lifespan": "Maalisk 2022",
+  "Works.Web.KhanhsPortfolio.Lifespan": "Maalisk 2022 - Nyt",
   "Works.Web.KhanhsPortfolio.Description": "Portfolioni :O",
 
   "Works.Embedded": "Sulautetut järjestelmät",
@@ -96,6 +96,11 @@
   "Works.Hobbies.ProjectMikkeli.Description": "Kooste mielenkiintoisista kohteista ja paikoista opiskeluaikana Mikkelissä.",
   "Works.Hobbies.BadApple.Lifespan": "Kesäk 2022",
   "Works.Hobbies.BadApple.Description": "Bad Apple!! mutta se on HTML ASCII -taideyritys.",
+
+  "Works.Wildcards": "Wildcards",
+
+  "Works.Wildcards.Docgi.Lifespan": "Kesäk 2022 - Nyt",
+  "Works.Wildcards.Docgi.Description": "Tutki ja ilmaise intohimoasi lukemiseen muiden kanssa.",
 
   "Works.Experimental": "Kokeellinen",
 

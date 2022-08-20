@@ -22,7 +22,7 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const dinoImg = `/images/dino${useColorModeValue('_dark', '_light')}.png`
+  const dinoImg = `/images/dino${useColorModeValue('_dark', '_light')}.webp`
 
   return (
     <NextLink href="/" passHref scroll={false}>
