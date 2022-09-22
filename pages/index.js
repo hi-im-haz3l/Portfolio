@@ -49,7 +49,8 @@ const Home = ({ windowWidth }) => {
           top={['-12.5em', '-15em', '-19.4em']}
           right={0}
           borderRadius="lg"
-          bg={useColorModeValue('#f5f9ffb0', '#181818ba')}
+          bg={useColorModeValue('#f5f9ffb0', '#323232c4')}
+          backdropFilter="blur(12px)"
         >
           <Box
             display="flex"
@@ -67,6 +68,8 @@ const Home = ({ windowWidth }) => {
           bg={useColorModeValue('#f5f9ffb0', '#323232c4')}
           textAlign="center"
           borderRadius="lg"
+          fontWeight="semibold"
+          backdropFilter="blur(12px)"
         >
           {t({ id: 'Home.Greeting', defaultMessage: 'Undefined' })}!
         </Box>

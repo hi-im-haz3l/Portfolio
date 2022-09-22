@@ -18,10 +18,8 @@ import { useIntl } from 'react-intl'
 import { motion } from 'framer-motion'
 import { CustomBadge } from '../components/icon-badge'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { FaFileAlt, FaFileSignature } from 'react-icons/fa'
-import { GiPlatform } from 'react-icons/gi'
-import { RiCodeSSlashFill, RiFullscreenFill } from 'react-icons/ri'
-import { SiGithub } from 'react-icons/si'
+import { MdOpenInFull } from 'react-icons/md'
+import { BiServer } from 'react-icons/bi'
 import ImageViewer from 'react-simple-image-viewer'
 
 export const Boilerplate = ({
@@ -130,7 +128,7 @@ export const Boilerplate = ({
         <Box p={{ base: '1em', sm: '1.3em', md: '1.5em' }} position="relative">
           <Button
             p={2.5}
-            m="-3.7em 1em 0 0"
+            m="-3.3em 1em 0 0"
             h="auto"
             minW="auto"
             top="0"
@@ -138,7 +136,7 @@ export const Boilerplate = ({
             position="absolute"
             bg="#000000ba"
             color="#ededee"
-            fontSize={12}
+            fontSize={14}
             zIndex={1}
             _active={{}}
             _hover={{ bg: '#333333d9' }}
@@ -151,7 +149,7 @@ export const Boilerplate = ({
             {details.images.length > 1 ? (
               `+${details.images.length}`
             ) : (
-              <RiFullscreenFill />
+              <MdOpenInFull />
             )}
           </Button>
           <motion.div layoutId={`title-container-${id}`}>
@@ -181,80 +179,63 @@ export const Boilerplate = ({
           </motion.div>
 
           <List as={motion.div} mx={3}>
-            {typeof details.demo === 'undefined' || (
-              <ListItem>
-                <CustomBadge icon={<FaFileAlt />}>
-                  {t({ id: 'Works.Badge.Demo', defaultMessage: 'Undefined' })}
+            {(details.information.internal ?? []).map((el, i) => (
+              <ListItem key={i}>
+                <CustomBadge icon={el.icon}>
+                  {t({ id: el.title, defaultMessage: 'Undefined' })}
                 </CustomBadge>
                 <Link
                   variant="align_icon"
                   target="_blank"
-                  href={details.demo.link}
+                  href={el.link}
+                  gap={1}
                 >
-                  {details.demo.content}
-                  <ExternalLinkIcon mx={1} />
-                </Link>
-              </ListItem>
-            )}
-            {typeof details.backend === 'undefined' || (
-              <ListItem>
-                <CustomBadge icon={<FaFileSignature />}>
                   {t({
-                    id: 'Works.Badge.Backend',
+                    id: el.localeId,
                     defaultMessage: 'Undefined'
                   })}
+                  {el.rightIcon}
+                </Link>
+              </ListItem>
+            ))}
+            {(details.information.external ?? []).map((el, i) => (
+              <ListItem key={i}>
+                <CustomBadge icon={el.icon}>
+                  {t({ id: el.title, defaultMessage: 'Undefined' })}
                 </CustomBadge>
                 <Link
                   variant="align_icon"
                   target="_blank"
-                  href={details.backend.link}
+                  href={el.link}
+                  gap={1}
                 >
-                  {t({
-                    id: 'Works.Management',
-                    defaultMessage: 'Undefined'
-                  })}
-                  <ExternalLinkIcon mx={1} />
+                  {el.leftIcon}
+                  {el.localeId
+                    ? t({
+                        id: el.localeId,
+                        defaultMessage: 'Undefined'
+                      })
+                    : el.content}
+                  <ExternalLinkIcon />
                 </Link>
               </ListItem>
-            )}
-            {typeof details.source === 'undefined' || (
-              <ListItem>
-                <CustomBadge icon={<FaFileSignature />}>
-                  {t({
-                    id: 'Navbar.Source',
-                    defaultMessage: 'Undefined'
-                  })}
-                </CustomBadge>
-                <Link
-                  variant="align_icon"
-                  target="_blank"
-                  href={details.source.link}
-                >
-                  <SiGithub />
-                  <Text ml={1}>{details.source.content}</Text>
-                  <ExternalLinkIcon mx={1} />
-                </Link>
-              </ListItem>
-            )}
-            {category == 'Web' && (
-              <ListItem>
-                <CustomBadge icon={<GiPlatform />}>
-                  {t({
-                    id: 'Works.Badge.Platform',
-                    defaultMessage: 'Undefined'
-                  })}
+            ))}
+            {(details.information.static ?? []).map((el, i) => (
+              <ListItem key={i}>
+                <CustomBadge icon={el.icon}>
+                  {t({ id: el.title, defaultMessage: 'Undefined' })}
                 </CustomBadge>
                 <span>
                   {t({
-                    id: `Works.${category}.Platform.Description`,
+                    id: el.localeId,
                     defaultMessage: 'Undefined'
                   })}
                 </span>
               </ListItem>
-            )}
+            ))}
             {typeof details.stack === 'undefined' || (
               <ListItem>
-                <CustomBadge icon={<RiCodeSSlashFill />}>
+                <CustomBadge icon={<BiServer />}>
                   {t({
                     id: 'Works.Badge.Stack',
                     defaultMessage: 'Undefined'
@@ -333,16 +314,20 @@ export const CondensedBoilerplate = ({
         <Image
           src={thumbnail}
           alt={title}
+          width={720}
+          height={400}
           className="grid-item-thumbnail"
           placeholder="blur"
           loading="lazy"
+          objectFit="cover"
+          objectPosition="top"
         />
       </motion.div>
       <>
         <motion.div layoutId={`title-container-${id}`}>
           <CondensedTitle>
             {title}
-            <Badge ml={3}>
+            <Badge ml={3} bg="#cad5de">
               {t({
                 id: `Works.${category}.${id}.Lifespan`,
                 defaultMessage: 'Undefined'

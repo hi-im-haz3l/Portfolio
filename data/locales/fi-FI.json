@@ -72,8 +72,8 @@
   "Works.Badge.Backend": "Tausta",
   "Works.Management": "Hallintajärjestelmä",
 
-  "Works.Web.Title": "Verkkosovellukset",
-  "Works.Web.Platform.Description": "Verkkosovellus, monialustainen",
+  "Works.Web": "Verkkosovellukset",
+  "Works.Web.Description": "Verkkosovellus, monialustainen",
 
   "Works.Web.AmbersBakery.Lifespan": "Tammik - Kesäk 2021",
   "Works.Web.AmbersBakery.Description": "Verkkoleipomo, jossa on vahvat tilaukset, tuotteet ja henkilöstöhallintajärjestelmä.",
@@ -89,9 +89,13 @@
 
   "Works.Embedded.LoadBalancer.Lifespan": "Marrask - Jouluk 2018",
   "Works.Embedded.LoadBalancer.Description": "Tasapainottaa energiankulutusta ja minimoi seisokit sähkökatkojen aikana.",
+  "Works.Embedded.LoadBalancer.Platform": "Kaaviokuva",
 
   "Works.Hobbies": "Harrastukset",
 
+  "Works.Hobbies.Elasticity.Lifespan": "Tammik 2022",
+  "Works.Hobbies.Elasticity.Description": "Taloustieteen joustavuus on välttämätöntä kuluttajien, yritysten ja talouksien käyttäytymisen ymmärtämiseksi.",
+  "Works.Hobbies.Elasticity.Platform": "Infograafinen juliste",
   "Works.Hobbies.ProjectMikkeli.Lifespan": "Toukok 2022",
   "Works.Hobbies.ProjectMikkeli.Description": "Kooste mielenkiintoisista kohteista ja paikoista opiskeluaikana Mikkelissä.",
   "Works.Hobbies.BadApple.Lifespan": "Kesäk 2022",

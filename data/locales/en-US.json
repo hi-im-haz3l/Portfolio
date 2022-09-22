@@ -72,8 +72,8 @@
   "Works.Badge.Backend": "Backend",
   "Works.Management": "Management console",
 
-  "Works.Web.Title": "Web applications",
-  "Works.Web.Platform.Description": "Web application, cross-platform",
+  "Works.Web": "Web applications",
+  "Works.Web.Description": "Web application, cross-platform",
 
   "Works.Web.AmbersBakery.Lifespan": "Jan - Jun 2021",
   "Works.Web.AmbersBakery.Description": "A online bakery with robust orders, products, and HR management system.",
@@ -89,9 +89,13 @@
 
   "Works.Embedded.LoadBalancer.Lifespan": "Nov - Dec 2018",
   "Works.Embedded.LoadBalancer.Description": "Balancing energy consumption and minimizing down-time during power outages.",
+  "Works.Embedded.LoadBalancer.Platform": "Schematic diagram",
 
   "Works.Hobbies": "Hobbies",
 
+  "Works.Hobbies.Elasticity.Lifespan": "Jan 2022",
+  "Works.Hobbies.Elasticity.Description": "Elasticity in economics is essential to understanding how consumers, businesses, and economies behave.",
+  "Works.Hobbies.Elasticity.Platform": "Infographic poster",
   "Works.Hobbies.ProjectMikkeli.Lifespan": "May 2022",
   "Works.Hobbies.ProjectMikkeli.Description": "A compilation of interesting spots and places during my studies in Mikkeli.",
   "Works.Hobbies.BadApple.Lifespan": "Jun 2022",

@@ -72,8 +72,8 @@
   "Works.Badge.Backend": "Backend",
   "Works.Management": "Hệ thống kiểm soát",
 
-  "Works.Web.Title": "Ứng dụng Web",
-  "Works.Web.Platform.Description": "Ứng dụng Web, đa nền tảng",
+  "Works.Web": "Ứng dụng Web",
+  "Works.Web.Description": "Ứng dụng Web, đa nền tảng",
 
   "Works.Web.AmbersBakery.Lifespan": "Tháng 1 - 6, 2021",
   "Works.Web.AmbersBakery.Description": "Tiệm bánh online kết hợp với hệ thống số giúp kiểm soát linh hoạt đơn hàng, mặt hàng, và nhân lực.",
@@ -89,9 +89,13 @@
 
   "Works.Embedded.LoadBalancer.Lifespan": "Tháng 11 - 12, 2018",
   "Works.Embedded.LoadBalancer.Description": "Cân bằng mức tiêu thụ năng lượng và giảm thiểu thời gian ngừng hoạt động khi mất điện.",
+  "Works.Embedded.LoadBalancer.Platform": "Sơ đồ điện",
 
   "Works.Hobbies": "Thú vui",
 
+  "Works.Hobbies.Elasticity.Lifespan": "Tháng 1, 2022",
+  "Works.Hobbies.Elasticity.Description": "Độ co giãn trong kinh tế học là điều cần thiết để hiểu cách người tiêu dùng, doanh nghiệp và nền kinh tế hành xử.",
+  "Works.Hobbies.Elasticity.Platform": "Áp phích đồ họa thông tin",
   "Works.Hobbies.ProjectMikkeli.Lifespan": "Tháng 5, 2022",
   "Works.Hobbies.ProjectMikkeli.Description": "Tổng hợp các địa điểm thú vị trong quá trình học tập của tôi ở Mikkeli.",
   "Works.Hobbies.BadApple.Lifespan": "Tháng 6, 2022",

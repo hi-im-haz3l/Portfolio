@@ -8,8 +8,8 @@ import { useState } from 'react'
 import lockScroll from 'react-lock-scroll'
 import { AnimatePresence } from 'framer-motion'
 import { Boilerplate, CondensedBoilerplate } from '../components/work-detail'
+import worksDetail from '../data/works-detail'
 
-import details from '../data/works-detail.json'
 import thumbAmbersBakery from '../public/images/works/ambersbakery_thumbnail.webp'
 import thumbStickynote from '../public/images/works/stickynote_thumbnail.webp'
 import thumbCronus from '../public/images/works/cronus_thumbnail.webp'
@@ -17,6 +17,7 @@ import thumbKhanhsPortfolio from '../public/placeholder.webp'
 import thumbBadApple from '../public/images/works/badapple_thumbnail.webp'
 import thumbLoadBalancer from '../public/images/works/loadbalancer_thumbnail.webp'
 import thumbProjectMikkeli from '../public/images/works/projectmikkeli_thumbnail.webp'
+import thumbElasticity from '../public/images/works/elasticity_thumbnail.webp'
 import thumbDocgi from '../public/images/works/docgi_thumbnail.webp'
 
 const Works = () => {
@@ -28,7 +29,7 @@ const Works = () => {
     <Layout title={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
       <Container maxW="container.sm">
         <Heading as="h3" fontSize={20} mb={6}>
-          {t({ id: 'Works.Web.Title', defaultMessage: 'Undefined' })}
+          {t({ id: 'Works.Web', defaultMessage: 'Undefined' })}
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} m={-3} spacing={2}>
           <Section mb={2}>
@@ -103,6 +104,16 @@ const Works = () => {
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section mb={3} delay={0.4}>
+            <CondensedBoilerplate
+              title="Elasticity"
+              id="Elasticity"
+              category="Hobbies"
+              thumbnail={thumbElasticity}
+              setOpen={setState}
+            />
+          </Section>
+
+          <Section mb={3} delay={0.4}>
             <HrefGridItem
               title="Project Mikkeli"
               thumbnail={thumbProjectMikkeli}
@@ -119,7 +130,7 @@ const Works = () => {
             </HrefGridItem>
           </Section>
 
-          <Section mb={2} delay={0.4}>
+          <Section mb={2} delay={0.5}>
             <CondensedBoilerplate
               title="Bad Apple!!"
               id="BadApple"
@@ -130,7 +141,7 @@ const Works = () => {
           </Section>
         </SimpleGrid>
 
-        <Section mb={2} delay={0.5}>
+        <Section mb={2} delay={0.6}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({ id: 'Works.Wildcards', defaultMessage: 'Undefined' })}
@@ -138,7 +149,7 @@ const Works = () => {
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section mb={2} delay={0.5}>
+          <Section mb={2} delay={0.6}>
             <CondensedBoilerplate
               title="Docgi"
               id="Docgi"
@@ -149,7 +160,7 @@ const Works = () => {
           </Section>
         </SimpleGrid>
 
-        <Section mb={2} delay={0.6}>
+        <Section mb={2} delay={0.7}>
           <Divider my={6} />
           <Heading as="h3" fontSize={20} mb={4}>
             {t({ id: 'Works.Experimental', defaultMessage: 'Undefined' })}
@@ -168,7 +179,7 @@ const Works = () => {
                 category={isOpen.category}
                 thumbnail={isOpen.thumbnail}
                 setOpen={setState}
-                details={details[isOpen.id]}
+                details={worksDetail[isOpen.id]}
               />
             </>
           )}
