@@ -327,7 +327,7 @@ export const CondensedBoilerplate = ({
         <motion.div layoutId={`title-container-${id}`}>
           <CondensedTitle>
             {title}
-            <Badge ml={3} bg="#cad5de">
+            <Badge ml={3} bg={useColorModeValue('#cad5de', '#3e3f43')}>
               {t({
                 id: `Works.${category}.${id}.Lifespan`,
                 defaultMessage: 'Undefined'
