@@ -182,7 +182,7 @@ const worksDetail = {
         {
           title: 'Works.Badge.Demo',
           icon: <FaFileAlt />,
-          link: 'https://docgi.haz3l.dev/user/OfsrMvpGptSr2vV2Xj4P',
+          link: 'https://docgi.haz3l.dev/user/634bfc297a4867c5c1faf117',
           content: 'My Docgi profile'
         }
       ]

@@ -40,6 +40,7 @@ const Layout = ({ children, title }) => (
           />
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="msapplication-TileColor" content="#333333" />
           <meta name="theme-color" content="#333333" />
           <meta name="og:title" content={title} />
