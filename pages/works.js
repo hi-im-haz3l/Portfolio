@@ -151,7 +151,7 @@ const Works = () => {
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section mb={2} delay={0.6}>
             <CondensedBoilerplate
-              title="Docgi"
+              title="DocGi.vn"
               id="Docgi"
               category="Wildcards"
               thumbnail={thumbDocgi}
