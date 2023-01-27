@@ -20,7 +20,7 @@
   "Home.Greeting": "Tervetuloa, tämä on portfolioni",
   "Home.Hobby": "Ohjelmoinnin Harrastaja",
   "Home.Bio.Title": "Elämäkerta",
-  "Home.Bio.Content": "Olen kaikenlainen tekijä, sähköasentaja, suunnittelija ja kehittäjä, olen kaikkien alojen ammattilainen, mutta en minkään alan mestari, usein parempi kuin yhden alan mestari. Olen syntynyt ja kasvanut Vietnamin Hanoissa ja opiskelen tällä hetkellä Mikkelissä. Minulla on intohimo luoda arvoja, ja olen aina rakastanut oppimista ja mielenkiintoisten asioiden tekemistä. Ideoiden herättäminen henkiin on aina antanut minulle loputtoman tyydytyksen.",
+  "Home.Bio.Content": "Olen kaiken valmistajasta sähköasentajaan, suunnittelijasta kehittäjään, mutta olen kaikkien ammattien mestari, mutta en minkään, usein parempi kuin yhden. Syntynyt ja kasvanut eloisassa Hanoissa, Vietnamissa, opiskelen tällä hetkellä Mikkelissä. Intohimoni arvon luomiseen saa minut jatkuvasti oppimaan ja luomaan, ja olen erittäin tyytyväinen uusien ja jännittävien ideoiden toteuttamiseen.",
   "Home.Works.Button": "Omat Teokset",
 
   "Home.Comfortable.Title": "Perehtynyt",
@@ -63,6 +63,8 @@
   "Home.Timeline.Content.2021.3.Description": "Yhteisö tieteestä, teknologiasta ja digitaalisesta taiteesta kiinnostuneille tavata, viettää aikaa yhdessä ja työskennellä joko henkilökohtaisen tai yhteistyön parissa.",
   "Home.Timeline.Content.2022.1": "Aloitin salkkuni rakentamisen",
   "Home.Timeline.Content.2022.1.Description": "Kun kevätloma alkoi, ajattelin, että se voisi olla hyvä tilaisuus katsoa taaksepäin ja miettiä, mitä olen oppinut vuosien varrella.",
+  "Home.Timeline.Content.2022.2": "Hänestä tuli DocGi.vn:n Full-Stack-insinööri",
+  "Home.Timeline.Content.2022.2.Description": "Valvoi kaikkia DocGi.vn:n teknisiä näkökohtia, mukaan lukien alustan suunnittelua, kehitystä ja ylläpitoa.",
 
   "Home.Social.Title": "Muut alustat",
 
@@ -78,12 +80,12 @@
   "Works.Web.AmbersBakery.Lifespan": "Tammik - Kesäk 2021",
   "Works.Web.AmbersBakery.Description": "Verkkoleipomo, jossa on vahvat tilaukset, tuotteet ja henkilöstöhallintajärjestelmä.",
   "Works.Web.Stickynote.Lifespan": "Maalisk 2021",
-  "Works.Web.Stickynote.Description": "Kevyt, monialustainen ja synkroninen tekstin jako verkkosovellus.",
+  "Works.Web.Stickynote.Description": "Kevyt, monialustainen ja synkroninen muistiinpanojen verkkosovellus.",
   "Works.Web.Cronus.Lifespan": "Marrask - Jouluk 2021",
-  "Works.Web.Cronus.Description": "Botti 3D-tulostimien hallintaan ja valvontaan.",
+  "Works.Web.Cronus.Description": "Kojelauta 3D-tulostimen tilan seurantaan Octoprint API:n kautta.",
   "Works.Web.Cronus.Source": "Lähdekoodi",
   "Works.Web.KhanhsPortfolio.Lifespan": "Maalisk 2022 - Nyt",
-  "Works.Web.KhanhsPortfolio.Description": "Portfolioni :O",
+  "Works.Web.KhanhsPortfolio.Description": "Henkilökohtainen portfolioni esittelee työtäni freelance-verkkokehittäjänä.",
 
   "Works.Embedded": "Sulautetut järjestelmät",
 

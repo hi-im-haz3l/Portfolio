@@ -20,7 +20,7 @@
   "Home.Greeting": "Hi, đây là sơ yếu lý lịch của tôi",
   "Home.Hobby": "Đam Mê Lập Trình",
   "Home.Bio.Title": "Tiểu sử",
-  "Home.Bio.Content": "Từ một nhà sản xuất đến một thợ điện, một nhà thiết kế đến một nhà phát triển, tôi không ngừng học hỏi phát triển bản thân. Sinh ra và lớn lên tại Hà Nội, Việt Nam, tôi hiện đang học tập tại Mikkeli, Phần Lan. Với niềm đam mê tạo ra giá trị mới, tôi luôn thích học hỏi và làm ra những điều thú vị. Hiện thực hóa những ý tưởng vào đời sống luôn mang lại cho tôi niềm vui vô tận.",
+  "Home.Bio.Content": "Từ một nhà sản xuất đến một thợ điện, một nhà thiết kế đến một nhà phát triển, tôi không ngừng học hỏi phát triển bản thân. Sinh ra và lớn lên tại thành phố Hà Nội sôi động, tôi hiện đang theo học tại Mikkeli, Phần Lan. Niềm đam mê tạo ra giá trị thúc đẩy tôi không ngừng học hỏi và thực hiện, và tôi rất hài lòng khi hiện thực hóa những ý tưởng mới và thú vị vào cuộc sống.",
   "Home.Works.Button": "Dự Án Đã Làm",
 
   "Home.Comfortable.Title": "Quen thuộc với",
@@ -63,6 +63,8 @@
   "Home.Timeline.Content.2021.3.Description": "Một cộng đồng dành cho những người quan tâm đến khoa học, công nghệ và nghệ thuật gặp gỡ, giao lưu và theo đuổi giấc mơ.",
   "Home.Timeline.Content.2022.1": "Bắt đầu dựng sơ yếu lý lịch",
   "Home.Timeline.Content.2022.1.Description": "Kỳ nghỉ xuân là một cơ hội tuyệt vời để tôi nhìn lại và suy ngẫm về những gì đã học được trong suốt các vừa năm qua.",
+  "Home.Timeline.Content.2022.2": "Trở thành Full-Stack Engineer tại DocGi.vn",
+  "Home.Timeline.Content.2022.2.Description": "Giám sát tất cả các khía cạnh kỹ thuật của DocGi.vn, bao gồm thiết kế, phát triển và bảo trì nền tảng.",
 
   "Home.Social.Title": "Các nền tảng khác",
 
@@ -76,14 +78,14 @@
   "Works.Web.Description": "Ứng dụng Web, đa nền tảng",
 
   "Works.Web.AmbersBakery.Lifespan": "Tháng 1 - 6, 2021",
-  "Works.Web.AmbersBakery.Description": "Tiệm bánh online kết hợp với hệ thống số giúp kiểm soát linh hoạt đơn hàng, mặt hàng, và nhân lực.",
+  "Works.Web.AmbersBakery.Description": "Một tiệm bánh trực tuyến với hệ thống quản lý đơn hàng, sản phẩm và giao hàng linh hoạt.",
   "Works.Web.Stickynote.Lifespan": "Tháng 3, 2021",
-  "Works.Web.Stickynote.Description": "Ứng dụng web chuyên lưu trữ thông tin nhỏ gọn, đa nền tảng, và luôn đồ bộ hóa.",
+  "Works.Web.Stickynote.Description": "Ứng dụng web chuyên ghi chú nhỏ gọn, đa nền tảng, và luôn đồ bộ hóa.",
   "Works.Web.Cronus.Lifespan": "Tháng 11 - 12, 2021",
-  "Works.Web.Cronus.Description": "Bot quản lý và giám sát máy in 3D.",
+  "Works.Web.Cronus.Description": "Bảng điều khiển để theo dõi trạng thái máy in 3D thông qua API Octoprint.",
   "Works.Web.Cronus.Source": "Mã nguồn",
   "Works.Web.KhanhsPortfolio.Lifespan": "Tháng 3, 2022 - Nay",
-  "Works.Web.KhanhsPortfolio.Description": "Sơ yếu lý lịch của tôi :O",
+  "Works.Web.KhanhsPortfolio.Description": "Danh mục đầu tư cá nhân của tôi giới thiệu công việc của tôi với tư cách là nhà phát triển web tự do.",
 
   "Works.Embedded": "Hệ thống nhúng",
 

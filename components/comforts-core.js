@@ -5,7 +5,7 @@ import { RiReactjsLine } from 'react-icons/ri'
 import {
   SiNextdotjs,
   SiBootstrap,
-  SiFirebase,
+  SiMongodb,
   SiDocker,
   SiArduino,
   SiEspressif,
@@ -50,11 +50,11 @@ const ComfortsCore = () => {
             tooltip="Next.js"
           />
           <IconBadge
-            icon={<SiFirebase />}
+            icon={<SiMongodb />}
             color={useColorModeValue('#e7b218', '#f2c22c')}
             bg={useColorModeValue(undefined, '#313134')}
             borderColor={useColorModeValue('#e7b218', undefined)}
-            tooltip="Firebase"
+            tooltip="Firebase / MongoDB"
           />
           <IconBadge
             icon={<SiBootstrap />}

@@ -20,7 +20,7 @@
   "Home.Greeting": "Hello, welcome to my portfolio",
   "Home.Hobby": "Programming Enthusiast",
   "Home.Bio.Title": "Bio",
-  "Home.Bio.Content": "Everything from a maker to an electrician, a designer to a developer, I'm a jack of all trades but a master of none, oftentimes better than a master of one. Born and raised in Hanoi, Vietnam, I'm currently studying in Mikkeli, Finland. With a passion for creating values, I've always loved learning and making interesting things. Bringing ideas to life has always given me endless satisfaction.",
+  "Home.Bio.Content": "Everything from a maker to an electrician, a designer to a developer, I'm a jack of all trades but a master of none, oftentimes better than a master of one. Born and raised in the vibrant city of Hanoi, Vietnam, I am currently pursuing my education in Mikkeli, Finland. My passion for creating value drives me to continuously learn and make, and I take great satisfaction in bringing new and exciting ideas to life.",
   "Home.Works.Button": "My Works",
 
   "Home.Comfortable.Title": "Familiar with",
@@ -63,6 +63,8 @@
   "Home.Timeline.Content.2021.3.Description": "A community for those interested in science, technology, and digital art to meet, spend time together, and work on either personal or collaborative hobbies.",
   "Home.Timeline.Content.2022.1": "Started working on building my portfolio",
   "Home.Timeline.Content.2022.1.Description": "As spring break began, I figured it might be a great opportunity to look back and reflect upon what I've learned throughout the years.",
+  "Home.Timeline.Content.2022.2": "Became the lead Full-Stack Engineer at DocGi.vn",
+  "Home.Timeline.Content.2022.2.Description": "Oversaw all technical aspects of DocGi.vn, including the platform's design, development, and maintenance.",
 
   "Home.Social.Title": "Other platforms",
 
@@ -76,14 +78,14 @@
   "Works.Web.Description": "Web application, cross-platform",
 
   "Works.Web.AmbersBakery.Lifespan": "Jan - Jun 2021",
-  "Works.Web.AmbersBakery.Description": "A online bakery with robust orders, products, and HR management system.",
+  "Works.Web.AmbersBakery.Description": "An online bakery with robust orders, products, and delivery management system.",
   "Works.Web.Stickynote.Lifespan": "Mar 2021",
-  "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous texts sharing web application.",
+  "Works.Web.Stickynote.Description": "Lightweight, cross-platform, and synchronous note-taking web application.",
   "Works.Web.Cronus.Lifespan": "Nov - Dec 2021",
-  "Works.Web.Cronus.Description": "A bot for managing and monitoring 3D printers.",
+  "Works.Web.Cronus.Description": "A dashboard for monitoring 3D printer status through Octoprint API.",
   "Works.Web.Cronus.Source": "Source code",
   "Works.Web.KhanhsPortfolio.Lifespan": "Mar 2022 - Now",
-  "Works.Web.KhanhsPortfolio.Description": "My portfolio :O",
+  "Works.Web.KhanhsPortfolio.Description": "My personal portfolio showcasing my work as a freelance web developer.",
 
   "Works.Embedded": "Embedded systems",
 
