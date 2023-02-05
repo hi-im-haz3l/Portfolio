@@ -20,7 +20,7 @@ const VoxelModel = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new Vector3(1, 8, 1))
+  const [target] = useState(new Vector3(1, 8, 0.3))
   const [initialCameraPosition] = useState(
     new Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI))
   )
@@ -36,15 +36,13 @@ const VoxelModel = () => {
       renderer.setSize(scW, scH)
 
       const scale = scH * 0.01 + 4.8
-      const camera = new OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale,
-        0.01,
-        50000
-      )
-      setCamera(camera)
+
+      _camera.left = -scale
+      _camera.right = scale
+      _camera.top = scale
+      _camera.bottom = -scale
+
+      _camera.updateProjectionMatrix()
     }
   }, [renderer])
 
