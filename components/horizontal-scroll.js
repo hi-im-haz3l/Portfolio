@@ -45,14 +45,6 @@ const SideIndicator = ({ direction, onClick, children }) => (
       onClick={onClick}
       cursor="pointer"
       zIndex={1}
-      css={{
-        '&>div>svg': {
-          filter: useColorModeValue(
-            'drop-shadow(1px 2px 2px rgb(0, 0, 0, 0.4))',
-            'drop-shadow(1px 2px 2px rgb(255, 255, 255, 0.3))'
-          )
-        }
-      }}
     >
       <motion.div
         animate={{

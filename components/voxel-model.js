@@ -34,6 +34,17 @@ const VoxelModel = () => {
       const scH = container.clientHeight
 
       renderer.setSize(scW, scH)
+
+      const scale = scH * 0.01 + 4.8
+      const camera = new OrthographicCamera(
+        -scale,
+        scale,
+        scale,
+        -scale,
+        0.01,
+        50000
+      )
+      setCamera(camera)
     }
   }, [renderer])
 
@@ -54,8 +65,6 @@ const VoxelModel = () => {
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
 
-      // 640 -> 240
-      // 8   -> 6
       const scale = scH * 0.01 + 4.8
       const camera = new OrthographicCamera(
         -scale,
@@ -69,7 +78,7 @@ const VoxelModel = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new AmbientLight(0xcccccc, 1)
+      const ambientLight = new AmbientLight(0xffffff, 1)
       scene.add(ambientLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
