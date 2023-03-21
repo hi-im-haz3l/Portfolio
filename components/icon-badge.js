@@ -41,6 +41,7 @@ export const IconBadge = ({
         borderRadius="full"
         bg={bg}
         color={color}
+        transition='transform 100ms'
         borderColor={
           typeof borderColor === 'undefined' ? defaultBorder : borderColor
         }
