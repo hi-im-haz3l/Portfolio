@@ -135,7 +135,7 @@ const CursorGlow = () => {
       <Blob
         ref={trailRef}
         style={{
-          background: useColorModeValue('#c8c8ef', '#555'),
+          background: useColorModeValue('#9494c5', '#555'),
           opacity: isVisible ? '.8' : '0'
         }}
       />
