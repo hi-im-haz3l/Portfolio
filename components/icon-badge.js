@@ -24,7 +24,8 @@ export const IconBadge = ({
   tooltip,
   bg = '#00000000',
   color = '#fff',
-  borderColor
+  borderColor,
+  animation = undefined
 }) => {
   const defaultBorder = useColorModeValue('gray.300', 'whiteAlpha.300')
   const [isLabelOpen, setIsLabelOpen] = useState(false)
@@ -33,6 +34,7 @@ export const IconBadge = ({
     <Tooltip label={tooltip} isOpen={isLabelOpen}>
       <Box
         p={2}
+        animation={animation}
         as="button"
         aria-label={tooltip}
         border="1px solid"

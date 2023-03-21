@@ -158,7 +158,7 @@ export const Boilerplate = ({
               onClick={setOpen}
             >
               {title}
-              <Badge ml={3}>
+              <Badge ml={3} bg={useColorModeValue('#e6ebf1', '#5e5e5e')}>
                 {t({
                   id: `Works.${category}.${id}.Lifespan`,
                   defaultMessage: 'Undefined'
@@ -287,7 +287,7 @@ export const CondensedBoilerplate = ({
       p={3}
       m="0 auto"
       borderRadius="xl"
-      _hover={{ bg: useColorModeValue('#f5f9ffb0', '#323232c4') }}
+      _hover={{ bg: useColorModeValue('#ffffff6b', '#ffffff1a') }}
       layoutId={`card-container-${id}`}
       cursor="pointer"
       textAlign="center"
@@ -327,7 +327,7 @@ export const CondensedBoilerplate = ({
         <motion.div layoutId={`title-container-${id}`}>
           <CondensedTitle>
             {title}
-            <Badge ml={3} bg={useColorModeValue('#cad5de', '#3e3f43')}>
+            <Badge ml={3} bg={useColorModeValue('#00000014', '#ffffff26')}>
               {t({
                 id: `Works.${category}.${id}.Lifespan`,
                 defaultMessage: 'Undefined'

@@ -4,6 +4,7 @@ import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
 import VoxelModelLoader from '../voxel-model-loader'
+import CursorGlow from '../cursor-glow'
 
 const ATLASnPbody = dynamic(() => import('../voxel-model'), {
   ssr: false,
@@ -73,6 +74,7 @@ const Main = ({ children, router, windowWidth }) => (
     />
 
     <Container maxW="container.md" pt={14}>
+      <CursorGlow />
       <ATLASnPbody />
 
       {children}

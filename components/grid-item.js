@@ -24,7 +24,7 @@ export const HrefGridItem = ({
     m="0 auto"
     textAlign="center"
     borderRadius="xl"
-    _hover={{ bg: useColorModeValue('#f5f9ffb0', '#323232c4') }}
+    _hover={{ bg: useColorModeValue('#ffffff6b', '#ffffff1a') }}
     transition="150ms"
     cursor="pointer"
   >

@@ -12,7 +12,7 @@ const Comfort = ({ children, ...props }) => (
     display="flex"
     p=".75rem 1rem"
     borderRadius="xl"
-    bg={useColorModeValue('#ebeff5', '#1b1b1d')}
+    bg={useColorModeValue('#ffffff63', '#16161680')}
     justifyContent="space-between"
     alignItems="center"
     flexWrap="wrap"

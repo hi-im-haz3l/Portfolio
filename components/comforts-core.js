@@ -1,4 +1,4 @@
-import { HStack, useColorModeValue } from '@chakra-ui/react'
+import { HStack, useColorModeValue, keyframes } from '@chakra-ui/react'
 import { BsLightningChargeFill } from 'react-icons/bs'
 import { GiCubes } from 'react-icons/gi'
 import { RiReactjsLine } from 'react-icons/ri'
@@ -22,6 +22,40 @@ import {
 } from 'react-icons/si'
 import { IconBadge } from './icon-badge'
 import { useIntl } from 'react-intl'
+
+const OpenCVColors = [
+  '#9ED110',
+  '#50B517',
+  '#179067',
+  '#476EAF',
+  '#9f49ac',
+  '#CC42A2',
+  '#FF3BA7',
+  '#FF5800',
+  '#FF8100',
+  '#FEAC00',
+  '#f5c400',
+  '#d8d103',
+  '#9ED110'
+]
+
+const animationKeyframes = keyframes`
+  0% { color: ${OpenCVColors[0]}}
+  8.3% { color: ${OpenCVColors[1]}}
+  16.6% { color: ${OpenCVColors[2]}}
+  25.0% { color: ${OpenCVColors[3]}}
+  33.4% { color: ${OpenCVColors[4]}}
+  41.8% { color: ${OpenCVColors[5]}}
+  50.2% { color: ${OpenCVColors[6]}}
+  58.5% { color: ${OpenCVColors[7]}}
+  66.8% { color: ${OpenCVColors[8]}}
+  75.1% { color: ${OpenCVColors[9]}}
+  83.4% { color: ${OpenCVColors[10]}}
+  91.7% { color: ${OpenCVColors[11]}}
+  100% { color: ${OpenCVColors[12]}}
+`
+
+const animation = `${animationKeyframes} 20s ease-in-out infinite`
 
 const Technologies = ({ children }) => (
   <HStack
@@ -193,9 +227,13 @@ const ComfortsCore = () => {
         <Technologies>
           <IconBadge
             icon={<SiOpencv />}
-            color={useColorModeValue('#727285', undefined)}
-            bg={useColorModeValue(undefined, '#313134')}
-            borderColor={useColorModeValue('#727285', undefined)}
+            animation={useColorModeValue(animation, undefined)}
+            color="#fff"
+            bg={useColorModeValue(
+              undefined,
+              `conic-gradient(${OpenCVColors[0]}, ${OpenCVColors[1]}, ${OpenCVColors[2]}, ${OpenCVColors[3]}, ${OpenCVColors[4]}, ${OpenCVColors[5]}, ${OpenCVColors[6]}, ${OpenCVColors[7]}, ${OpenCVColors[8]}, ${OpenCVColors[9]}, ${OpenCVColors[10]}, ${OpenCVColors[11]}, ${OpenCVColors[12]})`
+            )}
+            borderColor="#b3bfcd"
             tooltip="OpenCV"
           />
           <IconBadge

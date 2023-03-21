@@ -30,8 +30,8 @@ const ProfileImage = chakra(Image, {
 const Home = ({ windowWidth }) => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
-  const HoverColor = useColorModeValue('#ebeff5', '#464646')
-  const BtnTextColor = useColorModeValue('#7a7a7a', '#ededee')
+  const HoverColor = useColorModeValue('#ffffff52', '#ffffff1a')
+  const BtnTextColor = useColorModeValue('#767676', '#ededee')
   const CollapseShadow = useColorModeValue(
     '0 -1.25em 1.25em -1.5em #000',
     '0 -1.9em 1.25em -1.25em #000'
@@ -49,7 +49,7 @@ const Home = ({ windowWidth }) => {
           top={['-12.5em', '-15em', '-19.4em']}
           right={0}
           borderRadius="lg"
-          bg={useColorModeValue('#f5f9ffb0', '#323232c4')}
+          bg={useColorModeValue('#f5f9ff91', '#44444491')}
           backdropFilter="blur(12px)"
         >
           <Box
@@ -65,7 +65,7 @@ const Home = ({ windowWidth }) => {
         <Box
           mb={6}
           p={3}
-          bg={useColorModeValue('#f5f9ffb0', '#323232c4')}
+          bg={useColorModeValue('#ffffff63', '#44444491')}
           textAlign="center"
           borderRadius="lg"
           fontWeight="semibold"

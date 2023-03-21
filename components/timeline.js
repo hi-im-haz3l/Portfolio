@@ -14,45 +14,65 @@ const Events = ({ year, events }) => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
   const LineColor = useColorModeValue('#d3d3d3', '#686868')
-  const BackgroundColor = useColorModeValue(
-    '10px solid #e2e8f0',
-    '10px solid #202023'
-  )
 
   return (
     <List pb={4}>
       {(events ?? []).map(({ title, description }, index) => {
         const isLastElement = index === events.length - 1
         const isFirstElement = index === 0
+        const isMiddelElement =
+          isFirstElement === false && isLastElement === false
         const shouldConnectDots = events.length > 1
 
         return (
           <ListItem key={title} pt={4} position="relative">
-            {shouldConnectDots && (
-              <Box
-                left="15.5px"
-                top={isFirstElement ? 5 : 0}
-                w="3px"
-                bottom={0}
-                h={isLastElement ? 5 : 'unset'}
-                zIndex={-1}
-                position="absolute"
-                bg={LineColor}
-                mt={-1.5}
-              />
-            )}
+            {shouldConnectDots &&
+              (isMiddelElement ? (
+                <Box
+                  left="15.5px"
+                  position="absolute"
+                  top={0}
+                  bottom={0}
+                  _before={{
+                    content: '""',
+                    position: 'absolute',
+                    w: '3px',
+                    h: '10px',
+                    bg: LineColor
+                  }}
+                  _after={{
+                    content: '""',
+                    position: 'absolute',
+                    bottom: 0,
+                    w: '3px',
+                    h: 'calc(100% - 44px)',
+                    bg: LineColor
+                  }}
+                />
+              ) : (
+                <Box
+                  left="15.5px"
+                  top={isFirstElement ? '51px' : 0}
+                  w="3px"
+                  bottom={0}
+                  h={isLastElement ? '16px' : 'unset'}
+                  zIndex={-1}
+                  position="absolute"
+                  bg={LineColor}
+                  mt={-1.5}
+                />
+              ))}
             <HStack
               w="full"
               alignItems="flex-start"
               justifyContent="flex-start"
             >
               <Box
-                minW="34px"
-                h="34px"
-                mt={-1.5}
+                minW="14px"
+                h="14px"
+                m="4px 10px 10px 10px"
                 borderRadius="full"
                 bg={AccentColor}
-                border={BackgroundColor}
               />
               <VStack w="full" spacing={2} textAlign="left">
                 <Heading w="full" variant="timeline-title" textAlign="left">
