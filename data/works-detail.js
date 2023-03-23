@@ -117,9 +117,7 @@ const worksDetail = {
       ]
     },
     stack: 'Next.js, Chakra UI, Emotion, Three.js & Framer Motion',
-    images: [
-      '/images/works/khanhsportfolio_thumbnail_large.webp'
-    ]
+    images: ['/images/works/khanhsportfolio_thumbnail_large.webp']
   },
   LoadBalancer: {
     information: {
