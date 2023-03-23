@@ -31,8 +31,9 @@ const worksDetail = {
     stack: 'PHP 7.4, Bootstrap 5.1, jQuery 3.6 & MariaDB 10.7',
     images: [
       '/images/works/ambersbakery_thumbnail_large.webp',
-      '/images/works/ambersbakery_customize.webp',
-      '/images/works/ambersbakery_cart.webp'
+      '/images/works/ambersbakery_customizer_large.webp',
+      '/images/works/ambersbakery_customizer_mobile.webp',
+      '/images/works/ambersbakery_cart_large.webp'
     ]
   },
   Stickynote: {
@@ -56,8 +57,7 @@ const worksDetail = {
     stack: 'PHP 7.4, jQuery 3.6, Bootstrap 5.1 & MariaDB 10.7',
     images: [
       '/images/works/stickynote_thumbnail_large.webp',
-      '/images/works/stickynote_edit.webp',
-      '/images/works/stickynote_merge.webp'
+      '/images/works/stickynote_merge_large.webp'
     ]
   },
   Cronus: {
@@ -118,8 +118,7 @@ const worksDetail = {
     },
     stack: 'Next.js, Chakra UI, Emotion, Three.js & Framer Motion',
     images: [
-      '/images/works/khanhsportfolio_thumbnail_large.webp',
-      '/images/works/khanhsportfolio_works.webp'
+      '/images/works/khanhsportfolio_thumbnail_large.webp'
     ]
   },
   LoadBalancer: {
