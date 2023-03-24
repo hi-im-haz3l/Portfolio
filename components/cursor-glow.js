@@ -17,16 +17,6 @@ const rotate = keyframes(`
     }
   `)
 
-const Container = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -1;
-`
-
 const Blob = styled.div`
   background-color: white;
   height: 350px;
@@ -38,14 +28,18 @@ const Blob = styled.div`
   border-radius: 50%;
   animation: ${rotate} 20s infinite;
   transition: opacity 0.7s;
+  z-index: -1;
 `
 
 const Blur = styled.div`
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  backdrop-filter: blur(12vmax);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(100px);
+  backdrop-filter: blur(100px);
+  overflow: hidden;
 `
 
 const CursorGlow = () => {
@@ -131,7 +125,7 @@ const CursorGlow = () => {
   }, [])
 
   return (
-    <Container>
+    <Blur>
       <Blob
         ref={trailRef}
         style={{
@@ -139,8 +133,7 @@ const CursorGlow = () => {
           opacity: isVisible ? '.8' : '0'
         }}
       />
-      <Blur />
-    </Container>
+    </Blur>
   )
 }
 

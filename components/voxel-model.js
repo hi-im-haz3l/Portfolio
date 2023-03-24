@@ -84,7 +84,7 @@ const VoxelModel = () => {
       controls.target = target
       setControls(controls)
 
-      LoadGLTFModel(scene, '/ATLASnPbody.glb', {
+      LoadGLTFModel(scene, '/assets/ATLASnPbody.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {

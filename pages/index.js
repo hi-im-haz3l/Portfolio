@@ -49,7 +49,7 @@ const Home = ({ windowWidth }) => {
           top={['-12.5em', '-15em', '-19.4em']}
           right={0}
           borderRadius="lg"
-          bg={useColorModeValue('#f5f9ff91', '#44444491')}
+          bg={useColorModeValue('#ffffff63', '#44444491')}
           backdropFilter="blur(12px)"
         >
           <Box
@@ -98,7 +98,7 @@ const Home = ({ windowWidth }) => {
               overflow="hidden"
             >
               <ProfileImage
-                src="/images/profile_pic.webp"
+                src="/assets/profile_pic.webp"
                 alt="Profile image"
                 borderRadius="full"
                 width="100%"

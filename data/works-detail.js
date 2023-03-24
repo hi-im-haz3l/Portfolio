@@ -30,10 +30,16 @@ const worksDetail = {
     },
     stack: 'PHP 7.4, Bootstrap 5.1, jQuery 3.6 & MariaDB 10.7',
     images: [
-      '/images/works/ambersbakery_thumbnail_large.webp',
-      '/images/works/ambersbakery_customizer_large.webp',
-      '/images/works/ambersbakery_customizer_mobile.webp',
-      '/images/works/ambersbakery_cart_large.webp'
+      { src: '/works/ambersbakery_thumbnail_large.webp', caption: 'Home Page' },
+      {
+        src: '/works/ambersbakery_customizer_large.webp',
+        caption: 'Customizer Page'
+      },
+      {
+        src: '/works/ambersbakery_customizer_mobile.webp',
+        caption: 'Mobile Customizer'
+      },
+      { src: '/works/ambersbakery_cart_large.webp', caption: 'Shopping Cart' }
     ]
   },
   Stickynote: {
@@ -56,8 +62,11 @@ const worksDetail = {
     },
     stack: 'PHP 7.4, jQuery 3.6, Bootstrap 5.1 & MariaDB 10.7',
     images: [
-      '/images/works/stickynote_thumbnail_large.webp',
-      '/images/works/stickynote_merge_large.webp'
+      { src: '/works/stickynote_thumbnail_large.webp', caption: 'Sticky Note' },
+      {
+        src: '/works/stickynote_merge_large.webp',
+        caption: 'Merge Confirmation'
+      }
     ]
   },
   Cronus: {
@@ -86,7 +95,12 @@ const worksDetail = {
       ]
     },
     stack: 'PHP 7.4, jQuery 3.6, Python 3.8 & Discord.py 1.7',
-    images: ['/images/works/cronus_thumbnail_large.webp']
+    images: [
+      {
+        src: '/works/cronus_thumbnail_large.webp',
+        caption: 'Cronus deployed at Hacklab'
+      }
+    ]
   },
   KhanhsPortfolio: {
     information: {
@@ -117,7 +131,12 @@ const worksDetail = {
       ]
     },
     stack: 'Next.js, Chakra UI, Emotion, Three.js & Framer Motion',
-    images: ['/images/works/khanhsportfolio_thumbnail_large.webp']
+    images: [
+      {
+        src: '/works/khanhsportfolio_thumbnail_large.webp',
+        caption: 'My Portfolio'
+      }
+    ]
   },
   LoadBalancer: {
     information: {
@@ -130,7 +149,12 @@ const worksDetail = {
       ]
     },
     stack: 'NodeMCU (ESP-12), C++11 & Esp8266 3.0.2',
-    images: ['/images/works/loadbalancer_thumbnail_large.webp']
+    images: [
+      {
+        src: '/works/loadbalancer_thumbnail_large.webp',
+        caption: 'Load Balancer Diagram'
+      }
+    ]
   },
   Elasticity: {
     information: {
@@ -143,7 +167,7 @@ const worksDetail = {
       ]
     },
     stack: 'Adobe Illustrator & Adobe Photoshop',
-    images: ['/images/works/elasticity_thumbnail.webp']
+    images: [{ src: '/works/elasticity_thumbnail.webp', caption: 'Elasticity' }]
   },
   BadApple: {
     information: {
@@ -164,7 +188,9 @@ const worksDetail = {
       ]
     },
     stack: 'aalib.js 2.0 & Bad Apple!! ＰＶ',
-    images: ['/images/works/badapple_thumbnail_large.webp']
+    images: [
+      { src: '/works/badapple_thumbnail_large.webp', caption: 'Bad Apple!!' }
+    ]
   },
   Docgi: {
     information: {
@@ -187,10 +213,23 @@ const worksDetail = {
     stack:
       'Next.js, Chakra UI, Framer Motion, Next-Auth, Firebase, Firestore & Nodemailer',
     images: [
-      '/images/works/docgi_thumbnail_large.webp',
-      '/images/works/docgi_home_large.webp',
-      '/images/works/docgi_profile_large.webp',
-      '/images/works/docgi_review_large.webp'
+      { src: '/works/docgi_thumbnail_large.webp', caption: 'Welcome Page' },
+      { src: '/works/docgi_home_large.webp', caption: 'Home Page' },
+      { src: '/works/docgi_profile_large.webp', caption: 'Profile Page' },
+      { src: '/works/docgi_profile_edit_large.webp', caption: 'Profile Edit' },
+      { src: '/works/docgi_followers_large.webp', caption: 'Followers List' },
+      { src: '/works/docgi_review_large.webp', caption: 'Review Content' },
+      { src: '/works/docgi_create_large.webp', caption: 'Create Review' },
+      {
+        src: '/works/docgi_content_manage_large.webp',
+        caption: 'Manage Content'
+      },
+      { src: '/works/docgi_api_edit_large.webp', caption: 'Generate API' },
+      { src: '/works/docgi_api_manage_large.webp', caption: 'Manage API' },
+      {
+        src: '/works/docgi_search_function_large.webp',
+        caption: 'Search Function'
+      }
     ]
   }
 }

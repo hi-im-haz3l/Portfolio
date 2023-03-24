@@ -51,7 +51,7 @@ const Main = ({ children, router, windowWidth }) => (
       />
       <meta
         property="og:image"
-        content="https://portfolio.haz3l.dev/placeholder.png"
+        content="https://portfolio.haz3l.dev/hero/placeholder.png"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="portfolio.haz3l.dev" />
@@ -63,7 +63,7 @@ const Main = ({ children, router, windowWidth }) => (
       />
       <meta
         name="twitter:image"
-        content="https://portfolio.haz3l.dev/placeholder.png"
+        content="https://portfolio.haz3l.dev/hero/placeholder.png"
       />
     </Head>
 

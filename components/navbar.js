@@ -154,6 +154,7 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
               />
               <MenuList
                 border="none"
+                mt={1.5}
                 bg={useColorModeValue('#f5f5f5', '#313134')}
               >
                 <SideBarItem href="/" path={currentPath}>

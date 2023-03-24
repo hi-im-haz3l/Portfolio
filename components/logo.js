@@ -22,13 +22,19 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const dinoImg = `/images/dino${useColorModeValue('_dark', '_light')}.webp`
+  const dinoImg = `/assets/dino.webp`
 
   return (
     <NextLink href="/" passHref scroll={false}>
       <a>
         <LogoBox>
-          <Image src={dinoImg} width={20} height={20} alt="logo" />
+          <Image
+            src={dinoImg}
+            width={20}
+            height={20}
+            alt="logo"
+            style={{ filter: useColorModeValue('unset', 'invert(1)') }}
+          />
           <Text color={useColorModeValue('gray.800', '#efefef')}>
             Khánh&#x27;s Portfolio
           </Text>

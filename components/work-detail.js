@@ -9,7 +9,8 @@ import {
   List,
   ListItem,
   Link,
-  Text
+  Text,
+  Spinner
 } from '@chakra-ui/react'
 import { SmallCloseIcon } from '@chakra-ui/icons'
 import { Title, CondensedTitle } from './work'
@@ -20,7 +21,7 @@ import { CustomBadge } from '../components/icon-badge'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { MdOpenInFull } from 'react-icons/md'
 import { BiServer } from 'react-icons/bi'
-import ImageViewer from 'react-simple-image-viewer'
+import ImgsViewer from '@deplorable/react-images-viewer'
 
 export const Boilerplate = ({
   title,
@@ -32,8 +33,64 @@ export const Boilerplate = ({
 }) => {
   const { formatMessage: t } = useIntl()
   const [isViewerOpen, setIsViewerOpen] = useState(false)
+  const [currentIndex, setIndex] = useState(0)
+
+  const openImageViewer = () => {
+    setIsViewerOpen(true)
+  }
+
   const closeImageViewer = () => {
     setIsViewerOpen(false)
+    setIndex(0)
+  }
+
+  const gotoNextImg = () => {
+    setIndex(current => current + 1)
+  }
+
+  const gotoPrevImg = () => {
+    setIndex(current => current - 1)
+  }
+
+  const CustomSpinner = () => (
+    <Spinner color="#fff" w="50px" h="50px" speed="0.65s" thickness="4px" />
+  )
+
+  const theme = {
+    header: {
+      height: 50
+    },
+    container: {
+      background: 'rgba(0, 0, 0, .75)'
+    },
+    arrow: {
+      backgroundColor: 'rgba(255, 255, 255, .8)',
+      fill: '#222',
+      opacity: 0.6,
+      transition: 'opacity 200ms',
+
+      ':hover': {
+        opacity: 1
+      }
+    },
+    arrow__size__medium: {
+      borderRadius: 40,
+      height: 40,
+      marginTop: -20,
+
+      '@media (min-width: 768px)': {
+        height: 50,
+        width: 50,
+        padding: 13
+      }
+    },
+    arrow__direction__left: { marginLeft: 10, paddingLeft: 7 },
+    arrow__direction__right: { marginRight: 10, paddingRight: 7 },
+
+    close: {
+      height: 50,
+      width: 50
+    }
   }
 
   return (
@@ -140,12 +197,13 @@ export const Boilerplate = ({
             zIndex={1}
             _active={{}}
             _hover={{ bg: '#333333d9' }}
-            onClick={() => setIsViewerOpen(true)}
+            onClick={openImageViewer}
             aria-label={t({
               id: `ariaLabel.explore`,
               defaultMessage: 'Undefined'
             })}
           >
+            {console.log(details.images)}
             {details.images.length > 1 ? (
               `+${details.images.length}`
             ) : (
@@ -245,25 +303,19 @@ export const Boilerplate = ({
               </ListItem>
             )}
           </List>
-          {isViewerOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-              style={{ position: 'absolute', zIndex: '1' }}
-            >
-              <ImageViewer
-                src={details.images}
-                currentIndex={0}
-                onClose={closeImageViewer}
-                disableScroll={false}
-                backgroundStyle={{
-                  backgroundColor: 'rgba(0,0,0,0.75)'
-                }}
-                closeOnClickOutside={true}
-              />
-            </motion.div>
-          )}
+          <ImgsViewer
+            imgs={details.images}
+            currImg={currentIndex}
+            isOpen={isViewerOpen}
+            onClose={closeImageViewer}
+            onClickNext={gotoNextImg}
+            onClickPrev={gotoPrevImg}
+            onClickThumbnail={index => setIndex(index)}
+            spinner={CustomSpinner}
+            theme={theme}
+            backdropCloseable
+            showThumbnails
+          />
         </Box>
       </Container>
     </Box>

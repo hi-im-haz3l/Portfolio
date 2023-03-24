@@ -20,7 +20,7 @@ const Layout = ({ children, title }) => (
     <>
       {title && (
         <Head>
-          <title>{title} - Khánh&#x27;s Portfolio</title>
+          <title>{`${title} - Khánh's Portfolio`}</title>
           <link
             rel="apple-touch-icon"
             sizes="180x180"

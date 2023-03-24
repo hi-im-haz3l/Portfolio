@@ -9,6 +9,7 @@ export const ModelSpinner = () => (
     top="50%"
     ml="calc(0px - var(--spinner-size) / 2)"
     mt="calc(0px - var(--spinner-size))"
+    speed="0.6s"
   />
 )
 
