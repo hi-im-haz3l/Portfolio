@@ -13,7 +13,7 @@ import { useIntl } from 'react-intl'
 const Events = ({ year, events }) => {
   const { formatMessage: t } = useIntl()
   const AccentColor = useColorModeValue('#385898', 'teal.200')
-  const LineColor = useColorModeValue('#d3d3d3', '#686868')
+  const LineColor = useColorModeValue('#c4c4c4', '#686868')
 
   return (
     <List pb={4}>
@@ -56,7 +56,6 @@ const Events = ({ year, events }) => {
                   w="3px"
                   bottom={0}
                   h={isLastElement ? '16px' : 'unset'}
-                  zIndex={-1}
                   position="absolute"
                   bg={LineColor}
                   mt={-1.5}
