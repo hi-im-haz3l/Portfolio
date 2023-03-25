@@ -21,7 +21,7 @@ import { CustomBadge } from '../components/icon-badge'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { MdOpenInFull } from 'react-icons/md'
 import { BiServer } from 'react-icons/bi'
-import ImgsViewer from '@deplorable/react-images-viewer'
+import ImgsViewer from '@haz3l/react-images-viewer'
 
 export const Boilerplate = ({
   title,
@@ -63,26 +63,24 @@ export const Boilerplate = ({
     container: {
       background: 'rgba(0, 0, 0, .75)'
     },
-    arrow: {
+    arrow__size__medium: {
       backgroundColor: 'rgba(255, 255, 255, .8)',
-      fill: '#222',
       opacity: 0.6,
       transition: 'opacity 200ms',
-
-      ':hover': {
-        opacity: 1
-      }
-    },
-    arrow__size__medium: {
       borderRadius: 40,
       height: 40,
       marginTop: -20,
+      fill: '#222',
 
       '@media (min-width: 768px)': {
         height: 50,
         width: 50,
         padding: 13
-      }
+      },
+
+      ':hover': {
+        opacity: 1
+      },
     },
     arrow__direction__left: { marginLeft: 10, paddingLeft: 7 },
     arrow__direction__right: { marginRight: 10, paddingRight: 7 },
@@ -203,7 +201,6 @@ export const Boilerplate = ({
               defaultMessage: 'Undefined'
             })}
           >
-            {console.log(details.images)}
             {details.images.length > 1 ? (
               `+${details.images.length}`
             ) : (
