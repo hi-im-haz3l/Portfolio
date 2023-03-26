@@ -5,21 +5,22 @@ import { useColorModeValue } from '@chakra-ui/react'
 
 const rotate = keyframes(`
     from {
-      rotate: 0deg;
+      rotate: 0deg
     }
     
     50% {
-      scale: 1 1.5;
+      scale: 1 1.5
     }
     
     to {
-      rotate: 360deg;
+      rotate: 360deg
     }
   `)
 
 const Blob = styled.div`
   background-color: white;
-  height: 350px;
+  min-height: 350px;
+  min-width: 350px;
   aspect-ratio: 1;
   position: absolute;
   left: 50%;

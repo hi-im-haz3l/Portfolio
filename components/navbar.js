@@ -88,7 +88,7 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
     >
       <Container
         display="flex"
-        p={2}
+        p=".5em .75em .5em 1em"
         maxW="container.md"
         wrap="wrap"
         justifyContent="space-between"
