@@ -25,7 +25,7 @@ const Events = ({ year, events }) => {
         const shouldConnectDots = events.length > 1
 
         return (
-          <ListItem key={title} pt={4} position="relative">
+          <ListItem key={`timeline-${title}`} pt={4} position="relative">
             {shouldConnectDots &&
               (isMiddelElement ? (
                 <Box

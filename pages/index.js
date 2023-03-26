@@ -143,7 +143,7 @@ const Home = ({ windowWidth }) => {
           <Collapse startingHeight={531} in={show}>
             <List spacing={4} mb={-4}>
               {(timeline ?? []).map(({ year, events }) => (
-                <ListItem key={year}>
+                <ListItem key={`timeline-year-${year}`}>
                   <Heading variant="year-title">{year}</Heading>
                   <Events events={events} year={year} />
                 </ListItem>

@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -22,8 +21,8 @@ import thumbDocgi from '../public/works/docgi_thumbnail.webp'
 
 const Works = () => {
   const { formatMessage: t } = useIntl()
-  const [isOpen, setState] = useState(false)
-  lockScroll(isOpen)
+  const [isOpen, setState] = useState({})
+  lockScroll(Boolean(Object.keys(isOpen || {}).length))
 
   return (
     <Layout title={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
@@ -168,21 +167,11 @@ const Works = () => {
         </Section>
 
         <AnimatePresence>
-          {isOpen && (
-            <>
-              <Head>
-                <title>{isOpen.title} - Khánh&#x27;s Portfolio</title>
-              </Head>
-              <Boilerplate
-                title={isOpen.title}
-                id={isOpen.id}
-                category={isOpen.category}
-                thumbnail={isOpen.thumbnail}
-                setOpen={setState}
-                details={worksDetail[isOpen.id]}
-              />
-            </>
-          )}
+          <Boilerplate
+            metadata={isOpen}
+            setOpen={setState}
+            details={worksDetail[isOpen.id]}
+          />
         </AnimatePresence>
       </Container>
     </Layout>

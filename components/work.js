@@ -3,7 +3,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 
 export const Title = ({ parent, onClick, children }) => (
   <>
-    <Link onClick={() => onClick(false)}>{parent}</Link>
+    <Link onClick={onClick}>{parent}</Link>
     <span>
       {' '}
       <ChevronRightIcon />{' '}

@@ -35,8 +35,14 @@ const Switch = ({ base }) => {
     for (let o = 0; o < PagesCount; o++) {
       let temp = o * 3
       segment.push(
-        core.slice(temp, temp + 3).map(({ title, icons }, i) => (
-          <Comfort key={i} m="0 auto" mb={3} maxW="80%" minW={240}>
+        core.slice(temp, temp + 3).map(({ title, icons }) => (
+          <Comfort
+            key={`comfort-mobile-${title}`}
+            m="0 auto"
+            mb={3}
+            maxW="80%"
+            minW={240}
+          >
             <Heading>{title}</Heading>
             {icons}
           </Comfort>
@@ -49,8 +55,8 @@ const Switch = ({ base }) => {
     <DynamicHScroll tabs={segment} PagesIndexes={PagesCount - 1} />
   ) : (
     <DynamicGrid columns={[1, 1, 2]} spacing={3}>
-      {core.map(({ title, icons }, i) => (
-        <Comfort key={i}>
+      {core.map(({ title, icons }) => (
+        <Comfort key={`comfort-full-${title}`}>
           <Heading>{title}</Heading>
           {icons}
         </Comfort>

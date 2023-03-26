@@ -76,7 +76,7 @@ const HScroll = ({ tabs, PagesIndexes }) => {
           {tabs.map((e, i) => {
             const isActive = i === page
             return (
-              <Box key={i} w="100%">
+              <Box key={`comfort-tab-${i}`} w="100%">
                 {isActive && (
                   <Box
                     as={motion.div}
