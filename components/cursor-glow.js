@@ -28,7 +28,15 @@ const Blob = styled.div`
   border-radius: 50%;
   animation: ${rotate} 20s infinite;
   transition: opacity 0.7s;
-  z-index: -1;
+  z-index: -2;
+`
+
+const Container = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `
 
 const Blur = styled.div`
@@ -125,7 +133,7 @@ const CursorGlow = () => {
   }, [])
 
   return (
-    <Blur>
+    <Container>
       <Blob
         ref={trailRef}
         style={{
@@ -133,7 +141,8 @@ const CursorGlow = () => {
           opacity: isVisible ? '.8' : '0'
         }}
       />
-    </Blur>
+      <Blur />
+    </Container>
   )
 }
 
