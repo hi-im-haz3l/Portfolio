@@ -46,7 +46,6 @@ const VoxelModel = () => {
     }
   }, [renderer])
 
-
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const { current: container } = refContainer

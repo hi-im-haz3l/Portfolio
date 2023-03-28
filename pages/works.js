@@ -21,8 +21,8 @@ import thumbDocgi from '../public/works/docgi_thumbnail.webp'
 
 const Works = () => {
   const { formatMessage: t } = useIntl()
-  const [isOpen, setState] = useState({})
-  lockScroll(Boolean(Object.keys(isOpen || {}).length))
+  const [currentlyOpen, setState] = useState({})
+  lockScroll(Boolean(Object.keys(currentlyOpen || {}).length))
 
   return (
     <Layout title={t({ id: 'Navbar.Works', defaultMessage: 'Undefined' })}>
@@ -167,11 +167,13 @@ const Works = () => {
         </Section>
 
         <AnimatePresence>
-          <Boilerplate
-            metadata={isOpen}
-            setOpen={setState}
-            details={worksDetail[isOpen.id]}
-          />
+          {Object.keys(currentlyOpen || {}).length && (
+            <Boilerplate
+              metadata={currentlyOpen}
+              setOpen={setState}
+              details={worksDetail[currentlyOpen.id]}
+            />
+          )}
         </AnimatePresence>
       </Container>
     </Layout>

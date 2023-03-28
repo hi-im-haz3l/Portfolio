@@ -29,7 +29,7 @@ const Blob = styled.div`
   border-radius: 50%;
   animation: ${rotate} 20s infinite;
   transition: opacity 0.7s;
-  z-index: -1
+  z-index: -1;
 `
 
 const Container = styled.div`
@@ -37,7 +37,7 @@ const Container = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0
+  left: 0;
 `
 
 const Blur = styled.div`
@@ -48,7 +48,7 @@ const Blur = styled.div`
   left: 0;
   filter: blur(100px);
   backdrop-filter: blur(100px);
-  overflow: hidden
+  overflow: hidden;
 `
 
 const CursorGlow = () => {

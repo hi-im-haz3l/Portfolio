@@ -99,156 +99,165 @@ export const Boilerplate = ({ metadata, setOpen, details }) => {
   }
 
   return (
-    Object.keys(metadata || {}).length && (
-      <>
-        <Head>
-          <title>{metadata.title} - Khánh&#x27;s Portfolio</title>
-        </Head>
-        <Box
-          position="fixed"
-          top={0}
-          left={0}
-          right={0}
-          bottom={0}
-          overflowX="hidden"
-          overflowY="scroll"
-          css={{ '&::-webkit-scrollbar': { display: 'none' } }}
-          zIndex={2}
+    <>
+      <Head>
+        <title>{metadata.title} - Khánh&#x27;s Portfolio</title>
+      </Head>
+      <Box
+        position="fixed"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        overflowX="hidden"
+        overflowY="scroll"
+        css={{ '&::-webkit-scrollbar': { display: 'none' } }}
+        zIndex={2}
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0, transition: { duration: 0.2 } }}
+          transition={{ duration: 0.3 }}
+          style={{
+            pointerEvents: 'auto',
+            zIndex: '-1',
+            position: 'fixed',
+            background: overlayColor,
+            top: '0',
+            bottom: '0',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: '100%',
+            cursor: 'pointer'
+          }}
+          onClick={closeModal}
+        />
+        <Container
+          as={motion.div}
+          my={{ base: '7vh', sm: '10vh' }}
+          bg={containerColor}
+          p={0}
+          borderRadius="2xl"
+          position="relative"
+          overflow="hidden"
+          layoutId={`card-container-${metadata.id}`}
         >
+          <Button
+            p={1.5}
+            m={4}
+            h="auto"
+            minW="auto"
+            top="0"
+            right="0"
+            position="absolute"
+            bg={closeSymbolColor}
+            color="#202023"
+            fontSize={18}
+            zIndex={1}
+            borderRadius="full"
+            boxShadow="rgba(0, 0, 0, 0.24) 0 .25em .5em"
+            _active={{}}
+            _hover={{ bg: '#cdcdcd' }}
+            onClick={closeModal}
+            aria-label={t({
+              id: `ariaLabel.close`,
+              defaultMessage: 'Undefined'
+            })}
+          >
+            <SmallCloseIcon />
+          </Button>
           <motion.div
+            layoutId={`card-image-container-${metadata.id}`}
+            style={{
+              display: 'flex',
+              position: 'relative'
+            }}
+          >
+            <Image
+              src={metadata.thumbnail}
+              alt={metadata.title}
+              placeholder="blur"
+              loading="lazy"
+            />
+            <Box
+              position="absolute"
+              top="100%"
+              height="9999px"
+              width="100%"
+              boxShadow={depthShadow}
+            />
+          </motion.div>
+          <Box
+            as={motion.div}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.15 } }}
-            transition={{ duration: 0.2, delay: 0.15 }}
-            style={{
-              pointerEvents: 'auto',
-              zIndex: '-1',
-              position: 'fixed',
-              background: overlayColor,
-              top: '0',
-              bottom: '0',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '100%',
-              cursor: 'pointer'
-            }}
-            onClick={closeModal}
-          />
-          <Container
-            as={motion.div}
-            my={{ base: '7vh', sm: '10vh' }}
-            bg={containerColor}
-            p={0}
-            borderRadius="2xl"
+            exit={{ opacity: 0 }}
+            p={{ base: '1em', sm: '1.3em', md: '1.5em' }}
             position="relative"
-            overflow="hidden"
-            layoutId={`card-container-${metadata.id}`}
           >
             <Button
-              p={1.5}
-              m={4}
+              p={2.5}
+              m="-3.3em 1em 0 0"
               h="auto"
               minW="auto"
               top="0"
               right="0"
               position="absolute"
-              bg={closeSymbolColor}
-              color="#202023"
-              fontSize={18}
+              bg="#000000ba"
+              color="#ededee"
+              fontSize={14}
               zIndex={1}
-              borderRadius="full"
-              boxShadow="rgba(0, 0, 0, 0.24) 0 .25em .5em"
               _active={{}}
-              _hover={{ bg: '#cdcdcd' }}
-              onClick={closeModal}
+              _hover={{ bg: '#333333d9' }}
+              onClick={openImageViewer}
               aria-label={t({
-                id: `ariaLabel.close`,
+                id: `ariaLabel.explore`,
                 defaultMessage: 'Undefined'
               })}
             >
-              <SmallCloseIcon />
+              {details.images.length > 1 ? (
+                `+${details.images.length}`
+              ) : (
+                <MdOpenInFull />
+              )}
             </Button>
-            <motion.div
-              layoutId={`card-image-container-${metadata.id}`}
-              style={{
-                display: 'flex',
-                position: 'relative'
-              }}
-            >
-              <Image
-                src={metadata.thumbnail}
-                alt={metadata.title}
-                placeholder="blur"
-                loading="lazy"
-              />
-              <Box
-                position="absolute"
-                top="100%"
-                height="9999px"
-                width="100%"
-                boxShadow={depthShadow}
-              />
-            </motion.div>
-            <Box
-              p={{ base: '1em', sm: '1.3em', md: '1.5em' }}
-              position="relative"
-            >
-              <Button
-                p={2.5}
-                m="-3.3em 1em 0 0"
-                h="auto"
-                minW="auto"
-                top="0"
-                right="0"
-                position="absolute"
-                bg="#000000ba"
-                color="#ededee"
-                fontSize={14}
-                zIndex={1}
-                _active={{}}
-                _hover={{ bg: '#333333d9' }}
-                onClick={openImageViewer}
-                aria-label={t({
-                  id: `ariaLabel.explore`,
+            <motion.div layoutId={`title-container-${metadata.id}`}>
+              <Title
+                parent={t({
+                  id: 'Navbar.Works',
                   defaultMessage: 'Undefined'
                 })}
+                onClick={closeModal}
               >
-                {details.images.length > 1 ? (
-                  `+${details.images.length}`
-                ) : (
-                  <MdOpenInFull />
-                )}
-              </Button>
-              <motion.div layoutId={`title-container-${metadata.id}`}>
-                <Title
-                  parent={t({
-                    id: 'Navbar.Works',
-                    defaultMessage: 'Undefined'
-                  })}
-                  onClick={closeModal}
-                >
-                  {metadata.title}
-                  <Badge ml={3} bg={badgeColor}>
-                    {t({
-                      id: `Works.${metadata.category}.${metadata.id}.Lifespan`,
-                      defaultMessage: 'Undefined'
-                    })}
-                  </Badge>
-                </Title>
-              </motion.div>
-              <motion.div
-                layoutId={`description-container-${metadata.id}`}
-                style={{ marginTop: '.25em', marginBottom: '.75em' }}
-              >
-                <JustifyParagraph>
+                {metadata.title}
+                <Badge ml={3} bg={badgeColor}>
                   {t({
-                    id: `Works.${metadata.category}.${metadata.id}.Description`,
+                    id: `Works.${metadata.category}.${metadata.id}.Lifespan`,
                     defaultMessage: 'Undefined'
                   })}
-                </JustifyParagraph>
-              </motion.div>
+                </Badge>
+              </Title>
+            </motion.div>
+            <motion.div
+              layoutId={`description-container-${metadata.id}`}
+              style={{ marginTop: '.25em', marginBottom: '.75em' }}
+            >
+              <JustifyParagraph>
+                {t({
+                  id: `Works.${metadata.category}.${metadata.id}.Description`,
+                  defaultMessage: 'Undefined'
+                })}
+              </JustifyParagraph>
+            </motion.div>
 
-              <List as={motion.div} mx={3}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <List mx={3}>
                 {(details.information.internal ?? []).map(el => (
                   <ListItem key={`internal-${el.title}`}>
                     <CustomBadge icon={el.icon}>
@@ -328,11 +337,11 @@ export const Boilerplate = ({ metadata, setOpen, details }) => {
                 backdropCloseable
                 showThumbnails
               />
-            </Box>
-          </Container>
-        </Box>
-      </>
-    )
+            </motion.div>
+          </Box>
+        </Container>
+      </Box>
+    </>
   )
 }
 

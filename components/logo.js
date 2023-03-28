@@ -32,8 +32,10 @@ const Logo = () => {
             width={20}
             height={20}
             alt="logo"
-            style={{ filter: useColorModeValue('unset', 'invert(1)'), 
-            transition: 'transform 150ms' }}
+            style={{
+              filter: useColorModeValue('unset', 'invert(1)'),
+              transition: 'transform 150ms'
+            }}
           />
           <Text color={useColorModeValue('gray.800', '#efefef')}>
             Khánh&#x27;s Portfolio
