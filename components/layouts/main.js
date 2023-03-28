@@ -73,7 +73,7 @@ const Main = ({ children, router, windowWidth }) => (
       windowWidth={windowWidth}
     />
 
-    <Container maxW="container.md" pt={14}>
+    <Container maxW="container.md">
       <CursorGlow />
       <ATLASnPbody />
 

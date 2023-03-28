@@ -38,7 +38,7 @@ const NavBarItem = ({ href, path, children, ...props }) => {
             textDecorationThickness: '2px'
           }
         }
-        _hover={{ bg: useColorModeValue('#d1d1d195', '#71717488') }}
+        _hover={{ bg: useColorModeValue('#ffffff80', '#ffffff29') }}
         {...props}
       >
         {children}
@@ -79,7 +79,8 @@ const Navbar = ({ currentPath, currentLocale, windowWidth }) => {
 
   return (
     <Box
-      position="fixed"
+      position="sticky"
+      top={0}
       as="nav"
       w="100%"
       bg={useColorModeValue('#ffffff70', '#44444a80')}

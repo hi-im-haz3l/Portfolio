@@ -16,7 +16,7 @@ function easeOutCirc(x) {
 }
 
 const VoxelModel = () => {
-  const refContainer = useRef()
+  const refContainer = useRef(null)
   const [loaded, setLoaded] = useState(false)
   const [renderer, setRenderer] = useState(null)
   const [_camera, setCamera] = useState(null)

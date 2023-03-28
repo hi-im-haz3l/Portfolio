@@ -148,8 +148,8 @@ export const Boilerplate = ({ metadata, setOpen, details }) => {
             m={4}
             h="auto"
             minW="auto"
-            top="0"
-            right="0"
+            top={0}
+            right={0}
             position="absolute"
             bg={closeSymbolColor}
             color="#202023"
@@ -201,8 +201,8 @@ export const Boilerplate = ({ metadata, setOpen, details }) => {
               m="-3.3em 1em 0 0"
               h="auto"
               minW="auto"
-              top="0"
-              right="0"
+              top={0}
+              right={0}
               position="absolute"
               bg="#000000ba"
               color="#ededee"

@@ -46,7 +46,7 @@ const Home = ({ windowWidth }) => {
       <Container maxW="32.5em" overflow="hidden">
         <Box
           position="absolute"
-          top={['-12.5em', '-15em', '-19.4em']}
+          top={['-13em', '-15.5em', '-19.3em']}
           right={0}
           borderRadius="lg"
           bg={useColorModeValue('#ffffff63', '#44444491')}
