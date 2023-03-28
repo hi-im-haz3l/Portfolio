@@ -9,13 +9,14 @@ const LogoBox = styled.span`
   display: inline-flex;
   align-items: center;
   height: 1.9em;
-  line-height: 1.25em;
+  line-height: 1.25em
+
   padding: 0.7em img {
-    transition: 200ms ease;
+    transition: 200ms ease
   }
 
   &:hover img {
-    transform: scaleX(-1);
+    transform: scaleX(-1)
   }
 `
 
@@ -31,7 +32,8 @@ const Logo = () => {
             width={20}
             height={20}
             alt="logo"
-            style={{ filter: useColorModeValue('unset', 'invert(1)') }}
+            style={{ filter: useColorModeValue('unset', 'invert(1)'), 
+            transition: 'transform 150ms' }}
           />
           <Text color={useColorModeValue('gray.800', '#efefef')}>
             Khánh&#x27;s Portfolio

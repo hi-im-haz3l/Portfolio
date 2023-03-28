@@ -17,15 +17,15 @@ function easeOutCirc(x) {
 
 const VoxelModel = () => {
   const refContainer = useRef()
-  const [loading, setLoading] = useState(true)
-  const [renderer, setRenderer] = useState()
-  const [_camera, setCamera] = useState()
+  const [loaded, setLoaded] = useState(false)
+  const [renderer, setRenderer] = useState(null)
+  const [_camera, setCamera] = useState(null)
   const [target] = useState(new Vector3(1, 8, 0.3))
   const [initialCameraPosition] = useState(
     new Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI))
   )
   const [scene] = useState(new Scene())
-  const [_controls, setControls] = useState()
+  const [_controls, setControls] = useState(null)
 
   const handleWindowResize = useCallback(() => {
     const { current: container } = refContainer
@@ -45,6 +45,7 @@ const VoxelModel = () => {
       _camera.updateProjectionMatrix()
     }
   }, [renderer])
+
 
   /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
@@ -89,7 +90,7 @@ const VoxelModel = () => {
         castShadow: false
       }).then(() => {
         animate()
-        setLoading(false)
+        setLoaded(true)
       })
 
       let req = null
@@ -130,7 +131,7 @@ const VoxelModel = () => {
 
   return (
     <ModelContainer ref={refContainer}>
-      {loading && <ModelSpinner />}
+      {loaded || <ModelSpinner />}
     </ModelContainer>
   )
 }
