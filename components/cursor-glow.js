@@ -41,11 +41,10 @@ const Container = styled.div`
 `
 
 const Blur = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: absolute;
+  height: 100vh;
+  height: 100lvh;
+  width: 100%;
   filter: blur(100px);
   backdrop-filter: blur(100px);
   overflow: hidden;
